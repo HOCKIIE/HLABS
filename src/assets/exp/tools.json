@@ -1,0 +1,10 @@
+[
+    {"title":"VS Code","type":"vsCode"},
+    {"title":"Sublime","type":"sublime"},
+    {"title":"GitHub","type":"gitHub"},
+    {"title":"Source Tree","type":"sourceTree"},
+    {"title":"XAMPP","type":"xampp"},
+    {"title":"FileZilla","type":"fileZilla"},
+    {"title":"Postman","type":"postman"},
+    {"title":"ClickUp","type":"clickUp"}
+]

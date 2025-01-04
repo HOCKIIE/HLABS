@@ -1,0 +1,20 @@
+[
+    {"title":"HTML5","type":"html5"},
+    {"title":"CSS3","type":"css3"},
+    {"title":"SASS","type":"sass"},
+    {"title":"Bootstrap","type":"bootstrap"},
+    {"title":"Tailwind CSS","type":"tailwindCss"},
+    {"title":"MySQL","type":"mysql"},
+    {"title":"PHP","type":"php"},
+    {"title":"Codeigniter","type":"codeigniter"},
+    {"title":"Laravel","type":"laravel"},
+    {"title":"jQuery","type":"jquery"},
+    {"title":"phpMyAdmin","type":"phpMyAdmin"},
+    {"title":"MongoDB","type":"mongoDb"},
+    {"title":"NodeJS","type":"nodeJs"},
+    {"title":"ExpressJS","type":"expressJs"},
+    {"title":"ReactJS","type":"reactJs"},
+    {"title":"NextJS","type":"nextJs"},
+    {"title":"JavaScript","type":"javaScript"},
+    {"title":"TypeSscript","type":"typeScript"}
+]

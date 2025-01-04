@@ -1,0 +1,533 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "service": "Service",
+    "news": "News",
+    "blog": "Blog",
+    "contact": "Contact",
+    "profile": "Company Profile",
+    "history": "Company History",
+    "policy": "Company Policy",
+    "sea-freight": "Sea Freight",
+    "air-freight": "Air Freight",
+    "land-transportation": "Land Transportation",
+    "warehouse": "Warehouse",
+    "machinery-installation": "Machinery Installation",
+    "house-moving": "House Monving",
+    "packing-loading": "Packing/Loading",
+    "custom-clearance": "Custom Clearance",
+    "scm-solutions": "SCM Solutions",
+    "apply": "Apply"
+  },
+  "blog-section": {
+    "news": "News",
+    "more": "See More",
+    "announcement": "News",
+    "blog": "Blog",
+    "tracking": "Air Cargo Tracking"
+  },
+  "cover": {
+    "h1": "Reaching and Delivering to the World",
+    "h2": "A pioneer in international multimodal logistics",
+    "p": "SIAM NISTRANS (Thai Nissin) is committed to extending its business overseas, and providing innovative strategies in order to meet different business needs and be a real Global Logistics Service Provider."
+  },
+  "service-section": {
+    "heading": "Our services",
+    "see-more": "See More"
+  },
+  "about-section": {
+    "heading": "Siam Nistrans was established in 1987 as the Thai subsidiary of Nissin Corporation",
+    "p": "Since then we have provided safe and secure multimodal transport services to our customers across Nissin's global network. In Thailand, we have offices and warehouses in various locations such as Bangkok, Chiangmai, Ayutthaya, Prachinburi, Laem Chabang and Bangpakong, and we offer the best-suited and innovative logistics and packaging solutions by combining our hardware and software platforms in order to satisfy the customers' requirements."
+  },
+  "moving-section": {
+    "heading": "Moving by Siam Nistrans",
+    "1-1": "From/To Thailand",
+    "1-1-2": "",
+    "1-2": "Overseas ",
+    "1-2-2": "moving",
+    "1-3": "No worries about unexpected transfer or repatriation. With our integrated service from packing, collecting, customs clearance to delivery, we take care of each customer's household goods with safe and speedy operation.",
+    "2-1": "Within ",
+    "2-1-2": "Thailand",
+    "2-2": "Domestic ",
+    "2-2-2": "moving",
+    "2-3": "With our network throughout Thailand, not only in Bangkok, we provide services to meet the customers' needs, no matter how great the scale is.",
+    "3-1": "From large to small",
+    "3-1-2": "",
+    "3-2": "Office ",
+    "3-2-2": "relocation",
+    "3-3": "Now matter how large or small your office is, we deliver your properties to a new location with least effect on your day-to-day operations.",
+    "see-more": "Read More"
+  },
+  "warehouse-section": {
+    "heading": "Warehouse ・ Stock control by Siam Nistrans",
+    "p": "We provide higher value-added services to meet the customers' needs, including not only limited to stock control, also packing design and packing.",
+    "point": "POINT",
+    "1": "Transport network throughout Thailand, including five warehouses in the Central region and one in Chiang Mai",
+    "2": "Systematized control on the cargo volume stored or received/delivered to establish a smooth distribution flow",
+    "3": "Extensive warehouse capacity to meet the customers' demand",
+    "4": "Strict compliance by all warehouse staff with 5S.",
+    "see-more": "Read More"
+  },
+  "haco-section": {
+    "heading": "Distribution container management by Siam Nistrans",
+    "heading2": "Solutions for problems of distribution containers management",
+    "p1": "HACO Lab. solves problems in distribution and establish",
+    "p2": "future logistics services by combining \"distribution containers\"",
+    "p3": "and \"new technology\".",
+    "1-1": "Simple operations with",
+    "1-2": "smartphones by",
+    "1-3": "downloading the app.",
+    "2-1": "Attach labels to distribution",
+    "2-2": "containers. Easy to read the",
+    "2-3": "information with smartphone.",
+    "3-1": "Information is managed at the cloud service.",
+    "3-2": "Easy access from anywhere as long as",
+    "3-3": "the Internet is connected.",
+    "see-more": "Read More"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "telephone": "Tel",
+    "contact-form": "Contact Form",
+    "company-name": "Siam Nistrans Co.,Ltd.",
+    "address": "15th Fl., 191/66,68-69 CTI TOWER, Ratchadapisek Rd., Kwang Klongtoey\nKhet Klongtoey, Bangkok 10110 THAILAND"
+  },
+  "contact-form": {
+    "companyName": "Company name",
+    "contactName": "Name",
+    "department": "Department",
+    "telephone": "Telephone",
+    "email": "E-mail",
+    "title": "Inquiry subject",
+    "option": {
+      "1": "Transport",
+      "2": "HACO Lab.",
+      "3": "Warehouse/storage",
+      "4": "Careers",
+      "5": "Moving",
+      "6": "Others"
+    },
+    "detail": "Inquiry contents",
+    "send": "Send",
+    "validate": {
+      "require": "Please fill the information",
+      "email": "Please fill the correct Email",
+      "number": "Number Only",
+      "maxLenght": "Don't fill over {{maxLenght}} letters"
+    }
+  },
+  "sea-freight": {
+    "h1": "Sea Freight",
+    "section1": {
+      "p": "As an International Freight Forwarder, we provide seamless transportation services all over the world, such as reducing sea freight and transportation costs, providing prompt delivery and transportation, etc., through cooperation with NISSIN Corporation, which has a network in 150 countries worldwide, as well as affiliated companies and major agents."
+    },
+    "h2": "Siam Nistrans Sea Freight",
+    "h3": "Multimodal transportation with a global network (Door to Door)<br />Reliable and safe with consolidation services",
+    "section2": {
+      "title": "Highlights",
+      "p1": "Since our opening in 1987, we have used our experience and knowledge in multimodal transportation to deliver our customers' essential goods anywhere in the world with \"Reliability and Safety\", based on the motto \"Trust and Sincerity\".",
+      "p2": "Our sales staff, who have accumulated extensive experience from overseas assignments and have excellent local knowledge, will carefully design and propose transportation plans to enhance efficiency and effectiveness.",
+      "p3": "Whether it is \"Multi-modal transportation service\" Door to Door (pick up luggage domestically - sea freight - land freight overseas) to customers, Container Line (LCL) transportation, FCL transportation or Buyer Consolidation, etc., we can provide services by contacting major world-class shipping companies or through overseas networks."
+    },
+    "section3": {
+      "title": "Provide transportation routes and methods that meet customer needs.",
+      "step1": "Shipping Origin",
+      "step2": "Receiving Goods",
+      "step3": "Warehouse",
+      "step4": "Sea Freight",
+      "step5": "Warehouse",
+      "step6": "Shipping Destination"
+    }
+  },
+  "air-freight": {
+    "h1": "Air Freight Forwarding",
+    "h2": "Transport flow",
+    "h3": "Collection > Export declaration/Customs clearance > Air transportation > Import declaration > Delivery \"Door to Door\" international transport",
+    "section1": {
+      "p": "As a global logistics service provider, we offer reliable and quick transport services with the best routes that meet your requests. We have established a network with the major airlines that enables us to secure necessary cargo space even in high seasons, such as before long holidays or in an urgent case. The types of products that we deliver for export or import vary greatly. We offer multimodal international transport services including Door to Door cases based on our abundant experience in this field."
+    },
+    "section2": {
+      "title": "Feature",
+      "hilight1": "With our global network, we provide integrated transport services, including bothersome customs clearance, to deliver your cargo to the destination. With long-term experience as an IATA certified air cargo agent and reliable systems that meet your needs, we help you to export and import cargo.",
+      "image1": "/img/service/air-freight/en-001.jpg"
+    }
+  },
+  "land-transportation": {
+    "h1": "Land Transportation",
+    "h2": "Our strengths in land transport",
+    "section1": {
+      "p": "ith over 100 owned trucks, we deliver your valuable cargo to the destination port or airport in a safe and timely manner. Our land transport services include domestic transport within Thailand and also cross-border transport to Laos, Cambodia, Malaysia and the other ASEAN countries."
+    },
+    "section2": {
+      "title": "Feature",
+      "1": {
+        "1": "We own over 100 trucks and directly employ all the drivers who are trained on eco-driving to ensure safe driving all the time.",
+        "2": "Siam Nistrans' cargo vehicles",
+        "3": "Head truck: 15 units",
+        "4": "10W truck: 7 units",
+        "5": "6W truck: 60 units",
+        "6": "4W pickup truck: 29 units"
+      },
+      "2": {
+        "1": "Our safe and reliable cargo transport services are \"Q-mark (Quality Mark)\" certified by the Department of Land Transport, Ministry of Transport of Thailand.",
+        "2": "The Q-mark program is the certification granted by Department of Land Transport, Ministry of Transport of Thailand to truck service providers. The Q-mark certification is one of the conditions for transport under the Cross-Border Transport Agreement (CBTA). We were certified with Q-mark in October 2018."
+      },
+      "3": {
+        "1": "We provide cross-border transport services with our own trucks licensed under the CBTA.",
+        "2": "The Cross-Border Transport Agreement (CBTA) is one of the main initiatives for trade facilitation under the development program of the Greater Mekong Sub region (GMS), consisting of Thailand, Cambodia, Laos, Myanmar, Vietnam and China (the Yunnan province and the Guangxi Zhuang Autonomous Region (GZAR)). The CBTA allows cross-border vehicle movement, single-stop inspection and other goods transport benefits that facilitate land transport within the Mekong sub region.",
+        "3": "Currently, the \"Early Harvest\" package has been implemented, which allows all the members except Myanmar to provide cross-border transport."
+      },
+      "4": {
+        "1": "East-West Economic Corridor area services",
+        "2": "We are one of the pioneers that have developed and offered land transport routes between Thailand and its neighboring countries such as Laos, Cambodia, Malaysia, and the other ASEAN countries. We help you by reducing the cargo transit time and stock in transport.",
+        "3": "International land transport permit"
+      }
+    }
+  },
+  "warehouse": {
+    "h1": "Warehouse",
+    "h2": "Our strengths in warehouse",
+    "section1": {
+      "p": "With the warehouse management system (WMS) developed by us, we provide high value-added warehouse services that meet your needs, including not only limited to packing, but also delivery by our own trucks."
+    },
+    "section2": {
+      "title": "Feature",
+      "p": "We offer a smooth distribution flow with our warehouses having plenty of cargo space and computerized stock monitoring.",
+      "permit": "Warehouse business license",
+      "1": {
+        "1": "With warehouses located next to our branches, we provide efficient logistics hub functions. From the software aspect, we use warehouse and stock management systems developed by the Nissin Group and support by our internal IT team.",
+        "2": "Our technology-based solutions",
+        "3": "Warehouse management",
+        "4": "Receiving",
+        "5": "Storage",
+        "6": "Picking and distribution processing",
+        "7": "Delivery",
+        "8": "Dangerous goods warehouse",
+        "9": "We have opened a dangerous goods warehouse at T-park Bangna Km.39. DIW types 1, 2, 3, as well as UN Classes 3, 6.1, 8, 9, etc. can be stored. Please contact us with your SDS information.",
+        "10": "Location",
+        "11": "Google MAP",
+        "12": "PDF MAP",
+        "13": "Inside T-Park Bangna Km.39, which is the best logistics area near the industrial parks and port areas.",
+        "14": "Storage area of 1,000 ㎡ that complies with the DIW standard.",
+        "15": "Staff with the relevant license to handle dangerous goods will support your optimal storage.",
+        "16": "Temperature-controlled Warehouse",
+        "17": "A temperature-controlled warehouse has been opened in the BPK41 warehouse. The temperature is set at 18°C to 25°C with 24-hour air conditioning and humidity is maintained at around 60%. For storage of delicate cargo, please contact us. By storing such goods in the same warehouse as general cargo, we can provide the efficient delivery service.",
+        "18": "Bonded Warehouse",
+        "19": "The company established a bonded warehouse in FTZ 3 Lamphun Industrial Estate. It is suitable to store bonded materials, bonded products, bonded VMI, as well as, transportation and delivery between factories.",
+        "20": "Our warehouses",
+        "21": "Our warehouses are located in major commercial areas near Bangkok and in Chiang Mai that meet customer requirements.",
+        "22": "Ayutthaya",
+        "23": "MAP",
+        "24": "45-46 Moo 2, Tambol Uthai, Amphur Uthai,\n\rAyutthaya 13210\n\rWarehouse area ：11,340㎡",
+        "25": "Click a location to show details of the warehouse"
+      },
+      "address": {
+        "1": {
+          "title": "Ayutthaya",
+          "addr": "45-46 Moo 2, Tambol Uthai, Amphur Uthai,\nAyutthaya 13210\nWarehouse area : 11,340㎡"
+        },
+        "2": {
+          "title": "Bangpakong 38",
+          "addr": "68/8 Moo 5, Bangna-Trad Rd., Km.38, Bang Samak Subdistrict,\nBang Pakong District, Chachoengsao Province 24180\nWarehouse area : "
+        },
+        "3": {
+          "title": "Bangpakong 41",
+          "addr": "100/2 Moo 6, Bangna-Trad Rd., Km.41, Bangwao Subdistrict,\nBangpakong District, Chachoengsao Province 24130"
+        },
+        "4": {
+          "title": "Prachinburi (Rojana)",
+          "addr": "82 Moo 9, Nong Phrong Subdistrict,Sri Maha Phot District,\nPrachin Buri Province 25140"
+        },
+        "5": {
+          "title": "Laem Chabang",
+          "addr": "2/10 Village No. 1, Nongkham Subdistrict, Sriracha District,\nChonburi Province 20110"
+        },
+        "6": {
+          "title": "Chiang Mai",
+          "addr": "177 Village No. 13, Makhuea Chae Subdistrict, Mueang District,\nLamphun Province 51000"
+        },
+        "7": {
+          "title": "คลังสินค้าอันตราย",
+          "addr": "T-park Bangna WH DG 6/2 70/2 Village No. 5, Bang Samak Subdistrict,\nBang Pakong District, Chachoengsao Province 24180"
+        }
+      }
+    }
+  },
+  "machinery-installation": {
+    "h1": "Machinery Installation",
+    "h2": "Machinery installation flow",
+    "section1": {
+      "p": "We offer one-stop machinery installation services (from loading at the supplier's factory to installation on-site) under the motto of \"Safety First\".",
+      "1": {
+        "1": "Loading",
+        "2": "Packing",
+        "3": "Customs clearance",
+        "4": "International transport",
+        "5": "Customs clearance",
+        "6": "Delivery",
+        "7": "Packing and loading",
+        "8": "Installation"
+      },
+      "2": {
+        "1": "Packing by our staff",
+        "2": "Packing style suited to the machinery",
+        "3": "Loading into the container",
+        "4": "Instalation of large machinery",
+        "5": "Loading machinery",
+        "6": "Installation"
+      }
+    }
+  },
+  "house-moving": {
+    "h1": "House Moving",
+    "h2": "International and domestic moving",
+    "h3": "Integrated transport system supported by the Nissin's global network. We handle packing, collection, Customs clearance and delivery, and deliver your household effect good safe, reliable and timely manner.",
+    "section1": {
+      "p": "With our multimodal (land, sea, and air) transport services, we flexibly support your relocation, including domestic moving and office relocation. No matter how large or small the size , and our female Japanese expert staff with long experience in moving stand by you throughout the process. Try our moving services and you will not find a incomparable quality in other moving companies.",
+      "image": "/img/service/house-moving/jp-001.jpg"
+    }
+  },
+  "packing-loading": {
+    "h1": "Packing・Loading",
+    "h2": "Packing design suited to each product's properties",
+    "section1": {
+      "p": "We offer the best-suited packing materials and methods based on your needs and product properties.",
+      "1": {
+        "title": "Antirust film",
+        "p": "Products covered by antirust film"
+      },
+      "2": {
+        "title": "Vacuum packing",
+        "p": "Vacuum packing protects your products from humidity and rust"
+      },
+      "3": {
+        "title": "Auto parts and CBU packing for transportation",
+        "p": "Made-to-order wooden or steel case for packing CBU"
+      }
+    },
+    "section2": {
+      "title": "Packing types and the packing operation",
+      "1": "Made-to-order wooden case based on product standards",
+      "2": "Palletizing that achieves higher loading efficiency",
+      "3": "Wooden cases",
+      "4": "Metal auto parts packing",
+      "5": "Chassis packing",
+      "6": "Auto seat packing"
+    }
+  },
+  "customs-clearance": {
+    "h1": "Customs Clearance",
+    "section1": {
+      "p": "We have handled customs clearance ourselves since the company establishment on September 30, 1987. Our customs clearance services include the application for the necessary licenses/permits and duty refund, and the procedures before and after customs clearance as well. Special customs clearance such as hand-carry and unaccompanied baggage, and customs clearance of dangerous goods, machinery, food and medical products is also available. In addition to our experienced staff, we have implemented on-line connection through EDI with all the related departments and we are a certified customs broker under the AEO program. Our customs clearance teams, consisting of 75 experienced staff, are located in Laem Chabang Port, Bangkok Port and Suvarnabhumi Airport as well as in Chiang Mai and Ayutthaya.",
+      "feature": {
+        "title": "Feature",
+        "h": "Acquired AEO certificate",
+        "p": "The Authorized Economic Operator (AEO) program has been established by the World Customs Organization (WCO) for achieving both international logistics security and logistics facilitation. We have been set the standards by the Thai Customs Department since April 2014 (AEO Reference No. THC570019).",
+        "img-title": "Authorized Economic Operator"
+      }
+    },
+    "section2": {
+      "title": "FAQ from customers",
+      "1": {
+        "1": "Our goods have arrived at the port but not been released yet. Why?",
+        "2": "We wanted to export the products urgently but could not. Why?",
+        "3": "Are there any duty benefits available to us?"
+      },
+      "2": "We also help you deal with and solve any problems related to customs clearance.",
+      "3": {
+        "export": {
+          "title": "",
+          "1": "Automobiles",
+          "2": "Auto parts",
+          "3": "Machinery",
+          "4": "Home appiliances",
+          "5": "Electronic parts",
+          "6": "Chemicals",
+          "7": "Textiles",
+          "p": "Our unique EDI system identifies a suitable code from the list of several tens of thousands of codes to ensure accurate and timely customs clearance."
+        },
+        "import": {
+          "title": "Import",
+          "1": "Garments",
+          "2": "Food",
+          "3": "Liquors",
+          "4": "Chemicals",
+          "5": "Toy",
+          "6": "Daily necessities",
+          "7": "Wood materials",
+          "p": "Our certified customs brokers are familiar with the different duty privileges in order to provide you with high-quality service."
+        }
+      }
+    }
+  },
+  "scm-solutions": {
+    "h1": "SCM Solutions",
+    "h2": "3PL business agency services",
+    "h3": "We receive your production plan, order and delivery date data, link them with the shipping schedule, inventory data (including inventory in transit) and the destination data, and then create the best-suited monthly delivery plan and delivery order automatically. We also provide support in preparing the shipping documents and SCM analysis data.",
+    "section1": {
+      "p": "Our unique \"Information Platform\" system is based on the Logistics x Technology approach to provide total support for supply chain management (SCM)",
+      "image": "/img/service/scm-solutions/en-015.jpeg"
+    },
+    "section2": {
+      "title": "Visualize the overall logistical process",
+      "feature": "Feature",
+      "platform": {
+        "title": "Information Platform",
+        "1": "Production plan",
+        "2": "Delivery date confirmation",
+        "3": "Order data",
+        "4": "Ordering",
+        "5": "Collection",
+        "6": "Packing",
+        "7": "Vanning",
+        "8": "BOOKING",
+        "9": "Documentation",
+        "10": "Export declaration",
+        "11": "Loading",
+        "12": "Issuing B/L",
+        "13": "Issuing A/N",
+        "14": "Import customs clearance",
+        "15": "Drayage",
+        "16": "Storage",
+        "17": "Delivery order",
+        "18": "Release",
+        "19": "Delivery"
+      },
+      "more": {
+        "title": "Logistics total information management",
+        "p": "Integrated management of the logistical data, from plan to completion of delivery. The required documents are provided, and other related documents are stored at the same time."
+      },
+      "1": "Data from different databases (e.g. WMS and the forwarding system) is linked with the \"Information Platform\". Your cargo data is visualized in an integrated manner throughout the logistical process from import/export, storage, to delivery.",
+      "2": "Combined with HACO Lab. and linked with SCM, the logistics cycle between suppliers and buyers, namely \"what, where and how many\", is visualized in a timely manner."
+    }
+  },
+  "haco-lab": {
+    "h1": "HACO Lab.",
+    "h2": "How HACO Lab. works",
+    "p": "In order to prevent the distribution containers from being lost, control of each individual container is required. However, the management needs a lot of work and is a difficult challenge for many companies. In order to solve such problems, we are providing HACO Lab., which links a \"logistics container\" with a smartphone app, records, and manages easily on the cloud. In Japan and Thailand, import duty on returnable containers is exempted under the laws, which means that the use of HACO Lab. could reduce cost. We, together with our business partners, provide one-stop efficient distribution container management solutions, from plan development and management to implementation, and help you to achieve the most optimized logistical operation.",
+    "section1": {
+      "1": {
+        "1": "Color code program",
+        "1-1": "Issue color code labels and attach to the distribution containers.",
+        "1-1-1": "Chameleon Code is a product and a registered trademark of SHIFT Co., Ltd.",
+        "1-2": "Download the app to your smartphone to be licensed.",
+        "1-3": "Scan the color code labels with your smartphone.",
+        "2": "RFID (Radio Frequency Identification)",
+        "2-p": "Attach an RFID label in which electronic data is input and read the data by an RFID handy reader.",
+        "2-1": "RFID label",
+        "2-1-p": "Issue the RFID label and attach it to the distribution container.",
+        "2-2": "RFID handy reader",
+        "2-2-p": "Read RFID label is read by the RFID handy reader.",
+        "2-3": "RFID handy reader available to read from a few meters away.",
+        "3": "Scanned data (e.g. time and location) is accumulated in cloud-based space.",
+        "other": "Location of the distribution containers can be checked easily on PC!"
+      }
+    },
+    "section2": {
+      "title": "Why HACO Lab.?",
+      "1": "You can enjoy import with duty exemption on returnable containers.",
+      "1-p": "Depending on local Customs laws.",
+      "2": "You can reduce cost by visualizing the distribution container inventory in order to prevent lost and slow-moving items.",
+      "3": "It is easy to introduce because it is not just a management system for logistics containers, but can be added to the current logistics mobile.",
+      "4": "You can easily use the app anywhere in the world because of smartphone app and cloud manadement.",
+      "button-jp": "Japan's",
+      "button-th": "Thailand's",
+      "click-to-contact": "Click here to contact us."
+    }
+  },
+  "branchs": {
+    "title": "Branchs",
+    "airport": "Airport Branch(Suvanabhumi Airport)",
+    "laem-chabang": "Laem Chabang Branch",
+    "prachinburi": "Prachinburi Branch",
+    "bangna": "Bangna KM. 39 DG Branch",
+    "bangpakong": "Bangpakong",
+    "ayutthaya": "Ayutthaya Branch",
+    "chiang-mai": "Chiang Mai Branch",
+    "bangkok": "Bangkok Branch"
+  },
+  "footer": {
+    "message": " The company receives investment promotion for the production of airconditioner and refrigeration parts, both for export and domestic sales. Additionally, the company has been certified in quality management with ISO 9001 and ISO 14001 standards. The registered capital is provided by Japanese investors."
+  },
+  "cookie": {
+    "topic": "Cookie policy",
+    "privacy-heading": "Privacy Notice",
+    "description": "Siam Nistrans Co., Ltd. (the “Company”) respects privacy right of the viewer or the user and understands your expectation that information provided through this website should be properly protected. We hereby announce the Cookie Policy (the “Cookie Policy”) which shall apply to this website.",
+    "cookie-use": {
+      "heading": "Company’s use of cookies",
+      "p": "A cookie is a small file containing letters and numbers that the Company store on your browser, the hard drive of your computer, tablet or mobile device. When you visit our website, the Company may collect information from you through cookies. This website uses different types of cookies including but not limited to as set out below."
+    },
+    "cookie-type": {
+      "heading": "Type of cookies used in our website",
+      "1-1": "Type of cookies",
+      "1-2": "Purposes",
+      "1-3": "Expiry",
+      "2-1": "Necessary cookies",
+      "2-2": "Necessary cookies are required for the operations of the website to ensure the security, simplicity, and integrity of functional use. They include, for example, cookies that enable basic functions such as page navigation or enable the viewer or user to log in and access to the member secure areas of the website. The website cannot function properly without these cookies. These cookies placed on your device do not store any personally identifiable information.",
+      "2-3": "10 years",
+      "3-1": "Performance cookies",
+      "3-2": "Performance cookies allow us to count the number of viewers of our website and traffic sources of such viewers. They enable us to understand how the viewer or user interacts with the website and which page is the most or the least popular by collecting and reporting information anonymously and to help us improve the website and provide user the better experience. If you do not allow these cookies, we will not know when you have visited our site and will not be able to monitor its processing performance.",
+      "3-3": "10 years",
+      "4-1": "Functionality cookies",
+      "4-2": "Functionality cookies may be set by the Company or by third party providers. They enable the website to operate in accordance with your preferences, for example, to recognize your username together with your password and remember how you customized the site for your future visits. If you do not allow these cookies, then some of the website services may not function properly.",
+      "4-3": "10 years",
+      "5-1": "Targeting cookies",
+      "5-2": "Targeting cookies may be set through our website by our advertising partners. They store data of your visit to our website, the pages you have visited and the links you have followed. The Company will use this information to make our website and the advertising displayed on it more relevant to your interests. The Company may also share this information with third parties for these purposes. If you do not allow these cookies, you will experience less targeted advertising.",
+      "5-3": "10 years"
+    },
+    "more-detail": {
+      "heading": "Additional information",
+      "p": "To learn more about personal data protection, your rights as a data subject and contact information of the Company, please visit our Privacy Notice at Here."
+    },
+    "cookie-policy": {
+      "heading": "Updates to this Cookie Policy",
+      "p": "The Company regularly reviews and, if appropriate, updates this Cookie Policy from time to time to ensure that your personal data is properly protected. Please refer to this page for the updated Cookie Policy."
+    },
+    "date": "Last updated: 01/06/2022"
+  },
+  "modal": {
+      "law": {
+          "jp":{
+              "title":"Japan's Customs Act",
+              "1":"Customs Tariff Act Section 14 (Unconditional duty exemption)",
+              "2":"Duty on the following goods to be imported shall be exempted in accordance with the provisions of the Cabinet Order:",
+              "3":"Clause 11: Containers (including similar goods) for goods exported from the country as prescribed under the Cabinet Order and used for such export or to be used for import.",
+              "4":"Customs Tariff Act Section 17 (Duty exemption on re-export)",
+              "5":"Duty on the following goods to be exported within one (1) year from the date of import permit shall be exempted in accordance with the provisions of the Cabinet Order:",
+              "6":"Clause 1 (ii) Containers for imported goods as prescribed under the Cabinet Order",
+              "7":"Clause 1 (iii) Goods used as a container for exported goods as prescribed under the Cabinet Order",
+              "8":"As of October 2019"
+          },
+          "th":{
+              "title":"Thailand's Customs Act",
+              "1":"Duty exemption on returnable containers for imported goods.",
+              "2":"On July 9, 2018, the Customs Bureau issued a notification (No.154 / 2561) to apply a tax exemption measure for returnable containers for imported cargo called \"return boxes\".",
+              "3":"※For details, please contact us."
+          }
+      },
+      "form":{
+          "name":"Name",
+          "company":"Company name",
+          "department":"Department",
+          "email":"Email",
+          "cEmail":"Email (confirm)",
+          "phone":"Phone",
+          "address":"address",
+          "subject":{
+              "transport":"Transport",
+              "warehouse":"Warehouse/storage",
+              "moving":"Moving",
+              "haco-lab":"HACO Lab.",
+              "career":"Careers",
+              "title":"Others"
+          },
+          "content":"content",
+          "privacy-policy":{
+              "1":"By clicking this checkbox, I agree to the",
+              "2":"privacy policy."
+          }
+      },
+      "close":"Close"
+  }
+}

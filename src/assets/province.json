@@ -1,0 +1,464 @@
+[
+  {
+    "id": "1",
+    "PROVINCE_CODE": "10",
+    "name": "กรุงเทพมหานคร",
+    "GEO_ID": 2
+  },
+  {
+    "id": "2",
+    "PROVINCE_CODE": "11",
+    "name": "สมุทรปราการ",
+    "GEO_ID": 2
+  },
+  {
+    "id": "3",
+    "PROVINCE_CODE": "12",
+    "name": "นนทบุรี",
+    "GEO_ID": 2
+  },
+  {
+    "id": "4",
+    "PROVINCE_CODE": "13",
+    "name": "ปทุมธานี",
+    "GEO_ID": 2
+  },
+  {
+    "id": "5",
+    "PROVINCE_CODE": "14",
+    "name": "พระนครศรีอยุธยา",
+    "GEO_ID": 2
+  },
+  {
+    "id": "6",
+    "PROVINCE_CODE": "15",
+    "name": "อ่างทอง",
+    "GEO_ID": 2
+  },
+  {
+    "id": "7",
+    "PROVINCE_CODE": "16",
+    "name": "ลพบุรี",
+    "GEO_ID": 2
+  },
+  {
+    "id": "8",
+    "PROVINCE_CODE": "17",
+    "name": "สิงห์บุรี",
+    "GEO_ID": 2
+  },
+  {
+    "id": "9",
+    "PROVINCE_CODE": "18",
+    "name": "ชัยนาท",
+    "GEO_ID": 2
+  },
+  {
+    "id": "10",
+    "PROVINCE_CODE": "19",
+    "name": "สระบุรี",
+    "GEO_ID": 2
+  },
+  {
+    "id": "11",
+    "PROVINCE_CODE": "20",
+    "name": "ชลบุรี",
+    "GEO_ID": 5
+  },
+  {
+    "id": "12",
+    "PROVINCE_CODE": "21",
+    "name": "ระยอง",
+    "GEO_ID": 5
+  },
+  {
+    "id": "13",
+    "PROVINCE_CODE": "22",
+    "name": "จันทบุรี",
+    "GEO_ID": 5
+  },
+  {
+    "id": "14",
+    "PROVINCE_CODE": "23",
+    "name": "ตราด",
+    "GEO_ID": 5
+  },
+  {
+    "id": "15",
+    "PROVINCE_CODE": "24",
+    "name": "ฉะเชิงเทรา",
+    "GEO_ID": 5
+  },
+  {
+    "id": "16",
+    "PROVINCE_CODE": "25",
+    "name": "ปราจีนบุรี",
+    "GEO_ID": 5
+  },
+  {
+    "id": "17",
+    "PROVINCE_CODE": "26",
+    "name": "นครนายก",
+    "GEO_ID": 2
+  },
+  {
+    "id": "18",
+    "PROVINCE_CODE": "27",
+    "name": "สระแก้ว",
+    "GEO_ID": 5
+  },
+  {
+    "id": "19",
+    "PROVINCE_CODE": "30",
+    "name": "นครราชสีมา",
+    "GEO_ID": 3
+  },
+  {
+    "id": "20",
+    "PROVINCE_CODE": "31",
+    "name": "บุรีรัมย์",
+    "GEO_ID": 3
+  },
+  {
+    "id": "21",
+    "PROVINCE_CODE": "32",
+    "name": "สุรินทร์",
+    "GEO_ID": 3
+  },
+  {
+    "id": "22",
+    "PROVINCE_CODE": "33",
+    "name": "ศรีสะเกษ",
+    "GEO_ID": 3
+  },
+  {
+    "id": "23",
+    "PROVINCE_CODE": "34",
+    "name": "อุบลราชธานี",
+    "GEO_ID": 3
+  },
+  {
+    "id": "24",
+    "PROVINCE_CODE": "35",
+    "name": "ยโสธร",
+    "GEO_ID": 3
+  },
+  {
+    "id": "25",
+    "PROVINCE_CODE": "36",
+    "name": "ชัยภูมิ",
+    "GEO_ID": 3
+  },
+  {
+    "id": "26",
+    "PROVINCE_CODE": "37",
+    "name": "อำนาจเจริญ",
+    "GEO_ID": 3
+  },
+  {
+    "id": "27",
+    "PROVINCE_CODE": "39",
+    "name": "หนองบัวลำภู",
+    "GEO_ID": 3
+  },
+  {
+    "id": "28",
+    "PROVINCE_CODE": "40",
+    "name": "ขอนแก่น",
+    "GEO_ID": 3
+  },
+  {
+    "id": "29",
+    "PROVINCE_CODE": "41",
+    "name": "อุดรธานี",
+    "GEO_ID": 3
+  },
+  {
+    "id": "30",
+    "PROVINCE_CODE": "42",
+    "name": "เลย",
+    "GEO_ID": 3
+  },
+  {
+    "id": "31",
+    "PROVINCE_CODE": "43",
+    "name": "หนองคาย",
+    "GEO_ID": 3
+  },
+  {
+    "id": "32",
+    "PROVINCE_CODE": "44",
+    "name": "มหาสารคาม",
+    "GEO_ID": 3
+  },
+  {
+    "id": "33",
+    "PROVINCE_CODE": "45",
+    "name": "ร้อยเอ็ด",
+    "GEO_ID": 3
+  },
+  {
+    "id": "34",
+    "PROVINCE_CODE": "46",
+    "name": "กาฬสินธุ์",
+    "GEO_ID": 3
+  },
+  {
+    "id": "35",
+    "PROVINCE_CODE": "47",
+    "name": "สกลนคร",
+    "GEO_ID": 3
+  },
+  {
+    "id": "36",
+    "PROVINCE_CODE": "48",
+    "name": "นครพนม",
+    "GEO_ID": 3
+  },
+  {
+    "id": "37",
+    "PROVINCE_CODE": "49",
+    "name": "มุกดาหาร",
+    "GEO_ID": 3
+  },
+  {
+    "id": "38",
+    "PROVINCE_CODE": "50",
+    "name": "เชียงใหม่",
+    "GEO_ID": 1
+  },
+  {
+    "id": "39",
+    "PROVINCE_CODE": "51",
+    "name": "ลำพูน",
+    "GEO_ID": 1
+  },
+  {
+    "id": "40",
+    "PROVINCE_CODE": "52",
+    "name": "ลำปาง",
+    "GEO_ID": 1
+  },
+  {
+    "id": "41",
+    "PROVINCE_CODE": "53",
+    "name": "อุตรดิตถ์",
+    "GEO_ID": 1
+  },
+  {
+    "id": "42",
+    "PROVINCE_CODE": "54",
+    "name": "แพร่",
+    "GEO_ID": 1
+  },
+  {
+    "id": "43",
+    "PROVINCE_CODE": "55",
+    "name": "น่าน",
+    "GEO_ID": 1
+  },
+  {
+    "id": "44",
+    "PROVINCE_CODE": "56",
+    "name": "พะเยา",
+    "GEO_ID": 1
+  },
+  {
+    "id": "45",
+    "PROVINCE_CODE": "57",
+    "name": "เชียงราย",
+    "GEO_ID": 1
+  },
+  {
+    "id": "46",
+    "PROVINCE_CODE": "58",
+    "name": "แม่ฮ่องสอน",
+    "GEO_ID": 1
+  },
+  {
+    "id": "47",
+    "PROVINCE_CODE": "60",
+    "name": "นครสวรรค์",
+    "GEO_ID": 2
+  },
+  {
+    "id": "48",
+    "PROVINCE_CODE": "61",
+    "name": "อุทัยธานี",
+    "GEO_ID": 2
+  },
+  {
+    "id": "49",
+    "PROVINCE_CODE": "62",
+    "name": "กำแพงเพชร",
+    "GEO_ID": 2
+  },
+  {
+    "id": "50",
+    "PROVINCE_CODE": "63",
+    "name": "ตาก",
+    "GEO_ID": 4
+  },
+  {
+    "id": "51",
+    "PROVINCE_CODE": "64",
+    "name": "สุโขทัย",
+    "GEO_ID": 2
+  },
+  {
+    "id": "52",
+    "PROVINCE_CODE": "65",
+    "name": "พิษณุโลก",
+    "GEO_ID": 2
+  },
+  {
+    "id": "53",
+    "PROVINCE_CODE": "66",
+    "name": "พิจิตร",
+    "GEO_ID": 2
+  },
+  {
+    "id": "54",
+    "PROVINCE_CODE": "67",
+    "name": "เพชรบูรณ์",
+    "GEO_ID": 2
+  },
+  {
+    "id": "55",
+    "PROVINCE_CODE": "70",
+    "name": "ราชบุรี",
+    "GEO_ID": 4
+  },
+  {
+    "id": "56",
+    "PROVINCE_CODE": "71",
+    "name": "กาญจนบุรี",
+    "GEO_ID": 4
+  },
+  {
+    "id": "57",
+    "PROVINCE_CODE": "72",
+    "name": "สุพรรณบุรี",
+    "GEO_ID": 2
+  },
+  {
+    "id": "58",
+    "PROVINCE_CODE": "73",
+    "name": "นครปฐม",
+    "GEO_ID": 2
+  },
+  {
+    "id": "59",
+    "PROVINCE_CODE": "74",
+    "name": "สมุทรสาคร",
+    "GEO_ID": 2
+  },
+  {
+    "id": "60",
+    "PROVINCE_CODE": "75",
+    "name": "สมุทรสงคราม",
+    "GEO_ID": 2
+  },
+  {
+    "id": "61",
+    "PROVINCE_CODE": "76",
+    "name": "เพชรบุรี",
+    "GEO_ID": 4
+  },
+  {
+    "id": "62",
+    "PROVINCE_CODE": "77",
+    "name": "ประจวบคีรีขันธ์",
+    "GEO_ID": 4
+  },
+  {
+    "id": "63",
+    "PROVINCE_CODE": "80",
+    "name": "นครศรีธรรมราช",
+    "GEO_ID": 6
+  },
+  {
+    "id": "64",
+    "PROVINCE_CODE": "81",
+    "name": "กระบี่",
+    "GEO_ID": 6
+  },
+  {
+    "id": "65",
+    "PROVINCE_CODE": "82",
+    "name": "พังงา",
+    "GEO_ID": 6
+  },
+  {
+    "id": "66",
+    "PROVINCE_CODE": "83",
+    "name": "ภูเก็ต",
+    "GEO_ID": 6
+  },
+  {
+    "id": "67",
+    "PROVINCE_CODE": "84",
+    "name": "สุราษฎร์ธานี",
+    "GEO_ID": 6
+  },
+  {
+    "id": "68",
+    "PROVINCE_CODE": "85",
+    "name": "ระนอง",
+    "GEO_ID": 6
+  },
+  {
+    "id": "69",
+    "PROVINCE_CODE": "86",
+    "name": "ชุมพร",
+    "GEO_ID": 6
+  },
+  {
+    "id": "70",
+    "PROVINCE_CODE": "90",
+    "name": "สงขลา",
+    "GEO_ID": 6
+  },
+  {
+    "id": "71",
+    "PROVINCE_CODE": "91",
+    "name": "สตูล",
+    "GEO_ID": 6
+  },
+  {
+    "id": "72",
+    "PROVINCE_CODE": "92",
+    "name": "ตรัง",
+    "GEO_ID": 6
+  },
+  {
+    "id": "73",
+    "PROVINCE_CODE": "93",
+    "name": "พัทลุง",
+    "GEO_ID": 6
+  },
+  {
+    "id": "74",
+    "PROVINCE_CODE": "94",
+    "name": "ปัตตานี",
+    "GEO_ID": 6
+  },
+  {
+    "id": "75",
+    "PROVINCE_CODE": "95",
+    "name": "ยะลา",
+    "GEO_ID": 6
+  },
+  {
+    "id": "76",
+    "PROVINCE_CODE": "96",
+    "name": "นราธิวาส",
+    "GEO_ID": 6
+  },
+  {
+    "id": "77",
+    "PROVINCE_CODE": "97",
+    "name": "บึงกาฬ",
+    "GEO_ID": 3
+  }
+]
