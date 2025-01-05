@@ -4,6 +4,7 @@
     {"title":"SASS","type":"sass"},
     {"title":"Bootstrap","type":"bootstrap"},
     {"title":"Tailwind CSS","type":"tailwindCss"},
+    {"title":"Material UI","type":"mui"},
     {"title":"MySQL","type":"mysql"},
     {"title":"PHP","type":"php"},
     {"title":"Codeigniter","type":"codeigniter"},
@@ -16,5 +17,5 @@
     {"title":"ReactJS","type":"reactJs"},
     {"title":"NextJS","type":"nextJs"},
     {"title":"JavaScript","type":"javaScript"},
-    {"title":"TypeSscript","type":"typeScript"}
+    {"title":"TypeScript","type":"typeScript"}
 ]

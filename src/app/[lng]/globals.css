@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sixtyfour:BLED,SCAN@0..100,-53..100&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
 
 :root {
@@ -21,23 +20,36 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Figtree", Arial, Helvetica, sans-serif;
-  /* font-family: Arial, Helvetica, sans-serif; */
 }
 .font-silk-screen{
   font-family: "Silkscreen";
 }
-.font-sixty-four{
-  font-family: 'Sixtyfour';
+
+.cursor i {
+  display: block;
+  width: 10px;
+  height: 4px;
+  bottom: 4px;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: blink;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: normal; /* not "linear" */
+  -webkit-animation-fill-mode: forwards;
+  opacity: 1;
 }
-.font-figtree{
-  font-family: "Figtree";
-}
-.font-doto{
-  font-family: "Doto",;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
-  font-variation-settings:
-    "ROND" 0;
+@keyframes blink {
+  0% {
+      opacity: 1;
+  }
+  80% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 0;
+  }
 }
