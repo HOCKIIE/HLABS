@@ -1,16 +1,20 @@
 export default function ExperienceSection(){
     return (
         <>
-        <section>
+        <section className="bg-gray-200 dark:bg-slate-800 mt-40 py-10">
             <div className="container">
-                <div className="grid grid-cols-12 gap-6 mt-40">
-                    <div className="col-span-12"><h3 className="text-center text-4xl font-bold text-slate-800 dark:text-slate-200 -tracking-tighter">EXPERIENCE</h3></div>
+                <div className="grid grid-cols-12 gap-6">
+                    <div className="col-span-12 mt-4"><h3 className="text-center text-4xl font-bold text-slate-800 dark:text-slate-200 -tracking-tighter">EXPERIENCE</h3></div>
                     <div className="col-span-12">
-                        <ol className="relative border-s border-gray-200 dark:border-gray-700">                  
-                            <li className="mb-10 ms-4">
-                                <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-white dark:border-blue-900 bg-blue-700"></div>
-                                <time className="mb-1 text-lg font-normal leading-none text-gray-400 dark:text-gray-500">April 2022 - December 2024</time>
-                                <h3 className="text-2xl font-semibold text-gray-900 dark:text-slate-300">Full Stack Developer</h3>
+                        <ol className="border-s-8 ms-8 border-dashed border-gray-800 dark:border-gray-400">                  
+                            <li className="mb-10">
+                                <div className="sticky top-[4.2rem] xl:top-[5.8rem]">
+                                <div className="absolute w-16 h-16 flex items-center justify-center rounded-full bg-indigo-500 -ms-9">
+                                        <div className="rounded-full bg-white w-10 h-10 text-3xl text-indigo-500 flex justify-center items-center"><span className="ont-extrabold">03</span></div>
+                                    </div>
+                                    <div className="block w-auto py-2 pe-2 text-lg font-normal text-gray-800 dark:text-gray-500">April 2022 - December 2024</div>
+                                </div>
+                                <h3 className="text-2xl font-semibold text-gray-900 dark:text-slate-300 my-3">Full Stack Developer</h3>
                                 <ul>
                                     <li className="text-lg leading-8 font-narmal text-gray-500 dark:text-gray-400">- Develop the website according follow requirement of the organization</li>
                                     <li className="text-lg leading-8 font-narmal text-gray-500 dark:text-gray-400">- Design and analysis of then company website system</li>
@@ -23,14 +27,15 @@ export default function ExperienceSection(){
                                     <li className="text-lg leading-8 font-narmal text-gray-500 dark:text-gray-400">- Develop UX/UI with Tailwind CSS + Ant</li>
                                     <li className="text-lg leading-8 font-narmal text-gray-500 dark:text-gray-400">- Create and develop text editor that can generate HTML based on Tailwind CSS formatting to support another of devices</li>
                                 </ul>
-                                <a href="#" className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">More <svg className="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                        </svg></a>
                             </li>
-                            <li className="mb-10 ms-4">
-                                <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-white dark:border-green-900 bg-green-700"></div>
-                                <time className="mb-1 text-lg font-normal leading-none text-gray-400 dark:text-gray-500">March 2020 - March 2022</time>
-                                <h3 className="text-2xl font-semibold text-gray-900 dark:text-slate-300">Full Stack Developer</h3>
+                            <li className="mb-10">
+                                <div className="sticky top-[4.2rem] xl:top-[5.8rem]">
+                                <div className="absolute w-16 h-16 flex items-center justify-center rounded-full bg-indigo-500 -ms-9">
+                                        <div className="rounded-full bg-white w-10 h-10 text-3xl text-indigo-500 flex justify-center items-center"><span className="ont-extrabold">02</span></div>
+                                    </div>
+                                    <time className="block w-auto py-2 pe-2 text-lg font-normal text-gray-800 dark:text-gray-500">March 2020 - March 2022</time>
+                                </div>
+                                <h3 className="text-2xl font-semibold text-gray-900 dark:text-slate-300 my-3-10">Full Stack Developer</h3>
                                 <ul>
                                     <li className="text-lg leading-8 font-narmal text-gray-500 dark:text-gray-400">- Design and analysis of then company website system</li>
                                     <li className="text-lg leading-8 font-narmal text-gray-500 dark:text-gray-400">- Design the database structure</li>
@@ -46,10 +51,14 @@ export default function ExperienceSection(){
                                     <li className="text-lg leading-8 font-narmal text-gray-500 dark:text-gray-400">- Learning of the JS Framework for develop Frontend better and more efficient</li>
                                 </ul>
                             </li>
-                            <li className="ms-4">
-                                <div className="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-white dark:border-yellow-900 bg-yellow-700"></div>
-                                <time className="mb-1 text-lg font-normal leading-none text-gray-400 dark:text-gray-500">August 2017 - February 2020</time>
-                                <h3 className="text-2xl font-semibold text-gray-900 dark:text-slate-300">Developer</h3>
+                            <li className="">
+                                <div className="sticky top-[4.2rem] xl:top-[5.8rem]">
+                                    <div className="absolute w-16 h-16 flex items-center justify-center rounded-full bg-indigo-500 -ms-9">
+                                        <div className="rounded-full bg-white w-10 h-10 text-3xl text-indigo-500 flex justify-center items-center"><span className="ont-extrabold">01</span></div>
+                                    </div>
+                                    <time className="block w-auto py-2 pe-2 text-lg font-normal text-gray-800 dark:text-gray-500">August 2017 - February 2020</time>
+                                </div>
+                                <h3 className="text-2xl font-semibold text-gray-900 dark:text-slate-300 my-3">Developer</h3>
                                 {/* <p className="text-lg font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements built on top of Tailwind CSS.</p> */}
                                 <ul>
                                     <li className="text-lg leading-8 font-narmal text-gray-500 dark:text-gray-400">- Design the database structure</li>

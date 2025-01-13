@@ -3,11 +3,17 @@ import { Link } from "@/i18n/routing"
 import ThemeModeSwitch from "../atom/ThemeModeSwitch";
 import Logo from "../atom/Logo";
 import { useEffect, useState } from "react";
+import MenuBtn from "../atom/MenuBtn";
+import { useGlobal } from "@/contexts/PageSettingContext";
 
 const MenuItems = [
     {
-        name:"Experience",
-        href:"/experience",
+        name:"Portfolio",
+        href:"/portfolio",
+    },
+    {
+        name:"Curriculum Vitae",
+        href:"/cv"
     },
     {
         name:"Tricks",
@@ -21,30 +27,28 @@ const MenuItems = [
 
 export default function Header(){
     const [stiky, setSticky] = useState(false);
-    const scrollHeader = () => {
-        if(window.scrollY >= 170){
-            console.log(window.scrollY )
-            setSticky(true)
-        }else{
-            setSticky(false)
-        }
-    }
+    const scrollHeader = () =>  setSticky(window.scrollY >= 170 ? true : false);
+    const {toggleSidebar} = useGlobal();
+
     useEffect(()=>{
         window.addEventListener('scroll',scrollHeader);
         return()=>{ window.addEventListener('scroll',scrollHeader); }
     },[])
     return (<>
-        <div className={`z-[200] ${stiky?`sticky bg-white/60 backdrop-blur-md dark:bg-black/60 dark:backdrop-blur-md transition-all duration-300 ease-linear top-0`:``}`}>
+        <div className={`header py-4 z-[200] ${stiky?`sticky bg-white/60 backdrop-blur-md dark:bg-black/60 dark:backdrop-blur-md transition-all duration-300 ease-linear top-0`:``}`}>
             <div className="container">
                 <div className="flex justify-between">
-                    <ul className="nav-menu h-full flex items-center justify-center ">
-                        <li><Link href="/" className="block"><Logo/></Link></li>
+                    <div className="">
+                        <Link href="/" className="block"><Logo/></Link>
+                    </div>
+                    <ul className="nav-menu h-full hidden xl:flex items-center justify-center">
                         {MenuItems.map((v,k)=>
-                            <li key={k}><Link href={v.href} className="item py-4 px-10 text-2xl block text-black hover:text-indigo-700 dark:text-slate-400 tracking-widest dark:hover:text-emerald-400 dark:hover:drop-shadow-md">{v.name}</Link></li>
+                            <li key={k}><Link href={v.href} className="item py-4 px-10 text-xl block text-black font-silk-screen hover:text-indigo-700 dark:text-slate-400 tracking-widest dark:hover:text-emerald-400 dark:hover:drop-shadow-md">{v.name}</Link></li>
                         )}
                     </ul>
-                    <div className="mode flex items-center">
+                    <div className="mode flex items-center gap-2">
                         <ThemeModeSwitch />
+                        <MenuBtn />
                     </div>
                 </div>
             </div>

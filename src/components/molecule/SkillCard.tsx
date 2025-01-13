@@ -28,8 +28,8 @@ interface IconProps { type: IconName; s:String; c:String;}
 
 const Icon: React.FC<IconProps> = ({ type,s,c }) => {
     // Mapping icons to conditions
-    const df = '#1e293b';
-    const  colour = c ? c : "#1e293b";
+    // const df = '#1e293b';
+    // const  colour = c ? c : "#1e293b";
 
     const iconMap: Record<IconName,any> = {
         html5: <SiHtml5 size={s?`${s}`:'100'}   className="text-slate-800 dark:text-slate-400"/>,
@@ -63,12 +63,12 @@ const Icon: React.FC<IconProps> = ({ type,s,c }) => {
     return <>{iconMap[type]}</>;
 };
 
-export const SkillCard = ({title,type,colour}:any) =>
+export const SkillCard = ({title,type}:any) =>
 {
     return (
-        <div className="col-span-6 md:col-span-4 xl:col-span-2">
+        <div className="col-span-6 md:col-span-3 xl:col-span-2">
             <div className="rounded-3xl overflow-hidden relative p-6 bg-slate-100 dark:bg-slate-900 hover:dark:bg-slate-800 transition-all duration-500 hover:bg-indigo-200 hover:transform hover:scale-105">
-                <p className="text-center text-xl mb-4 text-black dark:text-slate-300">{title}</p>
+                <p className="text-center text-base xl:text-xl tracking-wide mb-4 text-black dark:text-slate-300">{title}</p>
                 <div className="flex items-center justify-center z-20"><Icon type={type} s="100" c="#1f2937" /></div>
                 <div className="absolute top-6 left-5 opacity-[0.03]">
                     <Icon type={type} s="300" c="#9ca3af"  />
@@ -81,9 +81,9 @@ export const SkillCard = ({title,type,colour}:any) =>
 export const ToolsCard = ({title,type}:any) => 
 {
     return (
-        <div className="col-span-6 md:col-span-4 xl:col-span-2">
+        <div className="col-span-6 md:col-span-3 xl:col-span-2">
             <div className="rounded-3xl p-6 bg-slate-100 dark:bg-slate-900 hover:dark:bg-slate-800 transition-all duration-500 hover:bg-indigo-100 hover:transform hover:rotate-3">
-                <p className="text-center text-xl mb-4 text-black dark:text-slate-300">{title}</p>
+                <p className="text-center text-base xl:text-xl mb-4 text-black dark:text-slate-300">{title}</p>
                 <div className="p-4"><Icon type={type} s="100" c="#1e293b" /></div>
             </div>
         </div>

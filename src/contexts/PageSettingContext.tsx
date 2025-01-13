@@ -7,20 +7,33 @@ import {
   useMemo,
   use,
 } from "react";
+interface GlobalContextType {
+  isSidebarOpen: boolean;
+  toggleSidebar: () => void;
+}
 
-export const PageSettingContext = createContext({});
-const primaryColor = "#0EA1DB";
+export const PageSettingContext = createContext<GlobalContextType | undefined>(undefined);
 
 export default function PageSettingProvider({
   children,
   pageSetting,
   lng,
 }: any) {
-  const [navMenuOpen, setNavMenuOpen] = useState(false);
+
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
 
   return (
-    <PageSettingContext.Provider value={{ primaryColor, navMenuOpen, setNavMenuOpen }}>
+    <PageSettingContext.Provider value={{ isSidebarOpen, toggleSidebar }}>
       {children}
     </PageSettingContext.Provider>
   );
 }
+
+export const useGlobal = (): GlobalContextType => {
+  const context = useContext(PageSettingContext);
+  if (!context) {
+    throw new Error("useGlobal must be used within a GlobalProvider");
+  }
+  return context;
+};

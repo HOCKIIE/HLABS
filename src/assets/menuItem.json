@@ -1,42 +1,18 @@
 [
   {
-    "title": {
-      "en": "Home",
-      "th": "Home",
-      "jp": "ホーム"
-    },
-    "href": "/"
+      "name":"Portfolio",
+      "href":"/portfolio"
   },
   {
-    "title": {
-      "th": "Our Business",
-      "en": "Our Business",
-      "jp": "私たちの事業"
-    },
-    "href": "/#our-business"
+      "name":"Curriculum Vitae",
+      "href":"/cv"
   },
   {
-    "title": {
-      "th": "About Us",
-      "en": "About Us",
-      "jp": "会社案内"
-    },
-    "href": "/about-us"
+      "name":"Tricks",
+      "href":"/tricks"
   },
   {
-    "title": {
-      "th": "News",
-      "en": "News",
-      "jp": "ブログ"
-    },
-    "href": "/news-activity"
-  },
-  {
-    "title": {
-      "th": "Contact",
-      "en": "Contact",
-      "jp": "お問い合わせ"
-    },
-    "href": "#contact"
+      "name":"Contact",
+      "href":"/contact"
   }
 ]

@@ -10,10 +10,11 @@ import { ThemeProvider } from "next-themes"
 
 
 import { Silkscreen,Roboto,Jersey_10,Press_Start_2P,VT323,DotGothic16,Handjet } from "next/font/google";
-import "./globals.css";
+import "./globals.scss";
 import BackGround from "@/components/layouts/BackGround";
 import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
+import Sidebar from "@/components/layouts/Sidebar";
 
 const SilkScreenFont = Silkscreen({variable:"--font-silkscreen",subsets:["latin"],weight: "400"});
 const roboto = Roboto({weight: '400',subsets:['latin']})
@@ -41,16 +42,17 @@ export default async function RootLayout({
   return (
     <html lang={lng}>
       <ThemeProvider attribute="class">
-          <body className={`scroll-smooth bg-white dark:bg-gradient-to-tr dark:from-slate-950 dark:to-slate-800 ${habdjet.className}`}>
           <PageSettingContext lng={lng}>
-              <NextIntlClientProvider messages={messages} >
-                <Header />
-                {children}
-                <BackGround />
-                <Footer />
-              </NextIntlClientProvider>
+            <body className={`scroll-smooth bg-white dark:bg-gradient-to-tr dark:from-slate-950 dark:to-slate-800 ${roboto.className}`}>
+                <NextIntlClientProvider messages={messages} >
+                  <Header />
+                  {children}
+                  <BackGround />
+                  <Footer />
+                  <Sidebar />
+                </NextIntlClientProvider>
+            </body>
           </PageSettingContext>
-          </body>
       </ThemeProvider>
     </html>
   );
