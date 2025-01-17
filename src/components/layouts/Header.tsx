@@ -35,7 +35,7 @@ export default function Header(){
         return()=>{ window.addEventListener('scroll',scrollHeader); }
     },[])
     return (<>
-        <div className={`header py-4 z-[200] ${stiky?`sticky bg-white/60 backdrop-blur-md dark:bg-black/60 dark:backdrop-blur-md transition-all duration-300 ease-linear top-0`:``}`}>
+        <div className={`header py-2 xl:py-3 z-[200] ${stiky?`sticky bg-white/60 backdrop-blur-md dark:bg-black/60 dark:backdrop-blur-md transition-all duration-300 ease-linear top-0`:``}`}>
             <div className="container">
                 <div className="flex justify-between">
                     <div className="">
@@ -43,7 +43,7 @@ export default function Header(){
                     </div>
                     <ul className="nav-menu h-full hidden xl:flex items-center justify-center">
                         {MenuItems.map((v,k)=>
-                            <li key={k}><Link href={v.href} className="item py-4 px-10 text-xl block text-black font-silk-screen hover:text-indigo-700 dark:text-slate-400 tracking-widest dark:hover:text-emerald-400 dark:hover:drop-shadow-md">{v.name}</Link></li>
+                            <li key={k}><Link href={v.href} className="item block py-4 px-10 text-xl transition-all ease-in-out duration-500 text- text-slate-800 dark:text-slate-300 font-silk-screen hover:text-indigo-700 dark:hover:text-emerald-500">{v.name}</Link></li>
                         )}
                     </ul>
                     <div className="mode flex items-center gap-2">

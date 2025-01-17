@@ -15,6 +15,7 @@ import BackGround from "@/components/layouts/BackGround";
 import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
 import Sidebar from "@/components/layouts/Sidebar";
+import BackToTopButton from "@/components/atom/BackToTopButton";
 
 const SilkScreenFont = Silkscreen({variable:"--font-silkscreen",subsets:["latin"],weight: "400"});
 const roboto = Roboto({weight: '400',subsets:['latin']})
@@ -47,8 +48,9 @@ export default async function RootLayout({
                 <NextIntlClientProvider messages={messages} >
                   <Header />
                   {children}
-                  <BackGround />
+                  {/* <BackGround /> */}
                   <Footer />
+                  <BackToTopButton />
                   <Sidebar />
                 </NextIntlClientProvider>
             </body>

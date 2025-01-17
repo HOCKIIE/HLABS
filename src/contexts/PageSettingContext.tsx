@@ -2,10 +2,7 @@
 import {
   createContext,
   useContext,
-  useEffect,
   useState,
-  useMemo,
-  use,
 } from "react";
 interface GlobalContextType {
   isSidebarOpen: boolean;
@@ -15,9 +12,7 @@ interface GlobalContextType {
 export const PageSettingContext = createContext<GlobalContextType | undefined>(undefined);
 
 export default function PageSettingProvider({
-  children,
-  pageSetting,
-  lng,
+  children
 }: any) {
 
   const [isSidebarOpen, setSidebarOpen] = useState(false);

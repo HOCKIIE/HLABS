@@ -28,7 +28,7 @@ export default function ThemeModeSwitch()
         <div ref={dropdownRef} className="relative">
             <button
                 onClick={()=>setDropdown(!dropdown)}
-                className='border border-slate-300 bg-slate-100 dark:border-slate-600 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-600 transition-all duration-100 text-indigo-500 dark:text-emerald-500 p-2 text-2xl rounded-full'
+                className='dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all duration-100 text-indigo-500 dark:text-emerald-500 p-[6px] text-2xl rounded-full'
             >
                 {currentTheme=='dark'&&<MdOutlineDarkMode fontSize={'20px'}/>}
                 {currentTheme=='light'&&<MdOutlineLightMode fontSize={'20px'}/>}
