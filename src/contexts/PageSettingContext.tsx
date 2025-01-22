@@ -11,9 +11,7 @@ interface GlobalContextType {
 
 export const PageSettingContext = createContext<GlobalContextType | undefined>(undefined);
 
-export default function PageSettingProvider({
-  children
-}: any) {
+export default function PageSettingProvider({children}:any) {
 
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);

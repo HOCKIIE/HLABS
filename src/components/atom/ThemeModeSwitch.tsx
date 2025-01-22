@@ -1,4 +1,4 @@
-"use client"
+
 import { useTheme } from "next-themes";
 import { useState, useRef, useEffect } from "react";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
@@ -8,7 +8,7 @@ export default function ThemeModeSwitch()
 {
     const { systemTheme, theme, setTheme } = useTheme();
     const currentTheme = theme === 'system' ? systemTheme : theme;
-    const [dropdown, setDropdown] = useState<Boolean>(false);
+    const [dropdown, setDropdown] = useState<boolean>(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
     const themeToggle = (set:string) => {
         setTheme(set)
@@ -26,26 +26,25 @@ export default function ThemeModeSwitch()
 
     return (
         <div ref={dropdownRef} className="relative">
-            <button
-                onClick={()=>setDropdown(!dropdown)}
+            <button onClick={()=>setDropdown(!dropdown)}
                 className='dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all duration-100 text-indigo-500 dark:text-emerald-500 p-[6px] text-2xl rounded-full'
             >
-                {currentTheme=='dark'&&<MdOutlineDarkMode fontSize={'20px'}/>}
-                {currentTheme=='light'&&<MdOutlineLightMode fontSize={'20px'}/>}
-                {currentTheme=='system'&&<RiComputerLine fontSize={'20px'}/>}
+                {currentTheme=='dark'&&<MdOutlineDarkMode className="w-[20px] h-[20px]"/>}
+                {currentTheme=='light'&&<MdOutlineLightMode className="w-[20px] h-[20px]"/>}
+                {currentTheme=='system'&&<RiComputerLine className="w-[20px] h-[20px]"/>}
             </button>
             <div id="dropdown" className={`${!dropdown?'hidden ':''}absolute mt-1 right-0 z-10 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700`}>
-                <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-                    <li>
-                        <a onClick={()=>themeToggle('light')} className={`flex gap-2 px-4 py-2${theme=='light'?` text-indigo-400 dark:text-emerald-500`:``} hover:bg-gray-100 dark:hover:bg-gray-600 cursor-pointer`}><MdOutlineLightMode fontSize={'20px'}/> Light</a>
-                    </li>
-                    <li>
-                        <a onClick={()=>themeToggle('dark')} className={`flex gap-2 px-4 py-2${theme=='dark'?` text-indigo-400 dark:text-emerald-500 `:``} hover:bg-gray-100 dark:hover:bg-gray-600 cursor-pointer`}><MdOutlineDarkMode fontSize={'20px'}/> Dark</a>
-                    </li>
-                    <li>
-                        <a onClick={()=>themeToggle('system')} className={`flex gap-2 px-4 py-2${theme=='system'?` text-indigo-400 dark:text-emerald-500 `:``} hover:bg-gray-100 dark:hover:bg-gray-600 cursor-pointer`}><RiComputerLine fontSize={`20px`}/> System</a>
-                    </li>
-                </ul>
+                <div className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                    <div>
+                        <button onClick={()=>themeToggle('light')} className={`flex w-full gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 cursor-pointer ${theme=='light'?`text-indigo-400 dark:text-emerald-500`:``}`}><MdOutlineLightMode fontSize={'20px'}/> Light</button>
+                    </div>
+                    <div>
+                        <button onClick={()=>themeToggle('dark')} className={`flex w-full gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 cursor-pointer ${theme=='dark'?`text-indigo-400 dark:text-emerald-500`:``}`}><MdOutlineDarkMode fontSize={'20px'}/> Dark</button>
+                    </div>
+                    <div>
+                        <button onClick={()=>themeToggle('system')} className={`flex w-full gap-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 cursor-pointer ${theme=='system'?`text-indigo-400 dark:text-emerald-500`:``}`}><RiComputerLine fontSize={`20px`}/> System</button>
+                    </div>
+                </div>
             </div>
         </div>
     )

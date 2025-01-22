@@ -1,14 +1,15 @@
+"use client"
 export default function Footer()
 {
     return (
-        <>
+        <footer>
             <div>
-                <div className="bg-gray-200 backdrop-blur dark:bg-black/20 dark:backdrop-blur-md min-h-[100px] mt-20 text-indigo-300">
+                <div className="bg-gray-500 dark:bg-gray-700 min-h-[15px] mt-20 text-gray-950 dark:text-emerald-500">
                     <div className="container">
-                        <strong>FOOTER</strong>
+                        <strong>&copy; {new Date().getFullYear()} HLABS</strong>
                     </div>
                 </div>
             </div>
-        </>
+        </footer>
     )
 }

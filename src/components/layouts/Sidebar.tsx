@@ -8,11 +8,7 @@ import {useGlobal} from "@/contexts/PageSettingContext";
 export default function Sidebar()
 {
     const {isSidebarOpen, toggleSidebar} = useGlobal();
-
-    const handleLinkClick = () => {
-        toggleSidebar(); // Close the sidebar when a link is clicked
-      };
-
+    const handleLinkClick = () => toggleSidebar();
       
     return (<>
         <div className={`sidebar ${isSidebarOpen?`open`:``}`}>

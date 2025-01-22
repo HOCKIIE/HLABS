@@ -13,7 +13,10 @@ const config: Config = {
         primaryColor: "#3562AE",
         background: "var(--background)",
         foreground: "var(--foreground)",
-      }
+      },
+      display: {
+        ruby: 'ruby',
+      },
     },
     container: {
       // you can configure the container to be centered

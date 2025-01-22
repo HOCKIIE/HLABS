@@ -1,0 +1,20 @@
+[{
+    "date":"2012 - 2014",
+    "qualificationHTML":"Bachelor of Business<br className=\"md:hidden\"/> Administration",
+    "qualification":"Bachelor of Business Administration",
+    "institutionHTML":"Business Computer, Chiang Mai<br/> Rajabhat University",
+    "institution":"Business Computer, Chiang Mai Rajabhat University"
+},
+{
+    "date":"2011 - 2013",
+    "qualification":"High Vocational Certificate",
+    "qualificationHTML":"High Vocational Certificate",
+    "institutionHTML":"Business Computer,<br className=\"md:hidden\"/> Nan Technical College",
+    "institution":"Business Computer, Nan Technical College"
+},{
+    "date":"2009 - 2011",
+    "qualification":"Vocational Certificate",
+    "qualificationHTML":"Vocational Certificate",
+    "institutionHTML":"Business Computer,<br className=\"md:hidden\"/> Nan Technical College",
+    "institution":"Business Computer,Nan Technical College"
+}]

@@ -7,14 +7,26 @@
             "list":[
                 "- Develop the website according follow requirement of the organization",
                 "- Design and analysis of then company website system",
-                "- Collaborate with UI/UX team",
+                "- Collaborate with UX/UI Designer team",
                 "- <strong>For Customer</strong> Develop the website according from requirement and template.",
-                "- Develop Frontend and back-end website with Laravel framework v8.x",
+                "- Develop Frontend and Backend website with Laravel framework v8.x",
                 "- Develop UX/UI with Bootstrap v5",
                 "- Develop Frontend website with React.js served by Express.js (and add TypeScript)",
                 "- Develop Backend website with Node.js + Express.js + MongoDB",
                 "- Develop UX/UI with Tailwind CSS + Ant",
                 "- Create and develop text editor that can generate HTML based on Tailwind CSS formatting to support another of devices"
+            ],
+            "pure":[
+                "Develop the website according follow requirement of the organization",
+                "Design and analysis of then company website system",
+                "Collaborate with UX/UI Designer team",
+                "For Customer Develop the website according from requirement and template.",
+                "Develop Frontend and Backend website with Laravel framework v8.x",
+                "Develop UX/UI with Bootstrap v5",
+                "Develop Frontend website with React.js served by Express.js (and add TypeScript)",
+                "Develop Backend website with Node.js + Express.js + MongoDB",
+                "Develop UX/UI with Tailwind CSS + Ant",
+                "Create and develop text editor that can generate HTML based on Tailwind CSS formatting to support another of devices"
             ]
         }
     },
@@ -29,13 +41,27 @@
                 "- Develop the website according follow requirement of the organization",
                 "- <strong>Company Side</strong> (the company want to hire candidate) search for applicants, invite job interview on the website. Candidate Side (Candidate want to find a job) job search, accept/reject job interview invitation.",
                 "- <strong>Develop website at-once.info</strong> website that collects business in Thailand . Division by category to trade between business and business together with the purpose of meeting business needs (B2B)",
-                "- Develop Frontend and back-end website with Laravel framework v7.x and upgrade to v8.x",
-                "- Develop UX, UI with Bootstrap v4",
+                "- Develop Frontend and Backend website with Laravel framework v7.x and upgrade to v8.x",
+                "- Develop UI with Bootstrap v4",
                 "- Using jQuery, Ajax as a website development tooling",
-                "- Change jQuery to javascriptv and use Axios intead of Ajax",
+                "- Change jQuery to javascriptv and use Axios instead of Ajax",
                 "- Create and develop charts to summarize website traffic data and other contents with Highcharts - interactive javascript charts library",
                 "- Create and develop text editor that can generate HTML based on bootstrap formatting to support another of devices",
                 "- Learning of the JS Framework for develop Frontend better and more efficient"
+            ],
+            "pure":[
+                "Design and analysis of then company website system",
+                "Design the database structure",
+                "Develop the website according follow requirement of the organization",
+                "Company Side (the company want to hire candidate) search for applicants, invite job interview on the website. Candidate Side (Candidate want to find a job) job search, accept/reject job interview invitation.",
+                "Develop website at-once.info website that collects business in Thailand . Division by category to trade between business and business together with the purpose of meeting business needs (B2B)",
+                "Develop Frontend and Backend website with Laravel framework v7.x and upgrade to v8.x",
+                "Develop UI with Bootstrap v4",
+                "Using jQuery, Ajax as a website development tooling",
+                "Change jQuery to javascriptv and use Axios instead of Ajax",
+                "Create and develop charts to summarize website traffic data and other contents with Highcharts - interactive javascript charts library",
+                "Create and develop text editor that can generate HTML based on bootstrap formatting to support another of devices",
+                "Learning of the JS Framework for develop Frontend better and more efficient"
             ]
         }
     },
@@ -47,9 +73,9 @@
                 "- Design the database structure",
                 "- Design and analysis system",
                 "- Create and develop web applications",
-                "- Develop by PHP language and writingin a framework style (Codeigniter, Laravel)",
+                "- Develop by PHP language and writing in a framework style (Codeigniter, Laravel)",
                 "- Use jQuery",
-                "- Develop UX, UI to provide better experience for user",
+                "- Develop UX/UI to provide better experience for user",
                 "- Develop a profile website",
                 "- Develop E-Commerce website",
                 "- Develop the website according follow requirement of the organization",
@@ -57,6 +83,20 @@
                 "- Writing HTML to support seo",
                 "- Create login function with Facebook, Gmail",
                 "- Changed from codeigniter v3 to Laravel v5.x and developt to v7.x"
+            ],
+            "pure":[
+                "Design the database structure",
+                "Design and analysis system",
+                "Create and develop web applications",
+                "Develop by PHP language and writing in a framework style (Codeigniter, Laravel)",
+                "Develop UX/UI to provide better experience for user",
+                "Develop a profile website",
+                "Develop E-Commerce website",
+                "Develop the website according follow requirement of the organization",
+                "Create credit card payment system with KBANK payment gatway",
+                "Writing HTML to support seo",
+                "Create login function with Facebook, Gmail",
+                "Changed from codeigniter v3 to Laravel v5.x and developt to v7.x"
             ]
          }
     }

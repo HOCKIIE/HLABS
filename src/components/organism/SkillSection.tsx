@@ -9,7 +9,7 @@ export default function SkillSection(){
                     <div className="col-span-12">
                         <h3 className="text-5xl font-bold text-center text-slate-800 dark:text-slate-200 -tracking-tighter">SKILLS</h3>
                     </div>
-                    {Skill.map((v,k)=> <SkillCard key={k} title={v.title} type={v.type} /> )} 
+                    {Skill.map((v,k)=> v.icon && <SkillCard key={k} title={v.title} type={v.type} /> )} 
                 </div>
             </div>
         </section>
