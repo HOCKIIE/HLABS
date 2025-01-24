@@ -32,6 +32,7 @@ const config: Config = {
         '2xl': '1302px',
       },
     },
+   
   },
   plugins: [],
 };

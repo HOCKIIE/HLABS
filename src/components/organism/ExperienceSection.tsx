@@ -47,7 +47,7 @@ export default function ExperienceSection(){
                             >
                             </div>
                             <div className="relative">
-                                {exp.map(({date,position,description}:any,index:number)=>
+                                {exp.map(({date,position,underline,description}:any,index:number)=>
                                     <div 
                                         key={index}
                                         data-index={index}
@@ -61,7 +61,9 @@ export default function ExperienceSection(){
                                             </svg>
                                         </div>
                                         <div className="ms-5 mt-[-1.7rem] text-lg font-normal text-gray-800 dark:text-gray-500">{date}</div>
-                                        <div className="ms-4 text-2xl font-semibold text-gray-900 dark:text-slate-300 my-3 block chonky-underline-blue">{position}</div>
+                                        <div className="ms-4 text-2xl font-[950] text-gray-900 dark:text-slate-100 my-3">
+                                            <span className={underline?underline:''}>{position}</span>
+                                        </div>
                                         {description.list && <div className="ms-4 mt-2" >
                                             {description.list.map((v:string,k:number)=>
                                                 <SafeHTML key={index+k} html={v} className="text-lg leading-8 font-narmal text-gray-500 dark:text-gray-400"/>

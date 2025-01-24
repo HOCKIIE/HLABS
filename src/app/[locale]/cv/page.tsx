@@ -26,7 +26,6 @@ export default function Resume(){
                                     <Image src="/image/IMG_0281.jpg" alt="Suphawat Kongson" width="200" height="200" className="w-full" quality={100}/>
                                 </div>
                             </div>
-                            
                         </div>
                         <div className="p-4 block md:block xl:hidden">
                             <h1 className="text-center text-3xl md:text-4xl xl:text-7xl text-slate-300 font-bold bg-gradient-to-r dark:from-emerald-400 dark:to-indigo-500 dark:bg-clip-text dark:text-transparent">SUPHAWAT KONGSON</h1>

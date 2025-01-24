@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PageSettingContext from "@/contexts/PageSettingContext";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getLocale, getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "next-themes"
@@ -21,31 +21,26 @@ export const metadata: Metadata = {
   description: "HLABS",
 };
 
-export default async function RootLayout({ children, params }: Readonly<{ children: React.ReactNode; params:any }>)
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>)
 {
-
-  const {locale} = params;
+  const locale = await getLocale();
   const messages = await getMessages();
-  if (!routing.locales.includes(locale as any | string[])) {
-    notFound();
-  }
-  if (!messages) {
-    return <div>Error: Translation data not found for locale &quot;{locale}&quot;</div>;
-  }
+  if (!routing.locales.includes(locale as any | string[])) notFound();
+
   return (
     <html lang={locale}>
       <body className={`scroll-smooth bg-white dark:bg-gradient-to-tr dark:from-slate-950 dark:to-slate-800 ${poppins.className}`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <PageSettingContext>
-            <NextIntlClientProvider messages={messages} >
-              <Header />
-              {children}
-              <Footer />
-              <BackToTopButton />
-              <Sidebar />
-            </NextIntlClientProvider>
-          </PageSettingContext>
-        </ThemeProvider>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <PageSettingContext>
+              <NextIntlClientProvider locale={locale} messages={messages} >
+                <Header />
+                {children}
+                <Footer />
+                <BackToTopButton />
+                <Sidebar />
+              </NextIntlClientProvider>
+            </PageSettingContext>
+          </ThemeProvider>
       </body>
     </html>
   );

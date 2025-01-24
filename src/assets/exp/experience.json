@@ -2,6 +2,7 @@
     {
         "date":"April 2022 - December 2024",
         "position":"Full Stack Developer",
+        "underline":"chonky-underline-megenta",
         "description":{
             "text":"",
             "list":[
@@ -33,6 +34,7 @@
     {
         "date":"March 2020 - March 2022",
         "position":"Full Stack Developer",
+        "underline":"chonky-underline-blue",
         "description":{
             "text":"",
             "list":[
@@ -68,6 +70,7 @@
     {
         "date":"August 2017 - February 2020",
         "position":"Developer",
+        "underline":"chonky-underline-yellow",
         "description":{
             "list":[
                 "- Design the database structure",
