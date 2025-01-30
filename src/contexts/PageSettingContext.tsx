@@ -2,11 +2,27 @@
 import {
   createContext,
   useContext,
+  useEffect,
   useState,
 } from "react";
+import { useTheme } from "next-themes";
+
 interface GlobalContextType {
   isSidebarOpen: boolean;
   toggleSidebar: () => void;
+  myCursor: any;
+  cursorStyle: any;
+}
+interface CursorType {
+  x: number;
+  y: number;
+  hover: boolean;
+}
+interface CursorStyle {
+  backgroundColor: string;
+  transform:string;
+  borderStyle:string;
+  borderWidth:string;
 }
 
 export const PageSettingContext = createContext<GlobalContextType | undefined>(undefined);
@@ -14,10 +30,46 @@ export const PageSettingContext = createContext<GlobalContextType | undefined>(u
 export default function PageSettingProvider({children}:any) {
 
   const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [myCursor, setMyCursor] = useState<CursorType>({ x: 0, y: 0, hover:false });
+  const [cursorStyle, setCursorStyle] = useState<CursorStyle>({
+    backgroundColor:'rgba(0,0,0,0)',
+    transform: "translate(-50%, -50%)",  
+    borderStyle:'none',
+    borderWidth:'0'
+  });
+
   const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
+  const {theme} = useTheme();
+  // const thisTheme = (document.getElementsByTagName('html') as HTMLCollectionOf<HTMLElement>)[0].getAttribute('class');
+  const handleMouseMove = (e:MouseEvent) => {
+    const onTarget = e.target as HTMLElement;
+    const el = onTarget.closest('a') || onTarget.closest('button') || onTarget.closest('.checkbox') || onTarget.closest('.card-item') || onTarget.closest('.spinnerCube');
+    if(el) {
+      setMyCursor({x: e.clientX, y: e.clientY, hover:true});
+      setCursorStyle({
+        borderStyle:'none',
+        borderWidth:'0px',
+        backgroundColor:theme=='dark' ? 'rgb(243,242,249)' : 'rgba(96,104,135,.5)',
+        transform:'translateX(-50%) translateY(-50%) scale(2)'
+      });
+    }else{
+      setMyCursor({x: e.clientX, y: e.clientY, hover:false});
+      setCursorStyle({
+        borderStyle:'solid',
+        borderWidth:'1px',
+        backgroundColor: theme=='dark' ? 'rgba(0,0,0,0)':'',
+        transform:'translateX(-50%) translateY(-50%)'
+      });
+    }
+  }
+
+  useEffect(()=>{
+    document.addEventListener("mousemove", handleMouseMove)
+    return () => document.removeEventListener("mousemove",handleMouseMove)
+  },[theme]);
 
   return (
-    <PageSettingContext.Provider value={{ isSidebarOpen, toggleSidebar }}>
+    <PageSettingContext.Provider value={{ isSidebarOpen, toggleSidebar, myCursor, cursorStyle}}>
       {children}
     </PageSettingContext.Provider>
   );

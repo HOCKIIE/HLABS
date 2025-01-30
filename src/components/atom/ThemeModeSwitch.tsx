@@ -11,8 +11,8 @@ export default function ThemeModeSwitch()
     const [dropdown, setDropdown] = useState<boolean>(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
     const themeToggle = (set:string) => {
-        setTheme(set)
-        setDropdown(!dropdown)
+        setTheme(set);
+        setDropdown(!dropdown);
     }
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {

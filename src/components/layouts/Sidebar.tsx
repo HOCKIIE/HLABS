@@ -14,7 +14,7 @@ export default function Sidebar()
     const locale = useLocale();
       
     return (<>
-        <div className={`sidebar ${isSidebarOpen?`open`:``}`}>
+        <div className={`sidebar ${isSidebarOpen?`open`:``} print:hidden`}>
             <div className={`top-0 right-0 py-3 bg-white/60 backdrop-blur dark:bg-black/60 dark:backdrop-blur-md h-full z-[300]`}>
                 <div className="btn-close flex justify-end pe-4">
                     <button onClick={handleLinkClick}>

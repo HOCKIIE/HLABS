@@ -42,7 +42,7 @@ export default function Header(){
     },[])
 
     return (<>
-        <div className={`header py-2 xl:py-3 z-[200] ${stiky?`sticky bg-white/60 backdrop-blur-md dark:bg-black/60 dark:backdrop-blur-md transition-all duration-300 ease-linear top-0`:``}`}>
+        <div className={`header py-2 xl:py-3 z-[200] print:hidden ${stiky?`sticky bg-white/60 backdrop-blur-md dark:bg-black/60 dark:backdrop-blur-md transition-all duration-300 ease-linear top-0`:``}`}>
             <div className="container">
                 <div className="flex justify-between">
                     <div className="">

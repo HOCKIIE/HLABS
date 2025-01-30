@@ -11,6 +11,7 @@ import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
 import Sidebar from "@/components/layouts/Sidebar";
 import BackToTopButton from "@/components/atom/BackToTopButton";
+import Mouse from "@/components/atom/Mouse";
 
 const roboto = Roboto({weight: ['400','700'],subsets:['latin']});
 const robotoMono = Roboto_Mono({weight: ['400','700'],subsets:['latin']});
@@ -29,7 +30,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
 
   return (
     <html lang={locale}>
-      <body className={`scroll-smooth bg-white dark:bg-gradient-to-tr dark:from-slate-950 dark:to-slate-800 ${poppins.className}`}>
+      <body className={`scroll-smooth bg-white dark:bg-gradient-to-tr dark:from-slate-950 dark:to-slate-800 dark:bg-no-repeat ${poppins.className}`}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <PageSettingContext>
               <NextIntlClientProvider locale={locale} messages={messages} >
@@ -38,6 +39,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
                 <Footer />
                 <BackToTopButton />
                 <Sidebar />
+                <Mouse />
               </NextIntlClientProvider>
             </PageSettingContext>
           </ThemeProvider>

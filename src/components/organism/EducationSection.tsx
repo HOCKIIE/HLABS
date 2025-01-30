@@ -1,6 +1,5 @@
 "use client"
-import { FaGraduationCap } from "react-icons/fa";
-import { BiSolidInstitution } from "react-icons/bi";
+
 import education from "../../assets/exp/education.json";
 import SafeHTML from "../molecule/SafeHTML";
 
@@ -32,7 +31,7 @@ export default function EducationSection(){
                     </div>
                     <div className="flex items-center">
                         <div className="element-widget">
-                            <div className="element-h3">
+                            <div className="element-p">
                                 <SafeHTML className="text-slate-900 dark:text-gray-300 font-roboto-mono tracking-tight" html={institutionHTML} />
                             </div>
                         </div>

@@ -2,7 +2,8 @@
     {
         "date":"April 2022 - December 2024",
         "position":"Full Stack Developer",
-        "underline":"chonky-underline-megenta",
+        "company":"1-CE Wind Co., Ltd.",
+        "underline":"chonky-underline-blue",
         "description":{
             "text":"",
             "list":[
@@ -34,7 +35,8 @@
     {
         "date":"March 2020 - March 2022",
         "position":"Full Stack Developer",
-        "underline":"chonky-underline-blue",
+        "company":"Jobs Labo Recruitment Co., Ltd.",
+        "underline":"chonky-underline-indigo",
         "description":{
             "text":"",
             "list":[
@@ -70,7 +72,8 @@
     {
         "date":"August 2017 - February 2020",
         "position":"Developer",
-        "underline":"chonky-underline-yellow",
+        "company":"Channel Wide Computer Co., Ltd.",
+        "underline":"chonky-underline-megenta",
         "description":{
             "list":[
                 "- Design the database structure",

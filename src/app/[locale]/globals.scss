@@ -4,6 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 :root {
     --background: #ffffff;
@@ -85,8 +86,46 @@ html{
         margin: 0;
         background-size: 10px 10px;
     }
+    a,button{
+        &:hover .mouse{
+            background: #555555 !important;
+            transform: scale(110);
+        }
+    }
+    .mouse, .mouse-dot{
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border-radius: 50%;
+        pointer-events: none;
+        display: flex;
+        z-index: 100000;
+        animation: .1s;
+    }
+    .mouse{
+        position: fixed;
+        top: -15px;
+        left: -15px;
+        width: 24px;
+        height: 24px;
+        -webkit-transition: all .1s ease-out;
+        -o-transition: all .1s ease-out;
+        transition: all .1s ease-out;
+        mix-blend-mode: multiply;
+    }
+    .mouse-dot{
+        position: fixed;
+        top: -15px;
+        left: -15px;
+        width: 5px;
+        height: 5px;
+        -webkit-transition: all .08s ease-out;
+        -o-transition: all .08s ease-out;
+        transition: all .08s ease-out;
+    }
     // light mode
     &.light{
+        .mouse{ border-color: #606887; }
+        .mouse-dot{ background: rgba(0, 0, 0, .7);}
         .with-line-numbers{
             counter-reset: line-count;
             position: relative;
@@ -163,6 +202,22 @@ html{
                 background: linear-gradient(65deg, #ff6b2b83 0%, #ff6b2b39 100%, rgba(255, 209, 0, 0) 100%);
             }
         }
+        .chonky-underline-indigo{
+            transition: all 0.1s ease-in-out;
+            position: relative;
+            z-index: 100;
+            &::after {
+                transition: all 0.1s ease-in-out;
+                content: "";
+                position: absolute;
+                width: 102%;
+                left: 0;
+                bottom: 3px;
+                z-index: -1;
+                height: 0.3em;
+                background: linear-gradient(65deg, #9440e8 0%, #9440e8 100%, rgba(255, 209, 0, 0) 100%);
+            }
+        }
         .element-widget{
             font-family: "Roboto Mono";
             position: relative;
@@ -185,7 +240,6 @@ html{
                     color: rgba(0,0,0,1);
                     display: block;
                     margin-left: -35px;
-                    font-weight: normal;
                     font-size: 14px;
                 }
                 &::before{ content: "<h2>"; margin-bottom: 5px; }
@@ -199,11 +253,23 @@ html{
                     color: rgba(0,0,0,1);
                     display: block;
                     margin-left: -35px;
-                    font-weight: normal;
                     font-size: 14px;
                 }
                 &::before{ content: "<h3>"; margin-bottom: 5px; }
                 &::after{ content: "</h3>"; margin-top: 10px; }
+            }
+            .element-p{
+                padding-left: 35px;
+                &::before,
+                &::after{
+                    opacity: 0.3;
+                    color: rgba(0,0,0,1);
+                    display: block;
+                    margin-left: -35px;
+                    font-size: 14px;
+                }
+                &::before{ content: "<p>"; margin-bottom: 5px; }
+                &::after{ content: "</p>"; margin-top: 10px; }
             }
             .element-strong{
                 padding-left: 35px;
@@ -213,7 +279,6 @@ html{
                     color: rgba(0,0,0,1);
                     display: block;
                     margin-left: -35px;
-                    font-weight: normal;
                     font-size: 14px;
                 }
                 &::before{ content: '<strong class="'attr(data-class-light)'">'; margin-bottom: 5px; }
@@ -235,7 +300,6 @@ html{
                 }
                 &::before{ content: "<h3>"; }
                 &::after{ content: "</h3>"; }
-                
             }
         }
         .portfolio{
@@ -269,6 +333,13 @@ html{
     }
     // dark mode
     &.dark{
+        .mouse {
+            border-color: #f3f2f9;
+            mix-blend-mode: difference;
+        }
+        .mouse-dot {
+            background-color: #f3f2f9;
+        }
         .with-line-numbers{
             counter-reset: line-count;
             position: relative;
@@ -345,6 +416,21 @@ html{
                 background: linear-gradient(65deg, #FF6B2B 0%, #FF6B2B 100%, rgba(255, 209, 0, 0) 100%);
             }
         }
+        .chonky-underline-indigo{
+            transition: all 0.1s ease-in-out;
+            position: relative;
+            z-index: 100;
+            &::after {
+                content: " ";
+                position: absolute;
+                width: 102%;
+                left: 0;
+                bottom: 3px;
+                z-index: -1;
+                height: 0.3em;
+                background: linear-gradient(65deg, #9440e8 0%, #9440e8 100%, rgba(255, 209, 0, 0) 100%);
+            }
+        }
         .element-widget{
             font-family: "Roboto Mono";
             position: relative;
@@ -368,7 +454,6 @@ html{
                     color: white;
                     display: block;
                     margin-left: -35px;
-                    font-weight: normal;
                     font-size: 14px;
                 }
                 &::before{ content: "<h3>"; margin-bottom: 5px; }
@@ -383,7 +468,6 @@ html{
                     color: white;
                     display: block;
                     margin-left: -35px;
-                    font-weight: normal;
                     font-size: 14px;
                 }
                 &::before{ content: "<h4>"; margin-bottom: 5px; }
@@ -398,7 +482,6 @@ html{
                     color: white;
                     display: block;
                     margin-left: -35px;
-                    font-weight: normal;
                     font-size: 14px;
                 }
                 &::before{ content: "<p>"; margin-bottom: 5px; }
@@ -412,7 +495,6 @@ html{
                     color: white;
                     display: block;
                     margin-left: -35px;
-                    font-weight: normal;
                     font-size: 14px;
                 }
                 &::before{ content: '<strong class="'attr(data-class-dark)'">'; margin-bottom: 5px; }
@@ -471,11 +553,9 @@ html{
 }
 .nav-menu{
     counter-reset: my-counter;
-    
     li{
         position: relative;
         counter-increment: my-counter;
-
         &::before{
             content: counter(my-counter, decimal-leading-zero);
             display: inline-block;
@@ -524,5 +604,16 @@ html{
 
     &.open{
         right: 0;
+    }
+}
+
+@media print{
+    section.cv{ 
+        margin: 0;
+        padding: 0;
+        color-adjust: exact;  
+        print-color-adjust: exact; 
+        -webkit-print-color-adjust: exact;
+        page-break-inside: avoid;
     }
 }

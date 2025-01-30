@@ -17,6 +17,9 @@ const config: Config = {
       display: {
         ruby: 'ruby',
       },
+      screens: {
+        print: { raw: 'print' }
+      },
     },
     container: {
       // you can configure the container to be centered
