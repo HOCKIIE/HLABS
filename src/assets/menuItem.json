@@ -1,18 +1,37 @@
 [
   {
-      "name":"Portfolio",
-      "href":"/portfolio"
+        "name":"Portfolio",
+        "key":"portfolio",
+        "href":"/portfolio"
   },
   {
-      "name":"Curriculum Vitae",
-      "href":"/cv"
+        "name":"Curriculum Vitae",
+        "key":"cv",
+        "href":"/cv"
   },
   {
-      "name":"Tricks",
-      "href":"/tricks"
+        "name":"Tricks",
+        "key":"tricks",
+        "href":"/tricks",
+        "sub":[
+            {
+                "name":"React.JS",
+                "key":"rect.js",
+                "href":"/react-js"
+            },{
+                "name":"Next.JS",
+                "key":"next.js",
+                "href":"/next-js"
+            },{
+                "name":"Tailwind CSS",
+                "key":"tailwind-css",
+                "href":"/tailwind-css"
+            }
+        ]
   },
   {
-      "name":"Contact",
-      "href":"/contact"
+        "name":"Contact",
+        "key":"contact",
+        "href":"/#contact"
   }
 ]

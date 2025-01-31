@@ -20,7 +20,9 @@
         --foreground: #ededed;
     }
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     color: var(--foreground);
     background: var(--background);
@@ -611,7 +613,7 @@ html{
     section.cv{ 
         margin: 0;
         padding: 0;
-        color-adjust: exact;  
+        color-adjust: exact;
         print-color-adjust: exact; 
         -webkit-print-color-adjust: exact;
         page-break-inside: avoid;
