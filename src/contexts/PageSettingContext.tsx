@@ -37,7 +37,6 @@ export default function PageSettingProvider({children}:any) {
     borderStyle:'none',
     borderWidth:'0'
   });
-
   const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
   const {theme} = useTheme();
   // const thisTheme = (document.getElementsByTagName('html') as HTMLCollectionOf<HTMLElement>)[0].getAttribute('class');

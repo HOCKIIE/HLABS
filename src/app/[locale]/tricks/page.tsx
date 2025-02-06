@@ -1,24 +1,97 @@
+"use client"
+import { useState } from 'react';
+import { useSearchParams, useRouter, usePathname } from 'next/navigation'
+// import SearchBar from '@/components/atom/SearchBar';
 import { RiSearchLine } from "react-icons/ri";
+import SearchModal from '@/components/layouts/SearchModal';
+
+
 export default function Tricks(){
+    const params = useSearchParams();
+    const searchParams = useSearchParams();
+    const pathname = usePathname();
+    const router = useRouter();
+    const keyword = params.get('keyword') || "";
+    const [search, setSearch] = useState<boolean>(false);
+
+    const handleSearch = (newKeyword: string) => {
+        const params = new URLSearchParams(searchParams)
+        params.set('keyword', newKeyword);
+        router.replace(`${pathname}?${params.toString()}`)
+    };
+
+    const closeModal = () => setSearch(false);
+
     return (<>
         <section className="">
-            <div className="container min-h-[90vh]">
-                {/* <div className="flex justify-center items-center min-h-[calc(100vh-108px)] text-4xl font-roboto-mono dark:text-gray-300">Coming Soon</div> */}
-                <div className="grid-cols-12">
+            <div className="container min-h-[90vh] pb-20">
+                <div className="grid grid-cols-12">
                     <div className="col-span-12">
-                        <h1 className="dark:text-slate-300 text-5xl uppercase mt-40 text-center">Tricks</h1>
+                        <h1 className="dark:text-slate-300 text-5xl uppercase mt-40 text-center mb-10">Tricks</h1>
                     </div>
-                    <div className="col-span-12 mt-10">
+                    <div className="col-span-2">
                         <div className="relative">
+                            <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                <RiSearchLine className="text-gray-800 dark:text-slate-300"/>
+                            </div> 
+                            <input 
+                                onClick={()=>setSearch(true)}
+                                type="search" className="w-full ps-8 px-4 py-2 text-gray-800 dark:bg-slate-700 border border-gray-500 rounded-lg shadow-sm" placeholder="Search"  
+                            />
+                        </div>
+                        <div className="mt-10">
+                            <h2 className='my-3 text-gray-800 dark:text-gray-200'>React.Js</h2>
+                            <ul className="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800 text-sm text-gray-500 dark:text-gray-400">
+                                <li><a href="" className="block px-5 py-1">Installation</a></li>
+                                <li><a href="" className="block px-5 py-1">Packages</a></li>
+                            </ul>
+                            <h2 className='my-3 text-gray-800 dark:text-gray-200'>Next.Js</h2>
+                            <ul className="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800 text-sm text-gray-500 dark:text-gray-400">
+                                <li><a href="" className="block px-5 py-1">Installation</a></li>
+                                <li><a href="" className="block px-5 py-1">Packages</a></li>
+                                <li><a href="" className="block px-5 py-1">Dark Mode</a></li>
+                            </ul>
+                            <h2 className='my-3 text-gray-800 dark:text-gray-200'>Tailwind CSS</h2>
+                            <ul className="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800 text-sm text-gray-500 dark:text-gray-400">
+                                <li><a href="" className="block px-5 py-1">Alerts</a></li>
+                                <li><a href="" className="block px-5 py-1">Badge</a></li>
+                                <li><a href="" className="block px-5 py-1">Breadcrumb</a></li>
+                                <li><a href="" className="block px-5 py-1">Button Group</a></li>
+                                <li><a href="" className="block px-5 py-1">Installation</a></li>
+                                <li><a href="" className="block px-5 py-1">Input</a></li>
+                                <li><a href="" className="block px-5 py-1">Color</a></li>
+                                <li><a href="" className="block px-5 py-1">Gallerys</a></li>
+                                <li><a href="" className="block px-5 py-1">Indicators</a></li>
+                                <li><a href="" className="block px-5 py-1">List Group</a></li>
+                                <li><a href="" className="block px-5 py-1">Modal</a></li>
+                                <li><a href="" className="block px-5 py-1">Navbar</a></li>
+                                <li><a href="" className="block px-5 py-1">Pagination</a></li>
+                                <li><a href="" className="block px-5 py-1">Popover</a></li>
+                                <li><a href="" className="block px-5 py-1">Progress</a></li>
+                                <li><a href="" className="block px-5 py-1">Rating</a></li>
+                                <li><a href="" className="block px-5 py-1">Sidebar</a></li>
+                                <li><a href="" className="block px-5 py-1">Skelton</a></li>
+                                <li><a href="" className="block px-5 py-1">Spinner</a></li>
+                                <li><a href="" className="block px-5 py-1">Timeline</a></li>
+                                <li><a href="" className="block px-5 py-1">Tost</a></li>
+                            </ul>
+                            <h2 className='my-3 text-gray-800 dark:text-gray-200'>CSS</h2>
+                            <ul className="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800 text-sm text-gray-500 dark:text-gray-400">
+                                <li><a href="" className="block px-5 py-1">Text Ellipsis</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="col-span-10">
+                        {/* <div className="relative">
                             <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                                 <RiSearchLine className="dark:text-slate-300"/>
                             </div>
-                            <input type="search" id="default-search" className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." required />
-                            {/* <button type="submit" className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button> */}
-                        </div>
+                                                  
+                        </div> */}
                     </div>
                 </div>
             </div>
         </section>
+        {search&&<SearchModal open={search} closeModal={closeModal}/>}
     </>);
 }

@@ -64,8 +64,8 @@ export default function ExperienceSection(){
                                         <div className="ms-4 text-2xl font-[950] text-gray-900 dark:text-slate-100 my-3">
                                             <span className={underline?underline:''}>{position}</span>
                                         </div>
-                                        {description.list && <div className="ms-4 mt-2" >
-                                            {description.list.map((v:string,k:number)=>
+                                        {description.html && <div className="ms-4 mt-2" >
+                                            {description.html.map((v:string,k:number)=>
                                                 <SafeHTML key={index+k} html={v} className="text-lg leading-8 font-narmal text-gray-500 dark:text-gray-400"/>
                                             )}
                                         </div>}

@@ -16,16 +16,16 @@
         "sub":[
             {
                 "name":"React.JS",
-                "key":"rect.js",
-                "href":"/react-js"
+                "key":"reactJs",
+                "href":"/tricks?keyword=react-js"
             },{
                 "name":"Next.JS",
-                "key":"next.js",
-                "href":"/next-js"
+                "key":"nextJs",
+                "href":"/tricks?keyword=next-js"
             },{
                 "name":"Tailwind CSS",
-                "key":"tailwind-css",
-                "href":"/tailwind-css"
+                "key":"tailwindCSS",
+                "href":"/tricks?keyword=tailwind-css"
             }
         ]
   },

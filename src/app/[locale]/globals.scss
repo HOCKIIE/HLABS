@@ -76,6 +76,13 @@ body{
     position: relative;
     transition: transform 500ms ease-in-out;
     -webkit-transition: transform 500ms ease-in-out;
+    .nav-menu .dropdown-item{
+        height: 0px;
+        &.open{
+            height: max-content;
+            transition: height 0.5 ease-in-out;
+        }
+    }
 }
 body:has(.sidebar.open){
     overflow: hidden;

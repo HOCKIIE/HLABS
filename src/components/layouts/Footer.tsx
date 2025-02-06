@@ -24,6 +24,7 @@ export default function Footer()
                                         </div>
                                         <a href="https://www.instagram.com/hockiie" target="_blank" className="p-0 transition-all duration-500 hover:text-pink-500 hover:scale-[1.7] text-gray-300">&lt;Instagram/&gt;</a>
                                         <a href="https://www.instagram.com/hockiie" target="_blank" className="p-0 ms-1 transition-all duration-500 hover:text-blue-500 text-gray-300">&lt;Messenger/&gt;</a>
+                                        <a href="https://www.linkedin.com/in/suphawat-kongson-24421634a/" target="_blank" className="p-0 ms-1 transition-all duration-500 hover:text-blue-500 text-gray-300">&lt;Linkedin/&gt;</a>
                                         <a href="https://x.com/hocky_k" target="_blank" className="p-0 ms-1 transition-all duration-500 hover:text-white/60 text-gray-300">&lt;X/&gt;</a>
                                     </div>
                                 </div>

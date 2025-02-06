@@ -7,9 +7,6 @@ import Image from "next/image";
 interface EducationProp {
     date: string; qualification: string; institution: string
 }
-interface ExperienceProp {
-    date: string; position:string; company:string, description:{ list:any|string[]; pure:any|string[] };
-}
 interface DefaultProp {
     title:string
 }
@@ -39,6 +36,12 @@ export default function Resume(){
                                     <div className="text-nowrap text-xl md:text-3xl text-gray-200 dark:text-gray-400 print:text-[17px]">Contact</div>
                                     <div className="w-full ms-2 border-solid border-t-[3px] border-gray-300 dark:border-gray-700 right-0 top-[50%]"></div>
                                 </h3>
+                                <div className="mt-4">
+                                    <strong className="text-gray-200 dark:text-gray-400">Date of birth :</strong><p className="text-gray-300 dark:text-gray-400">10 / 08 / 1991</p>
+                                </div>
+                                <div className="mt-4">
+                                <strong className="text-gray-200 dark:text-gray-400">Military status :</strong><p className="text-gray-300 dark:text-gray-400">Completed</p>
+                                </div>
                                 <div className="mt-4 print:text-sm">
                                     <strong className="text-gray-200 dark:text-gray-400">Phone : </strong><br/>
                                     <a href="tel:093-279-1392" className="text-gray-300 dark:text-gray-400">093-279-1392</a>
@@ -78,6 +81,25 @@ export default function Resume(){
                                 <div className="mt-3 text-gray-300 dark:text-slate-300 print:text-sm"><strong>Thai :</strong> Native</div>
                                 <div className="text-gray-300 dark:text-slate-300 print:text-sm"><strong>English :</strong> Speak=Fair, Read=Good, Write=Good</div>
                             </div>
+                            <div className="archievment mt-10">
+                                <h3 className="font-bold flex items-center">
+                                    <div className="text-2xl text-gray-200 dark:text-gray-400 print:text-[17px]">Achievement, Project, and Other Experiences</div>
+                                    {/* <div className="w-full ms-2 border-solid border-t-[3px] border-gray-300 dark:border-gray-700 right-0 top-[50%]"></div> */}
+                                </h3>
+                                <div>
+                                    <ul className="text-sm leading-6 mt-2">
+                                        <li><a href="https://www.at-once.info" target="_blank">www.at-once.info</a></li>
+                                        <li><a href="https://www.rent.co.th" target="_blank">www.rent.co.th</a><br/></li>
+                                        <li><a href="https://www.abilmente.com" target="_blank">www.abilmente.com</a><br/></li>
+                                        <li><a href="https://www.thaiprint.in.th" target="_blank">www.thaiprint.in.th</a><br/></li>
+                                        <li><a href="https://www.ymctranslation.com" target="_blank">www.ymctranslation.com</a><br/></li>
+                                        <li><a href="https://www.th.nissin-asia.com" target="_blank">www.th.nissin-asia.com</a><br/></li>
+                                        <li><a href="https://www.รับขนย้ายเครื่องจักร.net" target="_blank">www.รับขนย้ายเครื่องจักร.net</a><br/></li>
+                                        <li><a href="https://www.nankai.co.th" target="_blank">www.nankai.co.th</a><br/></li>
+                                    </ul>
+                                </div>
+                            www.th.nissin-asia.com
+                            </div>
                         </div>
                     </div>
                     <div className="col-span-12 xl:col-span-8 print:col-span-8">
@@ -108,15 +130,15 @@ export default function Resume(){
                                     <div className="w-full ms-2 border-solid border-t-[3px] border-gray-700 right-0 top-[50%]"></div>
                                 </h3>
                                 <div className="timeline ps-5 border-l-[3px] border-indigo-300 dark:border-indigo-800/40 ">
-                                    {experince.map(({date,position,description,company}:ExperienceProp,k:number)=> 
+                                    {experince.map((v:any,k:number)=> 
                                         <div key={k} className="mt-4 relative">
                                             <div className="absolute ms-[-29px] top-1 w-4 h-4 bg-indigo-600 rounded-full"></div>
                                             <div className="text-base print:text-sm text-gray-700 dark:text-gray-400">
-                                                <div className="">{date}: <strong>{company}</strong></div>
-                                                <strong className="block py-1">{position}</strong>
-                                                {description.pure &&
-                                                    <ul className="list-disc ms-4 ">
-                                                        {description.pure.map((v:string,ke:number) =><li key={k+ke}>{v}</li>)}
+                                                <div className="">{v.date}: <strong>{v.company}</strong></div>
+                                                <strong className="block py-1">{v.position}</strong>
+                                                {v.description.list &&
+                                                    <ul className="list-disc leading-7 ms-4 ">
+                                                        {v.description.list.map((v:string,ke:number) =><li key={k+ke}>{v}</li>)}
                                                     </ul>
                                                 }
                                             </div>
