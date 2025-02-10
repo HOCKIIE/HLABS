@@ -13,6 +13,7 @@
     "ansi-escapes": "^7.0.0",
     "antd": "^5.22.7",
     "dompurify": "^3.2.3",
+    "express": "^4.21.2",
     "framer-motion": "^11.18.0",
     "i18next": "^24.2.0",
     "motion": "^11.18.0",
