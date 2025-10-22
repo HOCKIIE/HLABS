@@ -2,6 +2,7 @@ import express from "express"
 import type { Request, Response, NextFunction } from "express";
 import cors from "cors";
 import logger from "./config/logger";
+import connectToMongo from "./config/database";
 import dataRoutes from "./routes"
 
 const app = express();
@@ -19,7 +20,7 @@ app.use((req, res, next) => {
     next();
 })
 app.use(express.urlencoded({ extended: true }));
-
+connectToMongo();
 
 app.use('/api',dataRoutes)
 app.use((req: Request, res: Response, next: NextFunction) => {

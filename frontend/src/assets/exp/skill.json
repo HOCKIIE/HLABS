@@ -1,6 +1,7 @@
 [
     {"title":"Microsoft Visio","type":"visio","icon":false},
     {"title":"Postman API Platform","type":"postman","icon":false},
+    {"title":"Insomnia","type":"insomnia","icon":false},
     {"title":"HTML5","type":"html5","icon":true},
     {"title":"CSS3","type":"css3","icon":true},
     {"title":"SASS","type":"sass","icon":true},
@@ -16,14 +17,15 @@
     {"title":"MongoDB","type":"mongoDb","icon":true},
     {"title":"Front End Framework","type":"frontendFramework","icon":false},
     {"title":"Back End Framework","type":"backendFramework","icon":false},
-    {"title":"NodeJS","type":"nodeJs","icon":true},
-    {"title":"ExpressJS","type":"expressJs","icon":true},
-    {"title":"ReactJS","type":"reactJs","icon":true},
-    {"title":"NextJS","type":"nextJs","icon":true},
+    {"title":"Node.Js","type":"nodeJs","icon":true},
+    {"title":"Express.Js","type":"expressJs","icon":true},
+    {"title":"React.Js","type":"reactJs","icon":true},
+    {"title":"Next.Js","type":"nextJs","icon":true},
+    {"title":"NestJs","type":"NestJs","icon":false},
     {"title":"JavaScript","type":"javaScript","icon":true},
     {"title":"TypeScript","type":"typeScript","icon":true},
-    {"title":"CI/CD","type":"cicd","icon":false},
     {"title":"Github","type":"github","icon":false},
     {"title":"Rest API","type":"restApi","icon":false},
-    {"title":"Debugging","type":"debugging","icon":false}
+    {"title":"Debugging","type":"debugging","icon":false},
+    {"title":"Salesforce","type":"salesforce","icon":false}
 ]
