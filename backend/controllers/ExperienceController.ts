@@ -1,4 +1,7 @@
 import type { Request, Response } from "express"
+import Experience from "../models/Experience";
+import config from "../config/app";
+
 type typo = {
     date: string;
     position: string;
@@ -12,6 +15,37 @@ type typo = {
 };
 const ExprienceData:typo[] = [
     {
+        date: "February 2025 - July 2025",
+        position: "Software Engineer",
+        company: "Nityo Infotech",
+        underline: "chonky-underline-blue",
+        description: {
+            text: "",
+            html: [
+                "- Salesforce (CRM)",
+                "- Heroku",
+                "- Node.js/NestJs: For building API Gateway for salesforce integrations",
+                "- Postman/Insomnia: Testing APIs",
+                "- Version Control: Git (Github)",
+                "- HTML, CSS, Javascript",
+                "- LWC Inspector (Chrome Extension)",
+                "- Salesforce DevOp Tools: Copado",
+                "- Experience with software development life circle methodologies Agile: SCRUM",
+            ],
+            list: [
+                "Salesforce (CRM)",
+                "Heroku",
+                "Node.js/NestJs: For building API Gateway for salesforce integrations",
+                "Postman/Insomnia: Testing APIs",
+                "Version Control: Git (Github)",
+                "HTML, CSS, Javascript",
+                "LWC Inspector (Chrome Extension)",
+                "Salesforce DevOp Tools: Copado",
+                "Experience with software development life circle methodologies Agile: SCRUM",
+            ]
+        }
+    },
+    {
         date: "April 2022 - December 2024",
         position: "Full Stack Developer",
         company: "1-CE Wind Co., Ltd.",
@@ -24,10 +58,9 @@ const ExprienceData:typo[] = [
                 "- Collaborate with UX/UI Designer team",
                 "- <strong>For Customer</strong> Develop the website according from requirement and template.",
                 "- Build, develop Frontend and Backend website with Laravel framework v8.x",
-                "- Build, develop UX/UI with Bootstrap v5",
+                "- Build, develop UX/UI with Bootstrap v5, Tailwind CSS, Ant",
                 "- Build, develop Frontend website with React.js + Next.js (TypeScript, JavaScript)",
                 "- Build, develop Backend website with Node.js + Express.js + MongoDB",
-                "- Build, develop UX/UI with Tailwind CSS + Ant",
                 "- Use GitHub for version control",
                 "- Use ClickUp, Trello for productivity tool",
                 "- Create and develop text editor that can generate HTML based on Tailwind CSS formatting to support another of devices",
@@ -39,10 +72,9 @@ const ExprienceData:typo[] = [
                 "Collaborate with UX/UI Designer team",
                 "For Customer Develop the website according from requirement and template.",
                 "Build, develop Frontend and Backend website with Laravel framework v8.x",
-                "Build, develop UX/UI with Bootstrap v5",
+                "Build, develop UX/UI with Bootstrap v5, Tailwind CSS, Ant",
                 "Build, develop Frontend website with React.js + Next.js (TypeScript, JavaScript)",
                 "Build, develop Backend website with Node.js + Express.js + MongoDB",
-                "Build, develop UX/UI with Tailwind CSS + Ant",
                 "Use GitHub for version control",
                 "Use ClickUp, Trello for productivity tool",
                 "Create and develop text editor that can generate HTML based on Tailwind CSS formatting to support another of devices",
@@ -140,3 +172,24 @@ export const getExperience = (req: Request, res: Response) => {
     );
     res.status(200).json({success:true, data:filteredExp});
 };
+
+// export const onGet = (req: Request, res: Response) => {
+//     try{
+//         const limit = +(req.query.size || config.pageLimit);
+//         const offset = +(limit * ((Number(req.query.page) || 1) - 1));
+//         const rows = await Experience.find({ status: true })
+//                 .sort({ sort: "asc" })
+//                 .limit(limit)
+//                 .skip(offset);
+//             const count = await Experience.countDocuments({ status: true });
+//             return {
+//                 total: count,
+//                 lastPage: Math.ceil(count / limit),
+//                 currPage: +req.query.page || 1,
+//                 rows: rows,
+//             };
+//     }
+//     catch(error){
+//         res.error(error)
+//     }
+// }

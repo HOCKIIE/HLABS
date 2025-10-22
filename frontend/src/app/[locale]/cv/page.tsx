@@ -60,7 +60,7 @@ export default function Resume(){
                                     <div className="text-nowrap text-xl md:text-3xl print:text-[17px] text-gray-200 dark:text-gray-400">Skill</div>
                                     <div className="w-full ms-2 border-solid border-t-[3px] border-gray-300 dark:border-gray-700 right-0 top-[50%]"></div>
                                 </h3>
-                               <div className="flex flex-wrap gap-2 my-4">
+                                <div className="flex flex-wrap gap-2 my-4">
                                     {skill.map(({title}:DefaultProp,k:number) =><div key={k} className="inline-block text-indigo-500 dark:text-indigo-200 bg-indigo-100 dark:bg-indigo-900  px-3 py-1 print:px-2 print:py-0 rounded-full text-sm print:text-[10px]">{title}</div>)}
                                 </div>
                                 <div className="flex flex-wrap gap-2 my-4">
@@ -87,7 +87,7 @@ export default function Resume(){
                                     {/* <div className="w-full ms-2 border-solid border-t-[3px] border-gray-300 dark:border-gray-700 right-0 top-[50%]"></div> */}
                                 </h3>
                                 <div>
-                                    <ul className="text-sm leading-6 mt-2">
+                                    <ul className="text-sm leading-6 mt-2 text-gray-300 dark:text-gray-400">
                                         <li><a href="https://www.at-once.info" target="_blank">www.at-once.info</a></li>
                                         <li><a href="https://www.rent.co.th" target="_blank">www.rent.co.th</a><br/></li>
                                         <li><a href="https://www.abilmente.com" target="_blank">www.abilmente.com</a><br/></li>
@@ -98,7 +98,6 @@ export default function Resume(){
                                         <li><a href="https://www.nankai.co.th" target="_blank">www.nankai.co.th</a><br/></li>
                                     </ul>
                                 </div>
-                            www.th.nissin-asia.com
                             </div>
                         </div>
                     </div>

@@ -65,9 +65,9 @@ const SpinnerCube: React.FC = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.aspect = 1;
             camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setSize(window.innerWidth/5, window.innerWidth/5);
         };
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);

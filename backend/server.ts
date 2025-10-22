@@ -2,11 +2,12 @@ import express from "express"
 import type { Request, Response, NextFunction } from "express";
 import cors from "cors";
 import logger from "./config/logger";
+import connectToMongo from "./config/database";
 import dataRoutes from "./routes"
 
 const app = express();
-// const HOST = "0.0.0.0";
-const HOST = '172.20.10.7';
+const HOST = "localhost";
+// const HOST = '172.20.10.7';
 const PORT = Number(process.env.PORT) || 3001;
 
 
@@ -19,7 +20,7 @@ app.use((req, res, next) => {
     next();
 })
 app.use(express.urlencoded({ extended: true }));
-
+connectToMongo();
 
 app.use('/api',dataRoutes)
 app.use((req: Request, res: Response, next: NextFunction) => {

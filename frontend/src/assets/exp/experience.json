@@ -1,5 +1,36 @@
 [
     {
+        "date": "February 2025 - July 2025",
+        "position": "Software Engineer",
+        "company": "Nityo Infotech",
+        "underline": "chonky-underline-blue",
+        "description": {
+            "text": "",
+            "html": [
+                "- Salesforce (CRM)",
+                "- Heroku",
+                "- Node.js/NestJs: For building API Gateway for salesforce integrations",
+                "- Postman/Insomnia: Testing APIs",
+                "- Version Control: Git (Github)",
+                "- HTML, CSS, Javascript",
+                "- LWC Inspector (Chrome Extension)",
+                "- Salesforce DevOps Tools: Copado",
+                "- Experience with software development life circle methodologies Agile: SCRUM"
+            ],
+            "list": [
+                "Salesforce (CRM)",
+                "Heroku",
+                "Node.js/NestJs: For building API Gateway for salesforce integrations",
+                "Postman/Insomnia: Testing APIs",
+                "Version Control: Git (Github)",
+                "HTML, CSS, Javascript",
+                "LWC Inspector (Chrome Extension)",
+                "Salesforce DevOps Tools: Copado",
+                "Experience with software development life circle methodologies Agile: SCRUM"
+            ]
+        }
+    },
+    {
         "date":"April 2022 - December 2024",
         "position":"Full Stack Developer",
         "company":"1-CE Wind Co., Ltd.",
@@ -110,6 +141,6 @@
                 "Create login function with Facebook, Gmail",
                 "Changed from codeigniter v3 to Laravel v5.x and developt to v7.x"
             ]
-         }
+        }
     }
 ]
