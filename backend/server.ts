@@ -5,8 +5,8 @@ import logger from "./config/logger";
 import dataRoutes from "./routes"
 
 const app = express();
-// const HOST = "0.0.0.0";
-const HOST = '172.20.10.7';
+const HOST = "localhost";
+// const HOST = '172.20.10.7';
 const PORT = Number(process.env.PORT) || 3001;
 
 

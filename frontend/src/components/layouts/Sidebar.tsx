@@ -2,7 +2,7 @@
 import { Link } from "@/i18n/routing";
 import { RiCloseLargeFill } from "react-icons/ri";
 import menuItem from "../../assets/menuItem.json";
-import {useGlobal} from "@/contexts/PageSettingContext";
+import { useGlobal } from "@/contexts/PageSettingContext";
 import { useLocale } from "next-intl";
 
   
