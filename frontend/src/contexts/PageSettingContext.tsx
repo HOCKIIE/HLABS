@@ -52,6 +52,7 @@ export default function PageSettingProvider({
   });
   const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
   const {theme} = useTheme();
+  
   // const thisTheme = (document.getElementsByTagName('html') as HTMLCollectionOf<HTMLElement>)[0].getAttribute('class');
   const handleMouseMove = (e:MouseEvent) => {
     const onTarget = e.target as HTMLElement;

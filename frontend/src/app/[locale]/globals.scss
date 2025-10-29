@@ -116,9 +116,9 @@ html{
         left: -15px;
         width: 24px;
         height: 24px;
-        -webkit-transition: all .1s ease-out;
-        -o-transition: all .1s ease-out;
-        transition: all .1s ease-out;
+        -webkit-transition: all .08s ease-out;
+        -o-transition: all .08s ease-out;
+        transition: all .08s ease-out;
         mix-blend-mode: multiply;
     }
     .mouse-dot{
@@ -127,9 +127,9 @@ html{
         left: -15px;
         width: 5px;
         height: 5px;
-        -webkit-transition: all .08s ease-out;
-        -o-transition: all .08s ease-out;
-        transition: all .08s ease-out;
+        -webkit-transition: all .09s ease-out;
+        -o-transition: all .09s ease-out;
+        transition: all .09s ease-out;
     }
     // light mode
     &.light{
