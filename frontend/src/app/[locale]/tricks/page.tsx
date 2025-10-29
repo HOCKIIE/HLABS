@@ -1,25 +1,12 @@
 "use client"
 import { useState } from 'react';
-import { useSearchParams, useRouter, usePathname } from 'next/navigation'
-// import SearchBar from '@/components/atom/SearchBar';
 import { RiSearchLine } from "react-icons/ri";
 import SearchModal from '@/components/layouts/SearchModal';
 
 
-export default function Tricks(){
-    const params = useSearchParams();
-    const searchParams = useSearchParams();
-    const pathname = usePathname();
-    const router = useRouter();
-    const keyword = params.get('keyword') || "";
+export default function Tricks()
+{
     const [search, setSearch] = useState<boolean>(false);
-
-    const handleSearch = (newKeyword: string) => {
-        const params = new URLSearchParams(searchParams)
-        params.set('keyword', newKeyword);
-        router.replace(`${pathname}?${params.toString()}`)
-    };
-
     const closeModal = () => setSearch(false);
 
     return (<>
@@ -86,7 +73,6 @@ export default function Tricks(){
                             <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                                 <RiSearchLine className="dark:text-slate-300"/>
                             </div>
-                                                  
                         </div> */}
                     </div>
                 </div>

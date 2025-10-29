@@ -6,15 +6,13 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "next-themes"
 import "./globals.scss";
-import { Poppins, Roboto, Roboto_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
 import Sidebar from "@/components/layouts/Sidebar";
 import BackToTopButton from "@/components/atom/BackToTopButton";
 import Mouse from "@/components/atom/Mouse";
 
-const roboto = Roboto({weight: ['400','700'],subsets:['latin']});
-const robotoMono = Roboto_Mono({weight: ['400','700'],subsets:['latin']});
 const poppins = Poppins({weight: ['100','200','300','400','500','700','800','900'],subsets:['latin']})
 
 export const metadata: Metadata = {
@@ -26,23 +24,25 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
 {
   const locale = await getLocale();
   const messages = await getMessages();
-  if (!routing.locales.includes(locale as any | string[])) notFound();
+  if (!routing.locales.includes(locale as "th"|"en")) notFound();
 
   return (
-    <html lang={locale}>
-      <body className={`scroll-smooth bg-white dark:bg-gradient-to-tr dark:from-slate-950 dark:to-slate-800 dark:bg-no-repeat ${poppins.className}`}>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <PageSettingContext>
-              <NextIntlClientProvider locale={locale} messages={messages} >
-                <Header />
-                {children}
-                <Footer />
-                <BackToTopButton />
-                <Sidebar />
-                <Mouse />
-              </NextIntlClientProvider>
-            </PageSettingContext>
-          </ThemeProvider>
+    <html lang={locale} suppressHydrationWarning>
+      <body
+        className={`scroll-smooth bg-white dark:bg-gradient-to-tr dark:from-slate-950 dark:to-slate-800 dark:bg-no-repeat ${poppins.className}`}
+      >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <PageSettingContext>
+            <NextIntlClientProvider locale={locale} messages={messages}>
+              <Header />
+              {children}
+              <Footer />
+              <BackToTopButton />
+              <Sidebar />
+              <Mouse />
+            </NextIntlClientProvider>
+          </PageSettingContext>
+        </ThemeProvider>
       </body>
     </html>
   );

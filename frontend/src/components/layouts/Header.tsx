@@ -2,12 +2,12 @@
 import { Link } from "@/i18n/routing"
 import ThemeModeSwitch from "../atom/ThemeModeSwitch";
 import Logo from "../atom/Logo";
-import { useEffect, useState, useRef,MouseEvent } from "react";
+import { useEffect, useState } from "react";
 import MenuBtn from "../atom/MenuBtn";
 import {useTranslations} from 'next-intl';
 import MenuItems  from "@/assets/menuItem.json";
 import Dropdown from "./Dropdown";
-import { useGlobal } from "@/contexts/PageSettingContext";
+import { MenuItemType } from "@/types/MenuItemType";
 
 export default function Header(){
 
@@ -15,9 +15,6 @@ export default function Header(){
     const scrollHeader = () =>  setSticky(window.scrollY >= 170 ? true : false);
     const t = useTranslations('header');
     const [dropdownToggle, setDropdownToggle] = useState<number | null>(null);
-
-
-
 
     useEffect(()=>{
         window.addEventListener('scroll',scrollHeader);
@@ -32,7 +29,7 @@ export default function Header(){
                         <Link href="/" className="block"><Logo/></Link>
                     </div>
                     <ul className="nav-menu h-full hidden xl:flex items-center justify-center">
-                        {MenuItems.map((v:any,k:number) =>{
+                        {MenuItems.map((v:MenuItemType, k:number) =>{
                             return (v.sub)
                                 ? <li 
                                     key={k} 
@@ -45,7 +42,7 @@ export default function Header(){
                                     >{t(v.key)}</button>
                                     {v.sub && <Dropdown
                                         data={{
-                                            sub:v.sub,
+                                            sub: v.sub,
                                             dropdownToggle
                                         }}
                                     />}

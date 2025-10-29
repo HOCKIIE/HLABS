@@ -1,6 +1,7 @@
 
 import items from "../../assets/exp/tools.json";
 import { ToolsCard } from "../molecule/SkillCard";
+import { IconType } from "@/types/IconType";
 
 export default function ToolsSection(){
     return (
@@ -10,7 +11,7 @@ export default function ToolsSection(){
                     <div className="col-span-12">
                         <h3 className="text-4xl font-bold text-center text-slate-800 dark:text-slate-200 -tracking-tighter">TOOLS</h3>
                     </div>
-                    {items.map((v,k)=><ToolsCard key={k} title={v.title} type={v.type} />)}
+                    {items.map((v,k)=><ToolsCard key={k} title={v.title} type={v.type as IconType} />)}
                 </div>
             </div>
         </section>

@@ -1,11 +1,11 @@
-import { useState,useEffect, useCallback } from 'react';
+import { useState,useEffect } from 'react';
 import { useSearchParams  } from "next/navigation";
 import { RiSearchLine } from "react-icons/ri";
 
 const DEBOUNCE_DELAY = 500; // Delay in milliseconds
 interface SearchProps {
     onSearch: (keyword: string) => void;
-  }
+}
 const SearchBar: React.FC<SearchProps> = ({onSearch}) => {
     const [input, setInput] = useState<string>("");
     const [typingTimeout, setTypingTimeout] = useState<NodeJS.Timeout | null>(null);

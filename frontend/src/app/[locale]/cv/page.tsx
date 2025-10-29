@@ -3,10 +3,9 @@ import tools from "../../../assets/exp/tools.json";
 import education from "../../../assets/exp/education.json";
 import experince from "../../../assets/exp/experience.json";
 import Image from "next/image";
+import { ExperienceType } from "@/types/ExperienceType";
+import { EducationType } from "@/types/EducationType";
 
-interface EducationProp {
-    date: string; qualification: string; institution: string
-}
 interface DefaultProp {
     title:string
 }
@@ -114,7 +113,7 @@ export default function Resume(){
                                     <div className="w-full ms-2 border-solid border-t-[3px] border-gray-700 right-0 top-[50%]"></div>
                                 </h3>
                                 {education && <ul className="list-disc ms-4 text-gray-700 dark:text-gray-400 mt-6">
-                                    {education.map(({date,qualification,institution}:EducationProp,k:number) =>
+                                    {education.map(({date,qualification,institution}:EducationType,k:number) =>
                                         <li className="mt-3" key={k}>
                                             <div> {date} <br className="md:hidden"/><strong className="md:ms-0">{qualification}</strong></div>
                                             <div>{institution}</div>
@@ -129,7 +128,7 @@ export default function Resume(){
                                     <div className="w-full ms-2 border-solid border-t-[3px] border-gray-700 right-0 top-[50%]"></div>
                                 </h3>
                                 <div className="timeline ps-5 border-l-[3px] border-indigo-300 dark:border-indigo-800/40 ">
-                                    {experince.map((v:any,k:number)=> 
+                                    {experince.map((v:ExperienceType, k:number) => 
                                         <div key={k} className="mt-4 relative">
                                             <div className="absolute ms-[-29px] top-1 w-4 h-4 bg-indigo-600 rounded-full"></div>
                                             <div className="text-base print:text-sm text-gray-700 dark:text-gray-400">
@@ -137,7 +136,7 @@ export default function Resume(){
                                                 <strong className="block py-1">{v.position}</strong>
                                                 {v.description.list &&
                                                     <ul className="list-disc leading-7 ms-4 ">
-                                                        {v.description.list.map((v:string,ke:number) =><li key={k+ke}>{v}</li>)}
+                                                        {v.description.list.map((item:string, ke:number) =><li key={k+ke}>{item}</li>)}
                                                     </ul>
                                                 }
                                             </div>

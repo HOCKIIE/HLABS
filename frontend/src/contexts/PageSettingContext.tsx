@@ -4,14 +4,23 @@ import {
   useContext,
   useEffect,
   useState,
+  ReactNode
 } from "react";
 import { useTheme } from "next-themes";
 
 interface GlobalContextType {
   isSidebarOpen: boolean;
   toggleSidebar: () => void;
-  myCursor: any;
-  cursorStyle: any;
+  myCursor: {
+    x:number;
+    y:number;
+  };
+  cursorStyle: {
+    borderStyle: string;
+    borderWidth: string;
+    backgroundColor: string;
+    transform: string;
+  };
 }
 interface CursorType {
   x: number;
@@ -27,7 +36,11 @@ interface CursorStyle {
 
 export const PageSettingContext = createContext<GlobalContextType | undefined>(undefined);
 
-export default function PageSettingProvider({children}:any) {
+export default function PageSettingProvider({
+  children
+}:{
+  children: ReactNode
+}) {
 
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [myCursor, setMyCursor] = useState<CursorType>({ x: 0, y: 0, hover:false });

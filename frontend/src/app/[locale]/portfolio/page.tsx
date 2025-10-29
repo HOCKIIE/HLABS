@@ -1,70 +1,8 @@
 import Image from "next/image";
+import { PortfolioType } from "@/types/PortfolioType";
+import portfolio from "../../../assets/exp/portfolio.json"
 
-const Tag = () => {
-    return <></>
-}
-export default function Experience(){
-    const items = [{
-        "title":"at-once.info",
-        "image":"/image/portfolio/at-once.info.png",
-        "url":'https://at-once.info',
-        "description":"",
-        "hashtag":['Laravel','Bootstrap',"JavaScript" ,"jQuery","MySQL"]
-    },{
-        "title":"Rent",
-        "image":"/image/portfolio/rent.png",
-        "url":'https://rent.co.th',
-        "description":"",
-        "hashtag":['React.Js','Next.Js','TypeScript','Tailwind Css','Node.js','Express.js','MongoDB']
-    },{
-        "title":"Abilmente",
-        "image":"/image/portfolio/abilmente.com.png",
-        "url":'https://abilmente.com',
-        "description":"Interior Design",
-        "hashtag":['PHP','Laravel','Bootstrap','JavaScript','MySQL']
-    },{
-        "title":"Thai Print",
-        "image":"/image/portfolio/thai-print.png",
-        "url":'https://thaiprint.in.th',
-        "description":"",
-        "hashtag":['PHP','Laravel','Bootstrap','JavaScript','MySQL']
-    },{
-        "title":"YMC Recruitment",
-        "image":"/image/portfolio/ymc-translation.png",
-        "url":'https://ymctranslation.com',
-        "description":"",
-        "hashtag":['Node.js','Express.js','MongoDB','React.js','Next.js','TypeScript','Tailwind Css','Swiper']
-    },{
-        "title":"Hankyu Hanshin Express Thai",
-        "image":"/image/portfolio/hh-express.png",
-        "url":'https://th-hh-express.oncewebdesign.com',
-        "description":"Logistic Bussiness",
-        "hashtag":['Node.js','Express.js','MongoDB','React.js','Next.js','TypeScript','Tailwind Css']
-    },{
-        "title":"Siam Nistrans",
-        "image":"/image/portfolio/th-nissin-asia.png",
-        "url":'https://www.th.nissin-asia.com',
-        "description":"",
-        "hashtag":['Node.js','Express.js','MongoDB','React.js','Next.js','TypeScript','Tailwind Css']
-    },{
-        "title":"Speed Move",
-        "image":"/image/portfolio/Screenshot 2025-01-25 183620.png",
-        "url":'https://xn--12cbgmf3hf0eafgd0k0bkj2g0h9fna.net/',
-        "description":"",
-        "hashtag":['Node.js','Express.js','MongoDB','React.js','Next.js','TypeScript','Tailwind Css']
-    },{
-        "title":"Blue Assistance",
-        "image":"/image/portfolio/blue-assistance.png",
-        "url":'',
-        "description":"",
-        "hashtag":['Node.js','Express.js','MongoDB','React.js','Next.js','TypeScript','Tailwind Css']
-    },{
-        "title":"Nankai Express",
-        "image":"/image/portfolio/nankai.png",
-        "url":'https://nankai.co.th/',
-        "description":"",
-        "hashtag":['Laravel','Bootstrap',"MySQL","JavaScript" ,"jQuery"]
-    }];
+export default function Portfolio(){
     return (<>
     <section className="portfolio overflow-x-hidden">
         <div className="container">
@@ -76,8 +14,8 @@ export default function Experience(){
                 <div className="pipeline"></div>
                 <span className="block ms-1 mb-[5px] text-black/10 dark:text-slate-700 font-roboto-mono text-xs">grid grid-cols-12 gap-6 pt-4</span>
                 <div className="grid grid-cols-12 pipeline bg-gray-950/5 dark:bg-white/10">
-                    {items.map((v,k)=>
-                        <div className="col-span-12 md:col-span-4 xl:col-span-4 m-2">
+                    {portfolio.map((v:PortfolioType, k:number)=>
+                        <div className="col-span-12 md:col-span-4 xl:col-span-4 m-2" key={k}>
                             <div className="overflow-hidden p-1 bg-gray-300 dark:bg-slate-900 h-full border dark:border-gray-800 rounded-xl">
                                 <div className="tools ms-1 mt-1 mb-2 flex gap-2">
                                     <div className="w-3 h-3 bg-red-500/20 dark:bg-red-500/20 rounded-full"></div>
@@ -102,22 +40,22 @@ export default function Experience(){
                             <div className="bg-white/30 dark:bg-slate-800 rounded-lg p-2 min-h-[calc(100%-25px)]">
                                 <code className="with-line-numbers text-sm">
                                     <div className="ms-10">
-                                        <div className="line"><span className="text-gray-500">&lt;</span><span className="text-blue-500">div</span> <span className="text-sky-300">class</span><span className="text-gray-500">="</span><span className="text-orange-400">grid grid-cols-12</span><span className="text-gray-500">"&gt;</span></div>
+                                        <div className="line"><span className="text-gray-500">&lt;</span><span className="text-blue-500">div</span> <span className="text-sky-300">class</span><span className="text-gray-500">=&ldquo;</span><span className="text-orange-400">grid grid-cols-12</span><span className="text-gray-500">&ldquo;&gt;</span></div>
                                         <div className="ms-[1.5rem] ">
-                                            <div className="line"><span className="text-gray-500">&lt;</span><span className="text-blue-500">div</span> <span className="text-sky-300">class</span><span className="text-gray-500">="</span><span className="text-orange-400">col-span-12 md:col-span-4 xl:col-span-4 m-2</span><span className="text-gray-500">"&gt;</span></div>
+                                            <div className="line"><span className="text-gray-500">&lt;</span><span className="text-blue-500">div</span> <span className="text-sky-300">class</span><span className="text-gray-500">=&ldquo;</span><span className="text-orange-400">col-span-12 md:col-span-4 xl:col-span-4 m-2</span><span className="text-gray-500">&ldquo;&gt;</span></div>
                                             <div className="ms-[1.5rem] ">
-                                                <div className="line"><span className="text-gray-500">&lt;</span><span className="text-blue-500">div</span> <span className="text-sky-300">class</span><span className="text-gray-500">="</span><span className="text-orange-400">p-1 bg-gray-300 dark:bg-slate-900 h-full border dark:border-gray-800 rounded-xl</span><span className="text-gray-500">"&gt;</span></div>
+                                                <div className="line"><span className="text-gray-500">&lt;</span><span className="text-blue-500">div</span> <span className="text-sky-300">class</span><span className="text-gray-500">=&ldquo;</span><span className="text-orange-400">p-1 bg-gray-300 dark:bg-slate-900 h-full border dark:border-gray-800 rounded-xl</span><span className="text-gray-500">&ldquo;&gt;</span></div>
                                                 <div className="ms-[1.5rem] ">
-                                                    <div className="line"><span className="text-gray-500">&lt;</span><span className="text-blue-500">div</span> <span className="text-sky-300">class</span><span className="text-gray-500">="</span><span className="text-orange-400">tools ms-1 mt-1 mb-2 flex gap-2</span><span className="text-gray-500">"&gt;</span></div>
+                                                    <div className="line"><span className="text-gray-500">&lt;</span><span className="text-blue-500">div</span> <span className="text-sky-300">class</span><span className="text-gray-500">=&ldquo;</span><span className="text-orange-400">tools ms-1 mt-1 mb-2 flex gap-2</span><span className="text-gray-500">&ldquo;&gt;</span></div>
                                                     <div className="ms-[1.5rem]">
-                                                        <div className="line"><span className="text-gray-500">&lt;</span><span className="text-blue-500">div</span>  <span className="text-sky-300">class</span><span className="text-gray-500">="</span><span className="text-orange-400">w-3 h-3 bg-red-500/20 dark:bg-red-500/20 rounded-full</span><span className="text-gray-500">"&gt;</span></div>
-                                                        <div className="line"><span className="text-gray-500">&lt;</span><span className="text-blue-500">div</span>  <span className="text-sky-300">class</span><span className="text-gray-500">="</span><span className="text-orange-400">w-3 h-3 bg-yellow-500/20 dark:bg-yellow-500/20 rounded-full</span><span className="text-gray-500">"&gt;</span></div>
-                                                        <div className="line"><span className="text-gray-500">&lt;</span><span className="text-blue-500">div</span>  <span className="text-sky-300">class</span><span className="text-gray-500">="</span><span className="text-orange-400">w-3 h-3 bg-green-500/20 dark:bg-green-500/20 rounded-full</span><span className="text-gray-500">"&gt;</span></div>
+                                                        <div className="line"><span className="text-gray-500">&lt;</span><span className="text-blue-500">div</span>  <span className="text-sky-300">class</span><span className="text-gray-500">=&ldquo;</span><span className="text-orange-400">w-3 h-3 bg-red-500/20 dark:bg-red-500/20 rounded-full</span><span className="text-gray-500">&ldquo;&gt;</span></div>
+                                                        <div className="line"><span className="text-gray-500">&lt;</span><span className="text-blue-500">div</span>  <span className="text-sky-300">class</span><span className="text-gray-500">=&ldquo;</span><span className="text-orange-400">w-3 h-3 bg-yellow-500/20 dark:bg-yellow-500/20 rounded-full</span><span className="text-gray-500">&ldquo;&gt;</span></div>
+                                                        <div className="line"><span className="text-gray-500">&lt;</span><span className="text-blue-500">div</span>  <span className="text-sky-300">class</span><span className="text-gray-500">=&ldquo;</span><span className="text-orange-400">w-3 h-3 bg-green-500/20 dark:bg-green-500/20 rounded-full</span><span className="text-gray-500">&ldquo;&gt;</span></div>
                                                     </div>
                                                     <div className="line"><span className="text-gray-500">&lt;/</span><span className="text-blue-500">div</span><span className="text-gray-500">&gt;</span></div>
                                                 </div>
                                                 <div className="ms-[1.5rem]">
-                                                <div className="line"><span className="text-gray-500">&lt;</span><span className="text-blue-500">div</span> <span className="text-sky-300">class</span><span className="text-gray-500">="</span><span className="text-orange-400">bg-white/30 dark:bg-slate-800 rounded-lg p-2 h-auto</span><span className="text-gray-500">"&gt;</span><span className="text-gray-500">&lt;/</span><span className="text-blue-500">div</span><span className="text-gray-500">&gt;</span></div>
+                                                <div className="line"><span className="text-gray-500">&lt;</span><span className="text-blue-500">div</span> <span className="text-sky-300">class</span><span className="text-gray-500">=&ldquo;</span><span className="text-orange-400">bg-white/30 dark:bg-slate-800 rounded-lg p-2 h-auto</span><span className="text-gray-500">&ldquo;&gt;</span><span className="text-gray-500">&lt;/</span><span className="text-blue-500">div</span><span className="text-gray-500">&gt;</span></div>
                                                 </div>
                                                 <div className="line"><span className="text-gray-500">&lt;/</span><span className="text-blue-500">div</span><span className="text-gray-500">&gt;</span></div>
                                             </div>

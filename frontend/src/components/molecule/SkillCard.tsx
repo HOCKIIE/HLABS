@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import { 
     SiHtml5, 
     SiCss3, 
@@ -20,16 +21,13 @@ import { SiGithub, SiSourcetree, SiPostman, SiClickup, SiSublimetext, SiMui} fro
 import { RiNextjsFill, RiNodejsLine, RiReactjsFill } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
 import { GrMysql } from "react-icons/gr";
+import { IconType } from "@/types/IconType";
 
-type IconName = 'html5'|'css3'|'sass'|'bootstrap'|'tailwindCss'|'mui'|'mysql'|'php'|'codeigniter'|'laravel'|'jquery'|'phpMyAdmin'|
-    'mongoDb'|'nodeJs'|'expressJs'|'reactJs'|'nextJs'|'javaScript'|'typeScript'|'vsCode'|'sublime'|'gitHub'|'sourceTree'|'postman'|
-    'clickUp'|'fileZilla'|'xampp';
-
-interface IconProps { type: IconName; s:string; c:string;}
+interface IconProps { type: IconType; s:string; c:string;}
 
 const Icon: React.FC<IconProps> = ({ type,s}) => {
 
-    const iconMap: Record<IconName,any> = {
+    const iconMap: Record<IconType, JSX.Element> = {
         html5: <SiHtml5 size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-400"/>,
         css3: <SiCss3 size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
         sass: <SiSass size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
@@ -61,8 +59,13 @@ const Icon: React.FC<IconProps> = ({ type,s}) => {
     return (iconMap[type])?<>{iconMap[type]}</>:<></>;
 };
 
-export const SkillCard = ({title,type}:any) =>
-{
+export const SkillCard = ({
+    title,
+    type
+}:{
+    title: string;
+    type: IconType
+}) => {
     return (
         <div className="card-item col-span-6 md:col-span-3 xl:col-span-2">
             <div className="rounded-3xl overflow-hidden relative p-6 bg-slate-100 dark:bg-slate-900 hover:dark:bg-slate-800 transition-all duration-500 hover:bg-indigo-200 hover:transform hover:scale-105">
@@ -76,8 +79,13 @@ export const SkillCard = ({title,type}:any) =>
     )
 }
 
-export const ToolsCard = ({title,type}:any) => 
-{
+export const ToolsCard = ({
+    title,
+    type
+}:{
+    title:string; 
+    type:IconType
+}) => {
     return (
         <div className="card-item col-span-6 md:col-span-3 xl:col-span-2">
             <div className="rounded-3xl p-6 bg-slate-100 dark:bg-slate-900 hover:dark:bg-slate-800 transition-all duration-500 hover:bg-indigo-100 hover:transform hover:rotate-3">

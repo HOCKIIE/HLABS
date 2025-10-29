@@ -1,17 +1,17 @@
-import React,{ useEffect, useState } from "react";
+import React,{ useEffect } from "react";
 import * as THREE from "three";
 
 const AsciiCube:React.FC = () => {
     useEffect(()=>{
    
-        let lightMode = true
-        const clock = new THREE.Clock()
-        let rotateModel = false
-        var userUploaded = false
-        let controls
+        // let lightMode = true
+        // const clock = new THREE.Clock()
+        // let rotateModel = false
+        // var userUploaded = false
+        // let controls
 
         // Creates empty mesh container
-        const myMesh = new THREE.Mesh();
+        // const myMesh = new THREE.Mesh();
         const scene = new THREE.Scene()
         scene.background = new THREE.Color(0, 0, 0);
 
@@ -25,7 +25,7 @@ const AsciiCube:React.FC = () => {
         scene.add(pointLight2);
 
         // Parameters
-        const stlLoader = new THREE.Loader()
+        // const stlLoader = new THREE.Loader()
 
         //Material
         const material = new THREE.MeshStandardMaterial()
@@ -33,29 +33,29 @@ const AsciiCube:React.FC = () => {
         material.side = THREE.DoubleSide;
 
         // Sizes
-        const sizes = {
-            width: window.innerWidth,
-            height: window.innerHeight
-        }
+        // const sizes = {
+        //     width: window.innerWidth,
+        //     height: window.innerHeight
+        // }
 
         // Camera
-        const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 2000)
+        // const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 2000);
 
         // Renderer
-        const renderer = new THREE.WebGLRenderer()
+        // const renderer = new THREE.WebGLRenderer()
 
-        let effect;
+        // let effect;
 
-        let characters = ' .:-+*=%@#'
-        const effectSize = { amount: .205 }
-        let backgroundColor = 'black'
-        let ASCIIColor = 'white';
-        function createEffect() {
-            effect = new AsciiEffect(renderer, characters, { invert: true, resolution: effectSize.amount });
-            effect.setSize(sizes.width, sizes.height);
-            effect.domElement.style.color = ASCIIColor;
-            effect.domElement.style.backgroundColor = backgroundColor;
-        }
+        // let characters = ' .:-+*=%@#'
+        // const effectSize = { amount: .205 }
+        // let backgroundColor = 'black'
+        // let ASCIIColor = 'white';
+        // function createEffect() {
+        //     effect = new AsciiEffect(renderer, characters, { invert: true, resolution: effectSize.amount });
+        //     effect.setSize(sizes.width, sizes.height);
+        //     effect.domElement.style.color = ASCIIColor;
+        //     effect.domElement.style.backgroundColor = backgroundColor;
+        // }
     },[])
     return (<div/>)
 

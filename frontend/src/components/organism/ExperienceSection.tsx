@@ -2,11 +2,11 @@
 import { useRef, useEffect, useState } from "react";
 import exp from "../../assets/exp/experience.json";
 import SafeHTML from "../molecule/SafeHTML";
+import { ExperienceType } from "@/types/ExperienceType";
 
 
 export default function ExperienceSection(){
 
-   
     const [activeIndexes, setActiveIndexes] = useState<number[]>([]);
     const [newElementHeights, setNewElementHeights] = useState<number[]>([]);
     const refs = useRef<(HTMLDivElement | null)[]>([]);
@@ -29,9 +29,9 @@ export default function ExperienceSection(){
         refs.current.forEach((ref) => { if (ref) observer.observe(ref) });
     
         return () => {
-          refs.current.forEach((ref) => {
-            if (ref) observer.unobserve(ref);
-          });
+            refs.current.forEach((ref) => {
+                if (ref) observer.unobserve(ref);
+            });
         };
     }, []);
 
@@ -47,12 +47,11 @@ export default function ExperienceSection(){
                             >
                             </div>
                             <div className="relative">
-                                {exp.map(({date,position,underline,description}:any,index:number)=>
+                                {exp.map(({date,position,underline,description}:ExperienceType,index:number)=>
                                     <div 
                                         key={index}
                                         data-index={index}
-                                        // @ts-expect-error
-                                        ref={(el) => (refs.current[index] = el)}
+                                        ref={(el) => { refs.current[index] = el; }}
                                         className={`font-roboto-mono grid pb-20 ms-1 ${activeIndexes.includes(index)}`}
                                     >
                                         <div className={`absulute flex items-center justify-center w-6 h-6  rounded-full ms-[-18px] transition-all duration-500 delay-[900ms] ring-8 ring-gray-200 dark:ring-slate-800 ${activeIndexes.includes(index)?`bg-indigo-500 dark:bg-emerald-500`:`bg-gray-400 dark:bg-gray-400`} z-[100] overflow-hidden`}>

@@ -1,5 +1,6 @@
 import Skill from "../../assets/exp/skill.json";
 import { SkillCard } from "../molecule/SkillCard"
+import { IconType } from "@/types/IconType";
 
 export default function SkillSection(){
     return (
@@ -9,7 +10,7 @@ export default function SkillSection(){
                     <div className="col-span-12">
                         <h3 className="text-5xl font-bold text-center text-slate-800 dark:text-slate-200 -tracking-tighter">SKILLS</h3>
                     </div>
-                    {Skill.map((v,k)=> v.icon && <SkillCard key={k} title={v.title} type={v.type} /> )} 
+                    {Skill.map((v,k)=> v.icon && <SkillCard key={k} title={v.title} type={v.type as IconType} /> )} 
                 </div>
             </div>
         </section>

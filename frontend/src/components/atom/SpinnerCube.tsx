@@ -2,8 +2,6 @@
 import React, { useEffect, useState, useReducer, useRef } from 'react';
 import {
     Mesh,
-    Fog,
-    FogExp2,
     Scene,
     BoxGeometry,
     WebGLRenderer,
@@ -46,7 +44,6 @@ const SpinnerCube: React.FC = () => {
     }
 
     useEffect(() => {
-      
         if (mountRef.current && !mountRef.current.hasChildNodes()) {
             mountRef.current.appendChild(renderer.domElement);
         }
@@ -78,21 +75,20 @@ const SpinnerCube: React.FC = () => {
             setIsDragging(true);
             lastMousePos.current = { x: event.clientX, y: event.clientY };
             dispatch({ type: "STOP_ANIMATION" });
-          };
-      
-          const handleMouseMove = (event: MouseEvent) => {
+        };
+    
+        const handleMouseMove = (event: MouseEvent) => {
             if (!isDragging) return;
             const deltaX = event.clientX - lastMousePos.current.x;
             const deltaY = event.clientY - lastMousePos.current.y;
             cube.rotation.y += deltaX * 0.005;
             cube.rotation.x += deltaY * 0.005;
             lastMousePos.current = { x: event.clientX, y: event.clientY };
-          };
-      
-          const handleMouseUp = () => {
-                setIsDragging(false);
-                if(auto) dispatch({ type: "START_ANIMATION" });
-          };
+        };
+        const handleMouseUp = () => {
+            setIsDragging(false);
+            if(auto) dispatch({ type: "START_ANIMATION" });
+        };
         if (mountRef.current) {
             mountRef.current.addEventListener("mousedown", handleMouseDown);
             mountRef.current.addEventListener("mouseup", handleMouseUp);
