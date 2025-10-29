@@ -8,11 +8,11 @@ import { getTools } from "../controllers/ToolsController";
 
 const router = express.Router();
 
-router.get('/mock',MockData);
-router.get('/experience',getExperience);
-router.get('/education',getEducation);
-router.get('/portfolio',getPortfolio);
-router.get('/skill',getSkill);
-router.get('/tool',getTools);
+router.get('/mock', MockData);
+router.get('/experience', getExperience);
+router.get('/education', getEducation);
+router.get('/portfolio', getPortfolio);
+router.get('/skill', getSkill);
+router.get('/tool', getTools);
 
 export default router;
