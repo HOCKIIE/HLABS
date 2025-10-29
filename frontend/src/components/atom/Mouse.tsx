@@ -1,14 +1,11 @@
 "use client";
 import { useGlobal } from "@/contexts/PageSettingContext";
-import { useEffect, useRef, useState } from "react";
-import { useTheme } from "next-themes";
+import { useEffect, useRef } from "react";
 
-export default function Mouse() 
+export default function Mouse()
 {
-    const { theme } = useTheme();
+
     const { myCursor, cursorStyle } = useGlobal();
-    const { resolvedTheme } = useTheme(); // ✅ ใช้ resolvedTheme แทน theme
-    const [isDark, setIsDark] = useState(false);
 
     // ✅ ใช้ ref เพื่อแยกตำแหน่งของ DOM element ออกจาก state
     const cursorRef = useRef<HTMLDivElement>(null);
@@ -16,45 +13,49 @@ export default function Mouse()
 
     const pos = useRef({ x: 0, y: 0 });
     const target = useRef({ x: 0, y: 0 });
+    const frame = useRef<number>(0);
 
-    useEffect(() => {
-        if (resolvedTheme === "dark") setIsDark(true);
-        else setIsDark(false);
-    }, [resolvedTheme]);
     // เมื่อ myCursor เปลี่ยน ให้เปลี่ยน target
     useEffect(() => {
-        target.current = { x: myCursor.x, y: myCursor.y };
+        target.current.x = myCursor.x;
+        target.current.y = myCursor.y;
     }, [myCursor]);
 
     // ✅ ใช้ animation loop ที่ลื่นกว่า React render
     useEffect(() => {
-        const lerp = (a: number, b: number, n: number) => a + (b - a) * n;
+    const lerp = (a: number, b: number, n: number) => a + (b - a) * n;
 
-        const animate = () => {
-            pos.current.x = lerp(pos.current.x, target.current.x, 0.15);
-            pos.current.y = lerp(pos.current.y, target.current.y, 0.15);
+    const animate = () => {
+      pos.current.x = lerp(pos.current.x, target.current.x, 0.15);
+      pos.current.y = lerp(pos.current.y, target.current.y, 0.15);
 
-            if (cursorRef.current) {
-                cursorRef.current.style.visibility = 'visible',
-                cursorRef.current.style.top = `${pos.current.y}px`;
-                cursorRef.current.style.left = `${pos.current.x}px`;
-                cursorRef.current.style.borderStyle = cursorStyle.borderStyle;
-                cursorRef.current.style.borderWidth = cursorStyle.borderWidth;
-                cursorRef.current.style.backgroundColor = cursorStyle.backgroundColor;
-                cursorRef.current.style.transform = cursorStyle.transform;
-            }
+      const cursor = cursorRef.current;
+      const dot = dotRef.current;
 
-            if (dotRef.current) {
-                dotRef.current.style.top = `${pos.current.y}px`;
-                dotRef.current.style.left = `${pos.current.x}px`;
-                dotRef.current.style.visibility = cursorStyle.borderWidth === "1px" ? "visible" : "hidden";
-                dotRef.current.style.transform = "translate(-50%, -50%)"
-            }
-            requestAnimationFrame(animate);
-        };
+      if (cursor) {
+        cursor.style.visibility = "visible";
+        cursor.style.top = `${pos.current.y}px`;
+        cursor.style.left = `${pos.current.x}px`;
+        cursor.style.borderStyle = cursorStyle.borderStyle;
+        cursor.style.borderWidth = cursorStyle.borderWidth;
+        cursor.style.backgroundColor = cursorStyle.backgroundColor;
+        cursor.style.transform = cursorStyle.transform;
+      }
 
-        animate();
-    }, [cursorStyle]);
+      if (dot) {
+        dot.style.top = `${pos.current.y}px`;
+        dot.style.left = `${pos.current.x}px`;
+        dot.style.visibility =
+          cursorStyle.borderWidth === "1px" ? "visible" : "hidden";
+        dot.style.transform = "translate(-50%, -50%)";
+      }
+
+      frame.current = requestAnimationFrame(animate);
+    };
+
+    frame.current = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(frame.current!);
+  }, [cursorStyle]);
 
     return (
         <>

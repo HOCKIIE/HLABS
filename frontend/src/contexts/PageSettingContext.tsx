@@ -52,6 +52,13 @@ export default function PageSettingProvider({
   });
   const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
   const {theme} = useTheme();
+  const { resolvedTheme } = useTheme(); // ✅ ใช้ resolvedTheme แทน theme
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+      if (resolvedTheme === "dark") setIsDark(true);
+      else setIsDark(false);
+  }, [resolvedTheme]);
   
   // const thisTheme = (document.getElementsByTagName('html') as HTMLCollectionOf<HTMLElement>)[0].getAttribute('class');
   const handleMouseMove = (e:MouseEvent) => {
@@ -62,7 +69,7 @@ export default function PageSettingProvider({
       setCursorStyle({
         borderStyle:'none',
         borderWidth:'0px',
-        backgroundColor:theme=='dark' ? 'rgb(243,242,249)' : 'rgba(96,104,135,.5)',
+        backgroundColor: isDark ? 'rgb(243,242,249)' : 'rgba(96,104,135,.5)',
         transform:'translateX(-50%) translateY(-50%) scale(2)'
       });
     }else{
@@ -70,7 +77,7 @@ export default function PageSettingProvider({
       setCursorStyle({
         borderStyle:'solid',
         borderWidth:'1px',
-        backgroundColor: theme=='dark' ? 'rgba(0,0,0,0)':'',
+        backgroundColor: isDark ? 'rgba(0,0,0,0)':'',
         transform:'translateX(-50%) translateY(-50%)'
       });
     }
