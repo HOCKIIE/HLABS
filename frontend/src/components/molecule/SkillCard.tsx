@@ -17,7 +17,7 @@ import {
     SiFilezilla,
     SiXampp
 } from "react-icons/si";
-import { SiGithub, SiSourcetree, SiPostman, SiClickup, SiSublimetext, SiMui} from "react-icons/si";
+import { SiGithub, SiSourcetree, SiPostman, SiClickup, SiSublimetext, SiMui, SiNestjs, SiInsomnia} from "react-icons/si";
 import { RiNextjsFill, RiNodejsLine, RiReactjsFill } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
 import { GrMysql } from "react-icons/gr";
@@ -27,34 +27,38 @@ interface IconProps { type: IconType; s:string; c:string;}
 
 const Icon: React.FC<IconProps> = ({ type,s}) => {
 
+    const defaultClass = `text-slate-800 dark:text-slate-300`;
+
     const iconMap: Record<IconType, JSX.Element> = {
-        html5: <SiHtml5 size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-400"/>,
-        css3: <SiCss3 size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        sass: <SiSass size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        bootstrap: <SiBootstrap size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        tailwindCss: <SiTailwindcss size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        mui: <SiMui size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        mysql: <GrMysql size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        php: <SiPhp size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        codeigniter: <SiCodeigniter size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        laravel: <SiLaravel size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        phpMyAdmin: <SiPhpmyadmin size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        mongoDb: <SiMongodb size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        jquery: <SiJquery size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        nodeJs: <RiNodejsLine size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        expressJs: <SiExpress size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        reactJs: <RiReactjsFill size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        nextJs: <RiNextjsFill size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        javaScript: <SiJavascript size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        typeScript: <SiTypescript size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        vsCode: <VscVscode size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        sublime: <SiSublimetext size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        gitHub: <SiGithub size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        sourceTree: <SiSourcetree size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        postman: <SiPostman size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        clickUp: <SiClickup size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        fileZilla: <SiFilezilla size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>,
-        xampp: <SiXampp size={s?`${s}`:'100'} className="text-slate-800 dark:text-slate-300"/>
+        html5: <SiHtml5 size={s?`${s}`:'100'} className={defaultClass.replace('300','400')}/>,
+        css3: <SiCss3 size={s?`${s}`:'100'} className={defaultClass}/>,
+        sass: <SiSass size={s?`${s}`:'100'} className={defaultClass}/>,
+        bootstrap: <SiBootstrap size={s?`${s}`:'100'} className={defaultClass}/>,
+        tailwindCss: <SiTailwindcss size={s?`${s}`:'100'} className={defaultClass}/>,
+        mui: <SiMui size={s?`${s}`:'100'} className={defaultClass}/>,
+        mysql: <GrMysql size={s?`${s}`:'100'} className={defaultClass}/>,
+        php: <SiPhp size={s?`${s}`:'100'} className={defaultClass}/>,
+        codeigniter: <SiCodeigniter size={s?`${s}`:'100'} className={defaultClass}/>,
+        laravel: <SiLaravel size={s?`${s}`:'100'} className={defaultClass}/>,
+        phpMyAdmin: <SiPhpmyadmin size={s?`${s}`:'100'} className={defaultClass}/>,
+        mongoDb: <SiMongodb size={s?`${s}`:'100'} className={defaultClass}/>,
+        jquery: <SiJquery size={s?`${s}`:'100'} className={defaultClass}/>,
+        nodeJs: <RiNodejsLine size={s?`${s}`:'100'} className={defaultClass}/>,
+        expressJs: <SiExpress size={s?`${s}`:'100'} className={defaultClass}/>,
+        reactJs: <RiReactjsFill size={s?`${s}`:'100'} className={defaultClass}/>,
+        nextJs: <RiNextjsFill size={s?`${s}`:'100'} className={defaultClass}/>,
+        nestJs: <SiNestjs size={s?`${s}`:`100`} className={defaultClass}/>,
+        javaScript: <SiJavascript size={s?`${s}`:'100'} className={defaultClass}/>,
+        typeScript: <SiTypescript size={s?`${s}`:'100'} className={defaultClass}/>,
+        vsCode: <VscVscode size={s?`${s}`:'100'} className={defaultClass}/>,
+        sublime: <SiSublimetext size={s?`${s}`:'100'} className={defaultClass}/>,
+        gitHub: <SiGithub size={s?`${s}`:'100'} className={defaultClass}/>,
+        sourceTree: <SiSourcetree size={s?`${s}`:'100'} className={defaultClass}/>,
+        postman: <SiPostman size={s?`${s}`:'100'} className={defaultClass}/>,
+        insomnia: <SiInsomnia size={s?`${s}`:'100'} className={defaultClass}/>,
+        clickUp: <SiClickup size={s?`${s}`:'100'} className={defaultClass}/>,
+        fileZilla: <SiFilezilla size={s?`${s}`:'100'} className={defaultClass}/>,
+        xampp: <SiXampp size={s?`${s}`:'100'} className={defaultClass}/>
     };
     return (iconMap[type])?<>{iconMap[type]}</>:<></>;
 };

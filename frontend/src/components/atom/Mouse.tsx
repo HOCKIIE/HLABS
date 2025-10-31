@@ -26,31 +26,31 @@ export default function Mouse()
     const lerp = (a: number, b: number, n: number) => a + (b - a) * n;
 
     const animate = () => {
-      pos.current.x = lerp(pos.current.x, target.current.x, 0.15);
-      pos.current.y = lerp(pos.current.y, target.current.y, 0.15);
+        pos.current.x = lerp(pos.current.x, target.current.x, 0.15);
+        pos.current.y = lerp(pos.current.y, target.current.y, 0.15);
 
-      const cursor = cursorRef.current;
-      const dot = dotRef.current;
+        const cursor = cursorRef.current;
+        const dot = dotRef.current;
 
-      if (cursor) {
-        cursor.style.visibility = "visible";
-        cursor.style.top = `${pos.current.y}px`;
-        cursor.style.left = `${pos.current.x}px`;
-        cursor.style.borderStyle = cursorStyle.borderStyle;
-        cursor.style.borderWidth = cursorStyle.borderWidth;
-        cursor.style.backgroundColor = cursorStyle.backgroundColor;
-        cursor.style.transform = cursorStyle.transform;
-      }
+        if (cursor) {
+            cursor.style.visibility = "visible";
+            cursor.style.top = `${pos.current.y}px`;
+            cursor.style.left = `${pos.current.x}px`;
+            cursor.style.borderStyle = cursorStyle.borderStyle;
+            cursor.style.borderWidth = cursorStyle.borderWidth;
+            cursor.style.backgroundColor = cursorStyle.backgroundColor;
+            cursor.style.transform = cursorStyle.transform;
+        }
 
-      if (dot) {
-        dot.style.top = `${pos.current.y}px`;
-        dot.style.left = `${pos.current.x}px`;
-        dot.style.visibility =
-          cursorStyle.borderWidth === "1px" ? "visible" : "hidden";
-        dot.style.transform = "translate(-50%, -50%)";
-      }
+        if (dot) {
+            dot.style.top = `${pos.current.y}px`;
+            dot.style.left = `${pos.current.x}px`;
+            dot.style.visibility =
+            cursorStyle.borderWidth === "1px" ? "visible" : "hidden";
+            dot.style.transform = "translate(-50%, -50%)";
+        }
 
-      frame.current = requestAnimationFrame(animate);
+        frame.current = requestAnimationFrame(animate);
     };
 
     frame.current = requestAnimationFrame(animate);

@@ -21,7 +21,7 @@
     {"title":"Express.Js","type":"expressJs","icon":true},
     {"title":"React.Js","type":"reactJs","icon":true},
     {"title":"Next.Js","type":"nextJs","icon":true},
-    {"title":"NestJs","type":"NestJs","icon":false},
+    {"title":"NestJs","type":"nestJs","icon":true},
     {"title":"JavaScript","type":"javaScript","icon":true},
     {"title":"TypeScript","type":"typeScript","icon":true},
     {"title":"Github","type":"github","icon":false},

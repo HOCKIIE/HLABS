@@ -6,5 +6,6 @@
     {"title":"XAMPP","type":"xampp"},
     {"title":"FileZilla","type":"fileZilla"},
     {"title":"Postman","type":"postman"},
+    {"title":"Insomnia","type":"insomnia"},
     {"title":"ClickUp","type":"clickUp"}
 ]
