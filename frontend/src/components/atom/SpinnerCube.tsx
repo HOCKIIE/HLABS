@@ -101,7 +101,7 @@ const SpinnerCube: React.FC = () => {
                 mountRef.current.removeEventListener("mousemove", handleMouseMove);
             }
         };
-    },[isDragging])
+    },[isDragging,auto])
 
     return <div>
         <div className="spinnerCube" ref={mountRef} />
