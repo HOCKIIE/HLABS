@@ -3,7 +3,7 @@
         "date": "February 2025 - July 2025",
         "position": "Software Engineer",
         "company": "Nityo Infotech",
-        "underline": "chonky-underline-yellow",
+        "underline": "chunky-underline-orange",
         "description": {
             "text": "",
             "html": [
@@ -34,7 +34,7 @@
         "date":"April 2022 - December 2024",
         "position":"Full Stack Developer",
         "company":"1-CE Wind Co., Ltd.",
-        "underline":"chonky-underline-blue",
+        "underline":"chunky-underline-blue",
         "description":{
             "text":"",
             "html":[
@@ -71,9 +71,9 @@
     },
     {
         "date":"March 2020 - March 2022",
-        "position":"Full Stack Developer",
+        "position":"Developer",
         "company":"Jobs Labo Recruitment Co., Ltd.",
-        "underline":"chonky-underline-indigo",
+        "underline":"chunky-underline-purple",
         "description":{
             "text":"",
             "html":[
@@ -110,7 +110,7 @@
         "date":"August 2017 - February 2020",
         "position":"Developer",
         "company":"Channel Wide Computer Co., Ltd.",
-        "underline":"chonky-underline-megenta",
+        "underline":"chunky-underline-pink",
         "description":{
             "html":[
                 "- Design the database structure",

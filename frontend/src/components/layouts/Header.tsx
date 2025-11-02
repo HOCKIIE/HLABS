@@ -29,7 +29,7 @@ export default function Header(){
                         <Link href="/" className="block"><Logo/></Link>
                     </div>
                     <ul className="nav-menu h-full hidden xl:flex items-center justify-center">
-                        {MenuItems.map((v:MenuItemType, k:number) =>{
+                        {MenuItems.filter((v)=> v.status == true).map((v:MenuItemType, k:number) =>{
                             return (v.sub)
                                 ? <li 
                                     key={k} 
@@ -38,7 +38,7 @@ export default function Header(){
                                     onMouseLeave={()=> setDropdownToggle(null)}
                                 >
                                     <button
-                                        className="item block py-4 px-10 text-xl transition-all ease-in-out duration-500 text-slate-800 dark:text-slate-300 font-silk-screen hover:text-indigo-700 dark:hover:text-emerald-500"
+                                        className="item block py-4 px-6 text-xl transition-all ease-in-out duration-500 text-slate-800 dark:text-slate-300 font-silk-screen hover:text-indigo-700 dark:hover:text-emerald-500"
                                     >{t(v.key)}</button>
                                     {v.sub && <Dropdown
                                         data={{
@@ -51,7 +51,7 @@ export default function Header(){
                                 <li key={k}>
                                     <Link
                                         href={v.href}
-                                        className="item block py-4 px-10 text-xl transition-all ease-in-out duration-500 text-slate-800 dark:text-slate-300 font-silk-screen hover:text-indigo-700 dark:hover:text-emerald-500"
+                                        className="item block py-4 px-6 text-xl transition-all ease-in-out duration-500 text-slate-800 dark:text-slate-300 font-silk-screen hover:text-indigo-700 dark:hover:text-emerald-500"
                                     >{t(v.key)}</Link>
                                 </li>
                             }

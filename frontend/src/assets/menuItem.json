@@ -1,37 +1,47 @@
 [
-  {
-        "name":"Portfolio",
-        "key":"portfolio",
-        "href":"/portfolio"
-  },
-  {
-        "name":"Curriculum Vitae",
-        "key":"cv",
-        "href":"/cv"
-  },
-  {
-        "name":"Tricks",
-        "key":"tricks",
-        "href":"/tricks",
-        "sub":[
-            {
-                "name":"React.JS",
-                "key":"reactJs",
-                "href":"/tricks?keyword=react-js"
-            },{
-                "name":"Next.JS",
-                "key":"nextJs",
-                "href":"/tricks?keyword=next-js"
-            },{
-                "name":"Tailwind CSS",
-                "key":"tailwindCSS",
-                "href":"/tricks?keyword=tailwind-css"
-            }
-        ]
-  },
-  {
-        "name":"Contact",
-        "key":"contact",
-        "href":"/#contact"
-  }
+    {
+            "name":"Labs",
+            "key":"labs",
+            "href":"/labs",
+            "status": false
+    },
+    {
+            "name":"Portfolio",
+            "key":"portfolio",
+            "href":"/portfolio",
+            "status": true
+    },
+    {
+            "name":"Curriculum Vitae",
+            "key":"cv",
+            "href":"/cv",
+            "status": true
+    },
+    {
+            "name":"Tricks",
+            "key":"tricks",
+            "href":"/tricks",
+            "status": true,
+            "sub":[
+                {
+                    "name":"React.JS",
+                    "key":"reactJs",
+                    "href":"/tricks?keyword=react-js"
+                },{
+                    "name":"Next.JS",
+                    "key":"nextJs",
+                    "href":"/tricks?keyword=next-js"
+                },{
+                    "name":"Tailwind CSS",
+                    "key":"tailwindCSS",
+                    "href":"/tricks?keyword=tailwind-css"
+                }
+            ]
+    },
+    {
+            "name":"Contact",
+            "key":"contact",
+            "href":"/#contact",
+            "status": true
+    }
 ]

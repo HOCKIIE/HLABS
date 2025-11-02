@@ -27,7 +27,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   if (!routing.locales.includes(locale as "th"|"en")) notFound();
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang="en" >
       <body
         className={`scroll-smooth bg-white dark:bg-gradient-to-tr dark:from-slate-950 dark:to-slate-800 dark:bg-no-repeat ${poppins.className}`}
       >

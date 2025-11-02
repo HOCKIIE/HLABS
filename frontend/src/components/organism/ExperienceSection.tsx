@@ -10,6 +10,22 @@ export default function ExperienceSection(){
     const [activeIndexes, setActiveIndexes] = useState<number[]>([]);
     const [newElementHeights, setNewElementHeights] = useState<number[]>([]);
     const refs = useRef<(HTMLDivElement | null)[]>([]);
+    const bgColor: Record<string, string> = {
+        red: "bg-red-500",
+        blue: "bg-blue-500",
+        green: "bg-green-500",
+        purple: "bg-purple-500",
+        pink: "bg-pink-500",
+        orange: "bg-orange-600",
+    };
+    const bgColorClass:Record<string, string> = {
+        red: "from-red-200 dark:from-red-950",
+        blue: "from-blue-200 dark:from-blue-950",
+        green: "from-green-200 dark:from-green-950",
+        purple: "from-purple-200 dark:from-purple-950",
+        pink: "from-pink-200 dark:from-pink-950",
+        orange: "from-orange-200 dark:from-orange-950",
+    }
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -47,31 +63,47 @@ export default function ExperienceSection(){
                             >
                             </div>
                             <div className="relative">
-                                {exp.map(({date,position,company,underline,description}:ExperienceType,index:number)=>
-                                    <div 
-                                        key={index}
-                                        data-index={index}
-                                        ref={(el) => { refs.current[index] = el; }}
-                                        className={`font-roboto-mono grid pb-20 ms-1 ${activeIndexes.includes(index)}`}
-                                    >
-                                        <div className={`absulute flex items-center justify-center w-6 h-6  rounded-full ms-[-18px] transition-all duration-500 delay-[900ms] ring-8 ring-gray-200 dark:ring-slate-800 ${activeIndexes.includes(index)?`bg-indigo-500 dark:bg-emerald-500`:`bg-gray-400 dark:bg-gray-400`} z-[100] overflow-hidden`}>
-                                            <svg className="w-2.5 h-2.5 text-white dark:text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-                                            </svg>
+                                {exp.map(({date,position,company,underline,description}:ExperienceType,index:number)=> {
+                                    const colorClass = underline.replace("chunky-underline-","");
+                                    return(
+                                        <div 
+                                            key={index}
+                                            data-index={index}
+                                            ref={(el) => { refs.current[index] = el; }}
+                                            className={`font-roboto-mono grid pb-20 ms-1 ${activeIndexes.includes(index)}`}
+                                        >
+                                            <div className={`absulute flex items-center justify-center w-6 h-6 rounded-full ms-[-18px] transition-all duration-500 delay-[900ms] ring-8 ring-gray-200 dark:ring-slate-800 ${activeIndexes.includes(index)?`bg-indigo-500 dark:bg-emerald-500`:`bg-gray-400 dark:bg-gray-400`} z-[100] overflow-hidden`}>
+                                                <svg className="w-2.5 h-2.5 text-white dark:text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                                                </svg>
+                                            </div>
+                                            <div className="ms-5 mt-[-1.7rem] flex">
+                                                <div className="rounded-lg bg-gray-100 dark:bg-slate-900 overflow-hidden shadow pe-3 relative">
+                                                    <div className={`absolute w-[160px] h-[55px] bg-gradient-to-br ${bgColorClass[colorClass]} via-gray-100 to-gray-100 dark:via-slate-900 dark:to-slate-900 z-0`}></div>
+                                                    <div className="py-3">
+                                                        <div className="relative z-3 flex">
+                                                            <div className={`w-[5px] ${bgColor[colorClass]} rounded-e-lg`}></div>
+                                                            <div className="border-r border-gray-300 dark:border-gray-600 min-w-14 text-gray-600 dark:text-slate-300 flex items-center justify-center">0{index+1}</div>
+                                                            <div className="mx-4">
+                                                                <p className="text-sm text-gray-600 dark:text-slate-300">{date}</p>
+                                                                <p className="text-gray-700 dark:text-slate-300 flex items-end"><span className="font-bold">@</span>{company}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div className="ms-4 text-2xl font-[950] text-gray-900 dark:text-slate-100 flex my-3">
+                                                <span className={underline||''}>{position}</span>
+                                            </div>
+                                            {description.html && <div className="ms-4 mt-2" >
+                                                {description.html.map((v:string,k:number)=>
+                                                    <SafeHTML key={index+k} html={v} className="leading-8 font-narmal text-gray-500 dark:text-gray-400"/>
+                                                )}
+                                            </div>}
                                         </div>
-                                        <div className="ms-5 mt-[-1.7rem] text-lg text-gray-800 dark:text-slate-300">{date}</div>
-                                        
-                                        <div className="ms-4 text-2xl font-[950] text-gray-900 dark:text-slate-100 flex my-3">
-                                            <span className={underline?underline:''}>{position}</span>
-                                            <div className="ms-5 text-lg dark:text-slate-300 flex items-end">@{company}</div>
-                                        </div>
-                                        {description.html && <div className="ms-4 mt-2" >
-                                            {description.html.map((v:string,k:number)=>
-                                                <SafeHTML key={index+k} html={v} className="text-lg leading-8 font-narmal text-gray-500 dark:text-gray-400"/>
-                                            )}
-                                        </div>}
-                                    </div>
-                                )}
+                                    )
+                                })}
                             </div>
                         </div>
                     </div>

@@ -36,10 +36,17 @@ const SpinnerCube: React.FC = () => {
     const [state, dispatch] = useReducer(reducer, { isAnimating: true });
     const [isDragging, setIsDragging] = useState(false);
     const lastMousePos = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
-    const [auto, setAuto] = useState<boolean|true>(true);
+    const [auto, setAuto] = useState<boolean>(true);
+    const [screen, setScreen] = useState<{width:number,height:number}>({
+        width: window.screen.width, 
+        height: window.screen.height
+    });
+    const [orientation, setOrientation] = useState<"portrait" | "landscape">(
+        window.matchMedia("(orientation: portrait)").matches ? "portrait" : "landscape"
+    );
 
     const handleAnimate = () => {
-        dispatch({type: auto?"STOP_ANIMATION":"START_ANIMATION"})
+        dispatch({type: auto ? "STOP_ANIMATION":"START_ANIMATION"})
         setAuto(!auto);
     }
 
@@ -61,10 +68,29 @@ const SpinnerCube: React.FC = () => {
     },[state.isAnimating]);
 
     useEffect(() => {
+
+        const handleChange = () => {
+            const newOrientation =
+            window.innerWidth > window.innerHeight ? "landscape" : "portrait";
+            setOrientation(newOrientation);
+            setScreen({
+                width: mountRef.current?.clientWidth || screen.width,
+                height: mountRef.current?.clientWidth || screen.height
+            });
+        }
+        window.addEventListener("resize", handleChange);
+
+        return () => window.removeEventListener("resize", handleChange);
+    }, []);
+
+    useEffect(() => {
         const handleResize = () => {
             camera.aspect = 1;
             camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth/5, window.innerWidth/5);
+            console.log('spinner column width ',mountRef.current?.clientWidth )
+            if(orientation == 'portrait' && screen.width <= 430){
+                renderer.setSize(mountRef.current?.clientWidth || screen.width, mountRef.current?.clientWidth || screen.width);
+            }
         };
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
