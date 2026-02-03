@@ -1,7 +1,7 @@
-import skill from "../../../assets/exp/skill.json";
-import tools from "../../../assets/exp/tools.json";
-import education from "../../../assets/exp/education.json";
-import experince from "../../../assets/exp/experience.json";
+import skill from "../../../../assets/exp/skill.json";
+import tools from "../../../../assets/exp/tools.json";
+import education from "../../../../assets/exp/education.json";
+import experince from "../../../../assets/exp/experience.json";
 import Image from "next/image";
 import { ExperienceType } from "@/types/ExperienceType";
 import { EducationType } from "@/types/EducationType";

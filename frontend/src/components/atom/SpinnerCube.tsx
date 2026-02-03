@@ -1,4 +1,5 @@
 "use client"
+
 import React, { useEffect, useState, useReducer, useRef } from 'react';
 import {
     Mesh,
@@ -67,21 +68,22 @@ const SpinnerCube: React.FC = () => {
         return () => cancelAnimationFrame(animationFrameId);
     },[state.isAnimating]);
 
-    useEffect(() => {
-
+   useEffect(() => {
         const handleChange = () => {
-            const newOrientation =
-            window.innerWidth > window.innerHeight ? "landscape" : "portrait";
-            setOrientation(newOrientation);
-            setScreen({
-                width: mountRef.current?.clientWidth || screen.width,
-                height: mountRef.current?.clientWidth || screen.height
-            });
-        }
-        window.addEventListener("resize", handleChange);
+            setOrientation(window.innerWidth > window.innerHeight ? "landscape" : "portrait");
 
+            setScreen({
+                width: mountRef.current?.clientWidth ?? window.innerWidth,
+                height: mountRef.current?.clientHeight ?? window.innerHeight
+            });
+        };
+
+        handleChange(); // เรียกครั้งแรกหลัง mount
+
+        window.addEventListener("resize", handleChange);
         return () => window.removeEventListener("resize", handleChange);
     }, []);
+
 
     useEffect(() => {
         const handleResize = () => {

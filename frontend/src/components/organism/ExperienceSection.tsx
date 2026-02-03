@@ -1,5 +1,5 @@
 "use client"
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useLayoutEffect } from "react";
 import exp from "../../assets/exp/experience.json";
 import SafeHTML from "../molecule/SafeHTML";
 import { ExperienceType } from "@/types/ExperienceType";
@@ -9,6 +9,7 @@ export default function ExperienceSection(){
 
     const [activeIndexes, setActiveIndexes] = useState<number[]>([]);
     const [newElementHeights, setNewElementHeights] = useState<number[]>([]);
+    const timelineRef = useRef<HTMLDivElement | null>(null);
     const refs = useRef<(HTMLDivElement | null)[]>([]);
     const bgColor: Record<string, string> = {
         red: "bg-red-500",
@@ -51,6 +52,15 @@ export default function ExperienceSection(){
         };
     }, []);
 
+    useEffect(() => {
+        const onResize = () => {
+            const heights = refs.current.map((ref) => ref ? ref.getBoundingClientRect().height : 0);
+            setNewElementHeights(heights);
+        };
+        window.addEventListener('resize', onResize);
+        return () => window.removeEventListener('resize', onResize);
+    }, []);
+
     return (
         <section className="bg-gray-200 dark:bg-slate-800 mt-40 py-10 experience">
             <div className="container">
@@ -58,7 +68,7 @@ export default function ExperienceSection(){
                     <div className="col-span-12 mt-4"><h3 className="text-center text-2xl md:text-4xl font-bold text-slate-800 dark:text-slate-200 -tracking-tighter">EXPERIENCE</h3></div>
                     <div className="col-span-12">
                         <div className="relative border-s-[5px] border-slate-300 dark:border-slate-700">
-                            <div style={{ height: `${newElementHeights.reduce((a,b)=>a+b,0)}px`}}
+                            <div ref={timelineRef} style={{ height: `${newElementHeights.reduce((a,b)=>a+b,0)}px`}}
                                 className="absolute top-0 left-0 ms-[-4px] transition-[height] ease-in-out duration-[900ms] delay-[900ms] w-[5px] bg-indigo-500 dark:bg-emerald-500 z-1"
                             >
                             </div>
@@ -78,14 +88,14 @@ export default function ExperienceSection(){
                                                 </svg>
                                             </div>
                                             <div className="ms-5 mt-[-1.7rem] flex">
-                                                <div className="rounded-lg bg-gray-100 dark:bg-slate-900 overflow-hidden shadow pe-3 relative">
+                                                <div className="rounded-lg bg-gray-100 dark:bg-slate-900 overflow-hidden shadow pe-2 relative w-full md:w-auto">
                                                     <div className={`absolute w-[160px] h-[55px] bg-gradient-to-br ${bgColorClass[colorClass]} via-gray-100 to-gray-100 dark:via-slate-900 dark:to-slate-900 z-0`}></div>
                                                     <div className="py-3">
                                                         <div className="relative z-3 flex">
                                                             <div className={`w-[5px] ${bgColor[colorClass]} rounded-e-lg`}></div>
-                                                            <div className="border-r border-gray-300 dark:border-gray-600 min-w-14 text-gray-600 dark:text-slate-300 flex items-center justify-center">0{index+1}</div>
+                                                            <div className="border-r border-gray-300 dark:border-gray-600 min-w-14 text-gray-600 dark:text-slate-300 hidden md:flex items-center justify-center">0{index+1}</div>
                                                             <div className="mx-4">
-                                                                <p className="text-sm text-gray-600 dark:text-slate-300">{date}</p>
+                                                                <h4 className="text-xl font-bold text-gray-600 dark:text-slate-300">{date}</h4>
                                                                 <p className="text-gray-700 dark:text-slate-300 flex items-end"><span className="font-bold">@</span>{company}</p>
                                                             </div>
                                                         </div>
@@ -96,11 +106,13 @@ export default function ExperienceSection(){
                                             <div className="ms-4 text-2xl font-[950] text-gray-900 dark:text-slate-100 flex my-3">
                                                 <span className={underline||''}>{position}</span>
                                             </div>
-                                            {description.html && <div className="ms-4 mt-2" >
-                                                {description.html.map((v:string,k:number)=>
-                                                    <SafeHTML key={index+k} html={v} className="leading-8 font-narmal text-gray-500 dark:text-gray-400"/>
-                                                )}
-                                            </div>}
+                                            {description.html && 
+                                                <div className="ms-4 mt-2" >
+                                                    {description.html.map((v:string,k:number)=>
+                                                        <SafeHTML key={index+k} html={v} className="leading-8 font-narmal text-gray-500 dark:text-gray-400"/>
+                                                    )}
+                                                </div>
+                                            }
                                         </div>
                                     )
                                 })}

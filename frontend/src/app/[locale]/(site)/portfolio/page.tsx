@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { PortfolioType } from "@/types/PortfolioType";
-import portfolio from "../../../assets/exp/portfolio.json"
+import portfolio from "../../../../assets/exp/portfolio.json"
 
 export default function Portfolio(){
     return (<>

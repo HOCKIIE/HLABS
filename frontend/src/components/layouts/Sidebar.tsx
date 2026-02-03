@@ -10,6 +10,8 @@ export default function Sidebar()
 {
     const {isSidebarOpen, toggleSidebar} = useGlobal();
     const handleLinkClick = () => toggleSidebar();
+    const activeCLass = `bg-gray-800 border-gray-800 text-gray-300 dark:text-emerald-500 dark:border-emerald-500`;
+    const defaultClass = `rounded-md border px-1`;
 
     const locale = useLocale();
 
@@ -26,8 +28,8 @@ export default function Sidebar()
                         <li key={k}><Link onClick={handleLinkClick} href={v.href} className="block item w-full py-4 px-10 font-silk-screen text-gray-800 dark:text-gray-300 dark:hover:text-emerald-500">{v.name}</Link></li>
                     )}
                     <li className="languages ms-10 flex gap-1 mt-2">
-                        <Link href="/" className={`border px-1 ${locale =="th"?"bg-gray-800 border-gray-800 text-gray-300 dark:text-emerald-500":"border-gray-400 text-gray-500"} dark:border-gray-300 rounded-md`} locale="th">TH</Link>
-                        <Link href="/" className={`border px-1 ${locale =="en"?"bg-gray-800 border-gray-800 text-gray-300 dark:text-emerald-500 ":"border-gray-400 text-gray-500"} border-gray-800 dark:border-gray-300 rounded-md`} locale="en">EN</Link>
+                        <Link href="/" className={`${defaultClass} ${locale =="th"?`${activeCLass}`:"border-gray-500 text-gray-500"}`} locale="th">TH</Link>
+                        <Link href="/" className={`${defaultClass} ${locale =="en"?`${activeCLass}`:"border-gray-500 text-gray-500"}`} locale="en">EN</Link>
                     </li>
                 </ul>
             </div>
