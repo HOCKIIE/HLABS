@@ -7,22 +7,20 @@
         "description": {
             "text": "",
             "html": [
-                "- Salesforce (CRM)",
-                "- Node.js/NestJs: For building API Gateway for salesforce integrations",
-                "- Postman/Insomnia: Testing APIs",
-                "- Version Control: Git (Github)",
-                "- HTML, CSS, Javascript",
-                "- Salesforce DevOps Tools: Copado",
-                "- Experience with software development life circle methodologies Agile: SCRUM"
+                "- Developed custom UI components using HTML, CSS, and JavaScript for Salesforce-integrated web applications",
+                "- Led the design and implementation of Salesforce integration architecture, using Node.js / NestJS as a centralized API Gateway",
+                "- Collaborated with cross-functional teams (Sales, Business, and Engineering) to translate business requirements into technical solutions",
+                "- Participated in Salesforce deployment and release processes using Copado (Salesforce DevOps)",
+                "- Used Git (GitHub) for version control, code reviews, and team collaboration",
+                "- Worked in an Agile (SCRUM) environment, participating in sprint planning, daily stand-ups, and retrospectives"
             ],
             "list": [
-                "Salesforce (CRM)",
-                "Node.js/NestJs: For building API Gateway for salesforce integrations",
-                "Postman/Insomnia: Testing APIs",
-                "Version Control: Git (Github)",
-                "HTML, CSS, Javascript",
-                "Salesforce DevOps Tools: Copado",
-                "Experience with software development life circle methodologies Agile: SCRUM"
+                "Developed custom UI components using HTML, CSS, and JavaScript for Salesforce-integrated web applications",
+                "Led the design and implementation of Salesforce integration architecture, using Node.js / NestJS as a centralized API Gateway",
+                "Collaborated with cross-functional teams (Sales, Business, and Engineering) to translate business requirements into technical solutions",
+                "Used Git (GitHub) for version control, code reviews, and team collaboration",
+                "Participated in Salesforce deployment and release processes using Copado (Salesforce DevOps)",
+                "Worked in an Agile (SCRUM) environment, participating in sprint planning, daily stand-ups, and retrospectives"
             ]
         }
     },
@@ -45,7 +43,9 @@
                 "- Use GitHub for version control",
                 "- Use ClickUp, Trello for productivity tool",
                 "- Create and develop text editor that can generate HTML based on Tailwind CSS formatting to support another of devices",
-                "- Install operating system software, applications, computer hardware and network devices, and customize settings to ensure the system works appropriately to the organization's specific needs."
+                "- Install operating system software, applications, computer hardware and network devices, and customize settings to ensure the system works appropriately to the organization's specific needs.",
+                "- Optimized Technical SEO, performance, and Core Web Vitals",
+                "- Handled deployment processes and environment configurations"
             ],
             "list":[
                 "Build, develop the website according follow requirement of the organization",
@@ -59,7 +59,9 @@
                 "Use GitHub for version control",
                 "Use ClickUp, Trello for productivity tool",
                 "Create and develop text editor that can generate HTML based on Tailwind CSS formatting to support another of devices",
-                "Install operating system software, applications, computer hardware and network devices, and customize settings to ensure the system works appropriately to the organization's specific needs."
+                "Install operating system software, applications, computer hardware and network devices, and customize settings to ensure the system works appropriately to the organization's specific needs.",
+                "Optimized Technical SEO, performance, and Core Web Vitals",
+                "Handled deployment processes and environment configurations"
             ]
         }
     },

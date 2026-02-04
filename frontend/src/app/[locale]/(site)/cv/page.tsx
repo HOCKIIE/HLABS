@@ -1,3 +1,5 @@
+"use client";
+
 import skill from "../../../../assets/exp/skill.json";
 import tools from "../../../../assets/exp/tools.json";
 import education from "../../../../assets/exp/education.json";
@@ -5,16 +7,27 @@ import experince from "../../../../assets/exp/experience.json";
 import Image from "next/image";
 import { ExperienceType } from "@/types/ExperienceType";
 import { EducationType } from "@/types/EducationType";
+import Button from "@/components/atom/Button";
+import { HiOutlineDownload } from "react-icons/hi";
+import { usePDF } from 'react-to-pdf';
 
 interface DefaultProp {
     title:string
 }
 
 export default function Resume(){
+
+    const { toPDF, targetRef } = usePDF({filename: 'CV - Suphawat Kongson.pdf'});
+
     return (<>
         <section className="cv">
             <div className="container">
-                <div className="grid grid-cols-12 gap-0 bg-gray-100 dark:bg-slate-800 mt-40 print:mt-0 overflow-hidden">
+                <div className="mt-40 mb-3">
+                    <div className="flex justify-end">
+                        <Button onClick={() => toPDF()}>Download CV<HiOutlineDownload className="ms-1"/></Button>
+                    </div>
+                </div>
+                <div className="grid grid-cols-12 gap-0 bg-gray-100 dark:bg-slate-800 print:mt-0 overflow-hidden" ref={targetRef}>
                     <div className="col-span-12 xl:col-span-4 print:col-span-4 bg-gray-500 dark:bg-gray-900">
                         <div className="print:bg-gray-400">
                             <div className="profile-image min-h-[400px] print:min-h-[230px] flex items-center justify-center relative">
@@ -39,7 +52,7 @@ export default function Resume(){
                                     <strong className="text-gray-200 dark:text-gray-400">Date of birth :</strong><p className="text-gray-300 dark:text-gray-400">10 / 08 / 1991</p>
                                 </div>
                                 <div className="mt-4">
-                                <strong className="text-gray-200 dark:text-gray-400">Military status :</strong><p className="text-gray-300 dark:text-gray-400">Completed</p>
+                                    <strong className="text-gray-200 dark:text-gray-400">Military status :</strong><p className="text-gray-300 dark:text-gray-400">Completed</p>
                                 </div>
                                 <div className="mt-4 print:text-sm">
                                     <strong className="text-gray-200 dark:text-gray-400">Phone : </strong><br/>
