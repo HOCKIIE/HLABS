@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import SearchModal from '@/components/layouts/SearchModal';
 import TricksLayout from '@/components/layouts/tricks/TricksLayout';
-import ReactNext from '../../(site)/tricks/react-next/page';
+import ReactNext from './react-next/page';
 import Tailwindcss from './tailwindcss/page';
 
 

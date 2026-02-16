@@ -18,12 +18,20 @@ interface DefaultProp {
 export default function Resume(){
 
     const { toPDF, targetRef } = usePDF({filename: 'CV - Suphawat Kongson.pdf'});
+    const env = process.env.NEXT_PUBLIC_ENV;
+    const dev = process.env.NEXT_PUBLIC_URI_PREFIX_DEV;
+    const prod = process.env.NEXT_PUBLIC_URI_PREFIX_PROD;
+    const prefix = env ? dev: prod;
+    const resume = prefix + '/download/RESUME - Suphawat Kongson.pdf';
+    const DownloadResume =  () => {
 
+    }
     return (<>
         <section className="cv">
             <div className="container">
                 <div className="mt-40 mb-3">
-                    <div className="flex justify-end">
+                    <div className="flex justify-end gap-2">
+                        <Button onClick={DownloadResume} download={true} href={resume} type="a">Download Resume <HiOutlineDownload className="ms-1"/></Button>
                         <Button onClick={() => toPDF()}>Download CV<HiOutlineDownload className="ms-1"/></Button>
                     </div>
                 </div>
