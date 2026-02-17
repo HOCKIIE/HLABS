@@ -5,20 +5,20 @@ import { Repository } from 'typeorm';
 
 @Injectable()
 export class SkillService {
-    constructor(
-        @InjectRepository(SkillEntity)
-        private usersRepository: Repository<SkillEntity>,
-    ) { }
+  constructor(
+    @InjectRepository(SkillEntity)
+    private usersRepository: Repository<SkillEntity>,
+  ) {}
 
-    findAll(): Promise<SkillEntity[]> {
-        return this.usersRepository.find();
-    }
+  findAll(): Promise<SkillEntity[]> {
+    return this.usersRepository.find();
+  }
 
-    findOne(id: number): Promise<SkillEntity | null> {
-        return this.usersRepository.findOneBy({ id });
-    }
+  findOne(id: number): Promise<SkillEntity | null> {
+    return this.usersRepository.findOneBy({ id });
+  }
 
-    async remove(id: number): Promise<void> {
-        await this.usersRepository.delete(id);
-    }
+  async remove(id: number): Promise<void> {
+    await this.usersRepository.delete(id);
+  }
 }
