@@ -11,7 +11,7 @@ export default function SkillSection(){
     useEffect(() => {
         const fetchSkills = async () => {
             try {
-                const response = await feApi.get('/skill');
+                const response = await feApi.get('/skill?display=home,resume');
                 console.log("Fetched skills:", response.data);
                 setSkills(response.data);
             } catch (error) {

@@ -11,7 +11,6 @@ export class SkillService {
     ) { }
 
     findAll(): Promise<SkillEntity[]> {
-        console.log(this.skillRepository.metadata.tableName);
         try {
             return this.skillRepository.query('SELECT * FROM public.skills');
         } catch (err) {

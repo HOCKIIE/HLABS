@@ -12,6 +12,9 @@ export class SkillEntity {
     type!: string;
 
     @Column({ type:'text', nullable: true })
+    display!: string;
+
+    @Column({ type:'text', nullable: true })
     html!: string;
 
     @Column({ type: 'int', default: 0 })
@@ -23,11 +26,11 @@ export class SkillEntity {
     @Column({ name:'created_at', type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
     created_at!: Date;
 
-    @Column({ 
-        name:'updated_at', 
-        type: 'timestamp', 
-        default: () => 'CURRENT_TIMESTAMP', 
-        onUpdate: 'CURRENT_TIMESTAMP' 
+    @Column({
+        name:'updated_at',
+        type: 'timestamp',
+        default: () => 'CURRENT_TIMESTAMP',
+        onUpdate: 'CURRENT_TIMESTAMP'
     })
     updated_at!: Date;
 }
