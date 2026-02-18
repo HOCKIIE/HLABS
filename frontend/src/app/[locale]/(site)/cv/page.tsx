@@ -108,14 +108,14 @@ export default function Resume(){
                                 </h3>
                                 <div>
                                     <ul className="text-sm leading-6 mt-2 text-gray-300 dark:text-gray-400">
-                                        <li><a href="https://www.at-once.info" target="_blank">www.at-once.info</a></li>
-                                        <li><a href="https://www.rent.co.th" target="_blank">www.rent.co.th</a><br/></li>
-                                        <li><a href="https://www.abilmente.com" target="_blank">www.abilmente.com</a><br/></li>
-                                        <li><a href="https://www.thaiprint.in.th" target="_blank">www.thaiprint.in.th</a><br/></li>
-                                        <li><a href="https://www.ymctranslation.com" target="_blank">www.ymctranslation.com</a><br/></li>
-                                        <li><a href="https://www.th.nissin-asia.com" target="_blank">www.th.nissin-asia.com</a><br/></li>
-                                        <li><a href="https://www.รับขนย้ายเครื่องจักร.net" target="_blank">www.รับขนย้ายเครื่องจักร.net</a><br/></li>
-                                        <li><a href="https://www.nankai.co.th" target="_blank">www.nankai.co.th</a><br/></li>
+                                        <li><a href="https://www.at-once.info" rel="" target="_blank">www.at-once.info</a></li>
+                                        <li><a href="https://www.rent.co.th" rel="" target="_blank">www.rent.co.th</a><br/></li>
+                                        <li><a href="https://www.abilmente.com" rel="" target="_blank">www.abilmente.com</a><br/></li>
+                                        <li><a href="https://www.thaiprint.in.th" rel="" target="_blank">www.thaiprint.in.th</a><br/></li>
+                                        <li><a href="https://www.ymctranslation.com" rel="" target="_blank">www.ymctranslation.com</a><br/></li>
+                                        <li><a href="https://www.th.nissin-asia.com" rel="" target="_blank">www.th.nissin-asia.com</a><br/></li>
+                                        <li><a href="https://www.รับขนย้ายเครื่องจักร.net" rel="" target="_blank">www.รับขนย้ายเครื่องจักร.net</a><br/></li>
+                                        <li><a href="https://www.nankai.co.th" rel="" target="_blank">www.nankai.co.th</a><br/></li>
                                     </ul>
                                 </div>
                             </div>
