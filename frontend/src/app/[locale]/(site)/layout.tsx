@@ -5,6 +5,7 @@ import Sidebar from "@/components/layouts/Sidebar";
 import BackToTopButton from "@/components/atom/BackToTopButton";
 import Mouse from "@/components/atom/Mouse";
 
+
 export default async function Layout({
     children,
 }: {

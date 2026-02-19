@@ -1,27 +1,19 @@
-import { useState, useEffect, useRef } from "react";
-import Skill from "../../assets/exp/skill.json";
 import { SkillCard } from "../molecule/SkillCard"
 import { IconType } from "@/types/IconType";
 import feApi from "@/services/feApi";
+import { SkillType } from "@/types/SkillType";
+import useSWR from 'swr'
 
 export default function SkillSection(){
-    const [skills, setSkills] = useState([]);
-    const didFetchSkills = useRef(false);
-
-    useEffect(() => {
-        const fetchSkills = async () => {
-            try {
-                const response = await feApi.get('/skill?display=home,resume');
-                console.log("Fetched skills:", response.data);
-                setSkills(response.data);
-            } catch (error) {
-                console.error("Error fetching skills:", error);
-            }
-        };
-        if(didFetchSkills.current) return; 
-        didFetchSkills.current = true;
-        fetchSkills();
-    }, []);
+    const fetcher = (url: string) => feApi.get(url).then(res => res.data);
+    const { data: skills, isLoading, error } = useSWR(
+        '/skill?display=home,resume',
+        fetcher,
+        { 
+            revalidateOnFocus: false,
+            revalidateIfStale: true
+        }
+    );
     return (
         <section className="backdrop-blur">
             <div className="container">
@@ -29,7 +21,9 @@ export default function SkillSection(){
                     <div className="col-span-12">
                         <h3 className="text-5xl font-bold text-center text-slate-800 dark:text-slate-200 -tracking-tighter">SKILLS</h3>
                     </div>
-                    {Skill.map((v,k)=> v.icon && <SkillCard key={k} title={v.title} type={v.type as IconType} /> )} 
+                    {error && <p className="text-center col-span-12 text-red-500">Failed to load skills.</p>}
+                    {isLoading && Array(24).fill(null).map((_, i) => <SkillCard key={i} loading={true} />)}
+                    {skills && skills.map((v:SkillType,k: number)=> v.icon && <SkillCard key={k} title={v.title} type={v.type as IconType} /> )} 
                 </div>
             </div>
         </section>

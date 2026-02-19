@@ -62,6 +62,15 @@ body {
     color: var(--foreground);
     background: var(--background);
 }
+#splash {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .font-silk-screen{
     font-family: "Silkscreen";
 }

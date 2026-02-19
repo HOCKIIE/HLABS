@@ -10,6 +10,8 @@ import { EducationType } from "@/types/EducationType";
 import Button from "@/components/atom/Button";
 import { HiOutlineDownload } from "react-icons/hi";
 import { usePDF } from 'react-to-pdf';
+import { useGlobal } from "@/contexts/PageSettingContext";
+import { useEffect } from "react";
 
 interface DefaultProp {
     title:string
@@ -17,6 +19,7 @@ interface DefaultProp {
 
 export default function Resume(){
 
+    const { setLoading } = useGlobal();
     const { toPDF, targetRef } = usePDF({filename: 'CV - Suphawat Kongson.pdf'});
     const env = process.env.NEXT_PUBLIC_ENV;
     const dev = process.env.NEXT_PUBLIC_URI_PREFIX_DEV;
@@ -26,6 +29,9 @@ export default function Resume(){
     const DownloadResume =  () => {
 
     }
+    useEffect(() => {
+        setTimeout(() => setLoading(false), 300);
+    }, [setLoading]);
     return (<>
         <section className="cv">
             <div className="container">

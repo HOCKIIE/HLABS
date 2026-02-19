@@ -20,6 +20,9 @@ export class SkillEntity {
     @Column({ type: 'int', default: 0 })
     level!: number;
 
+    @Column({ type: 'boolean', default: false })
+    icon!: boolean;
+
     @Column({ type: 'boolean', default: true })
     is_active!: boolean;
 

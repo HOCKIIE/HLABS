@@ -1,8 +1,19 @@
+"use client";
+
+import { useEffect } from "react";
 import Image from "next/image";
 import { PortfolioType } from "@/types/PortfolioType";
-import portfolio from "../../../../assets/exp/portfolio.json"
+import portfolio from "../../../../assets/exp/portfolio.json";
+import { useGlobal } from "@/contexts/PageSettingContext";
 
-export default function Portfolio(){
+export default function Portfolio()
+{
+
+    const { setLoading } = useGlobal();
+    useEffect(() => {
+        setTimeout(() => setLoading(false), 300);
+    }, [setLoading]);
+    
     return (<>
     <section className="portfolio overflow-x-hidden">
         <div className="container">

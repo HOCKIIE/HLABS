@@ -1,5 +1,5 @@
 "use client"
-import { useRef, useEffect, useState, useLayoutEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import exp from "../../assets/exp/experience.json";
 import SafeHTML from "../molecule/SafeHTML";
 import { ExperienceType } from "@/types/ExperienceType";
