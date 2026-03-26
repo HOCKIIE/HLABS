@@ -40,5 +40,5 @@ HLabs Dev is a modern web application designed as a **developer portfolio** and 
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/hlabs-dev.git
+git clone https://github.com/HOCKIIE/hlabs-dev.git
 cd hlabs-dev
