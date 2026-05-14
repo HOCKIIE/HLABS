@@ -1,6 +1,6 @@
 "use client"
 import { useRef, useEffect, useState } from "react";
-import exp from "../../assets/exp/experience.json";
+// import exp from "../../assets/exp/experience.json";
 import SafeHTML from "../molecule/SafeHTML";
 import { ExperienceType } from "@/types/ExperienceType";
 import useSWR from 'swr'
@@ -82,15 +82,17 @@ export default function ExperienceSection(){
                     <div className="col-span-12 mt-4"><h3 className="text-center text-2xl md:text-4xl font-bold text-slate-800 dark:text-slate-200 -tracking-tighter">EXPERIENCE</h3></div>
                     <div className="col-span-12">
                         <div className="relative border-s-[5px] border-slate-300 dark:border-slate-700">
-                            <div ref={timelineRef} style={{ height: `${newElementHeights.reduce((a,b)=>a+b,0)}px`}}
+                            <div 
+                                ref={timelineRef} 
+                                style={{ height: `${newElementHeights.reduce((a,b)=>a+b,0)}px`}}
                                 className="absolute top-0 left-0 ms-[-4px] transition-[height] ease-in-out duration-[900ms] delay-[900ms] w-[5px] bg-indigo-500 dark:bg-emerald-500 z-1"
-                            >
-                            </div>
+                            ></div>
                             <div className="relative">
                                 {isLoading && Array(4).fill(null).map((_, i) => <ExpEmptyItem key={i}/> )}
-                                {exp.map(({date,position,company,underline,description}:ExperienceType,index:number)=> {
+                                {items && items.map(({date,position,company,underline,description_json}:ExperienceType,index:number)=> {
                                     const colorClass = underline.replace("chunky-underline-","");
-                                    return(
+                                    const description = description_json ? JSON.parse(description_json) : {html: []};
+                                    return (
                                         <div
                                             key={index}
                                             data-index={index}
@@ -131,6 +133,7 @@ export default function ExperienceSection(){
                                         </div>
                                     )
                                 })}
+                                {error && <div className="text-red-500 dark:text-red-700">Failed to load experience data.</div>}
                             </div>
                         </div>
                     </div>

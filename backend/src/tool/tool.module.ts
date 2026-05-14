@@ -4,8 +4,8 @@ import { ToolService } from './tool.service';
 import { ToolController } from './tool.controller';
 import { ToolEntity } from './entities/tool.entity';
 
-@Module({ 
-    controllers: [ToolController], 
+@Module({
+    controllers: [ToolController],
     providers: [ToolService],
     imports: [TypeOrmModule.forFeature([ToolEntity])],
     exports: [TypeOrmModule, ToolService],

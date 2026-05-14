@@ -3,9 +3,5 @@ export interface ExperienceType {
     company: string;
     position: string;
     underline: string,
-    description: {
-        text?: string | null;
-        html: string[];
-        list: string[];
-    }
+    description_json: string | null;
 }

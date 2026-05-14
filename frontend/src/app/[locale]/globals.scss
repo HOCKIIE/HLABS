@@ -285,6 +285,20 @@ html{
                 bottom: 20%;
                 left: 2px;
             }
+
+            .element-div{
+                padding-left: 35px;
+                &::before,
+                &::after{
+                    opacity: 0.3;
+                    color: rgba(0,0,0,1);
+                    display: block;
+                    margin-left: -35px;
+                    font-size: 14px;
+                }
+                &::before{ content: "<div>"; margin-bottom: 5px; }
+                &::after{ content: "</div>"; margin-top: 10px; }
+            }            
             .element-h2{
                 padding-left: 35px;
                 &::before,
