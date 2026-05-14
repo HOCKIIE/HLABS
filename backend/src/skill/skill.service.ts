@@ -1,46 +1,98 @@
 import { SkillEntity } from './skill.entity';
-import { Injectable, Res } from '@nestjs/common';
+import { Injectable, Res, Query, Inject, Logger } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import type { Response } from 'express';
+import { CACHE_MANAGER } from '@nestjs/cache-manager';
+import type { Cache } from 'cache-manager';
+import { CACHE_TTL, CACHE_KEYS } from '../common/cache.constants';
 
 @Injectable()
 export class SkillService {
+
+    private readonly logger = new Logger(SkillService.name);
+    
     constructor(
         @InjectRepository(SkillEntity)
         private skillRepository: Repository<SkillEntity>,
-    ) { }
+        @Inject(CACHE_MANAGER)
+        private readonly cacheManager: Cache,
+    ) {
 
-    findAll(
-        display?: string
+    }
+
+    async findAll(
+        @Query('display') display: string
     ): Promise<SkillEntity[]> {
         try {
+            const cacheKey = CACHE_KEYS.SKILLS + `:all`;
+            const cached = await this.cacheManager.get<SkillEntity[]>(cacheKey);
+            if (cached) {
+                return cached;
+            }
 
             const query = this.skillRepository.createQueryBuilder('skills');
-            if (display !== undefined) query.where('skills.display = :display', { display });
+            if (display) {
+                const displayValues = display.split(',').map(value => value.trim());
+                query.andWhere(`string_to_array(skills.display, ',') && ARRAY[:...values]`, { values: displayValues });
+            }
+            const data = await query.getMany();
 
-            return query.getMany();
+            if (data) await this.cacheManager.set(cacheKey, data, CACHE_TTL);
+            return data;
+
 
         } catch (err) {
-            console.error('DB ERROR 👉', err);
+            console.error('ERROR 👉', err);
             throw err;
         }
     }
 
-    findOne(id: number): Promise<SkillEntity | null> {
-        return this.skillRepository.findOneBy({ id });
+    async findOne(id: number): Promise<SkillEntity | null> {
+        try {
+            const cacheKey = CACHE_KEYS.SKILLS + `:${id}`;
+
+            const cached = await this.cacheManager.get<SkillEntity>(cacheKey);
+            console.log(`Cache check for key:${id}`);
+            if (cached) {
+                console.log('Cache hit:', cached);
+                return cached;
+            }
+
+            const data = await this.skillRepository.findOneBy({ id });
+            if (data) await this.cacheManager.set(cacheKey, data, CACHE_TTL);
+            return data;
+
+        } catch (err) {
+            console.error('ERROR 👉', err);
+            throw err;
+        }
     }
 
     insert(skill: Partial<SkillEntity>): Promise<SkillEntity> {
-        const newSkill = this.skillRepository.create(skill);
-        return this.skillRepository.save(newSkill);
+        try {
+            const newSkill = this.skillRepository.create(skill);
+            return this.skillRepository.save(newSkill);
+        } catch (err) {
+            console.error('ERROR 👉', err);
+            throw err;
+        }
     }
 
     update(id: number, skill: Partial<SkillEntity>): Promise<SkillEntity> {
-        return this.skillRepository.save({ ...skill, id });
+        try {
+            return this.skillRepository.save({ ...skill, id });
+        } catch (err) {
+            console.error('ERROR 👉', err);
+            throw err;
+        }
     }
 
     async remove(id: number): Promise<void> {
-        await this.skillRepository.delete(id);
+        try {
+            await this.skillRepository.delete(id);
+        } catch (err) {
+            console.error('ERROR 👉', err);
+            throw err;
+        }
     }
 }

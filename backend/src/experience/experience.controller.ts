@@ -1,4 +1,13 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get, } from '@nestjs/common';
+import { ExperienceService } from './experience.service';
 
-@Controller('experience')
-export class ExperienceController {}
+@Controller('experiences')
+export class ExperienceController { 
+
+    constructor(private readonly experienceService: ExperienceService) {}
+
+    @Get('')
+    async findAll() {
+        return await this.experienceService.findAll()
+    }
+}

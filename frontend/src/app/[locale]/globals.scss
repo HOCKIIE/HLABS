@@ -675,12 +675,18 @@ html{
 // }
 
 @media print{
-    section.cv{ 
-        margin: 0;
-        padding: 0;
-        color-adjust: exact;
-        print-color-adjust: exact; 
-        -webkit-print-color-adjust: exact;
-        page-break-inside: avoid;
+    section{
+        .cv{
+            margin: 0;
+            padding: 0;
+            .page-break{
+                color-adjust: exact;
+                print-color-adjust: exact; 
+                -webkit-print-color-adjust: exact;
+                page-break-inside: avoid;
+                break-after: page;
+                background-color: #b5a0ca;
+            }
+        } 
     }
 }

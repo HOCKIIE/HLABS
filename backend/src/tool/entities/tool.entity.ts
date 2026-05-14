@@ -1,7 +1,7 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity('skills')
-export class SkillEntity {
+@Entity('tools')
+export class ToolEntity {
     @PrimaryGeneratedColumn()
     id!: number;
 
@@ -16,9 +16,6 @@ export class SkillEntity {
 
     @Column({ type:'text', nullable: true })
     html!: string;
-
-    @Column({ type: 'int', default: 0 })
-    level!: number;
 
     @Column({ type: 'boolean', default: false })
     icon!: boolean;

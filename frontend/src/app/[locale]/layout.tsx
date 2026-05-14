@@ -7,7 +7,6 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "next-themes"
 import { Poppins } from "next/font/google";
-import FullScreenLoading from "@/components/atom/FullScreenLoading";
 
 const poppins = Poppins({weight: ['100','200','300','400','500','700','800','900'],subsets:['latin']})
 

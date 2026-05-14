@@ -3,6 +3,11 @@ import { useRef, useEffect, useState } from "react";
 import exp from "../../assets/exp/experience.json";
 import SafeHTML from "../molecule/SafeHTML";
 import { ExperienceType } from "@/types/ExperienceType";
+import useSWR from 'swr'
+import feApi from "@/services/feApi";
+import ExpEmptyItem from "../atom/ExpEmptyItem";
+
+const fetcher = (url: string) => feApi.get(url).then(res => res.data);
 
 
 export default function ExperienceSection(){
@@ -27,6 +32,15 @@ export default function ExperienceSection(){
         pink: "from-pink-200 dark:from-pink-950",
         orange: "from-orange-200 dark:from-orange-950",
     }
+
+    const { data: items, isLoading, error } = useSWR(
+        '/experiences',
+        fetcher,
+        { 
+            revalidateOnFocus: false,
+            revalidateIfStale: true
+        }
+    );
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -73,10 +87,11 @@ export default function ExperienceSection(){
                             >
                             </div>
                             <div className="relative">
+                                {isLoading && Array(4).fill(null).map((_, i) => <ExpEmptyItem key={i}/> )}
                                 {exp.map(({date,position,company,underline,description}:ExperienceType,index:number)=> {
                                     const colorClass = underline.replace("chunky-underline-","");
                                     return(
-                                        <div 
+                                        <div
                                             key={index}
                                             data-index={index}
                                             ref={(el) => { refs.current[index] = el; }}

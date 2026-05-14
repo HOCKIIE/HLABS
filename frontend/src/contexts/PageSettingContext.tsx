@@ -89,7 +89,7 @@ export default function PageSettingProvider({
 
     return (
         <PageSettingContext.Provider value={{ isSidebarOpen, toggleSidebar, myCursor, cursorStyle, loading, setLoading}}>
-            {loading && <FullScreenLoading />}
+            {/* {loading && <FullScreenLoading />} */}
             {children}
         </PageSettingContext.Provider>
     );

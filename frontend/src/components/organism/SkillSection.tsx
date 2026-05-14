@@ -22,7 +22,7 @@ export default function SkillSection(){
                         <h3 className="text-5xl font-bold text-center text-slate-800 dark:text-slate-200 -tracking-tighter">SKILLS</h3>
                     </div>
                     {error && <p className="text-center col-span-12 text-red-500">Failed to load skills.</p>}
-                    {isLoading && Array(24).fill(null).map((_, i) => <SkillCard key={i} loading={true} />)}
+                    {isLoading && Array(18).fill(null).map((_, i) => <SkillCard key={i} loading={true} />)}
                     {skills && skills.map((v:SkillType,k: number)=> v.icon && <SkillCard key={k} title={v.title} type={v.type as IconType} /> )} 
                 </div>
             </div>

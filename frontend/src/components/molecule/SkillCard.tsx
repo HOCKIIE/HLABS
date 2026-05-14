@@ -43,8 +43,8 @@ const Icon: React.FC<IconProps> = ({ type,s}) => {
         codeigniter: <SiCodeigniter size={s?`${s}`:'100'} className={defaultClass}/>,
         laravel: <SiLaravel size={s?`${s}`:'100'} className={defaultClass}/>,
         phpMyAdmin: <SiPhpmyadmin size={s?`${s}`:'100'} className={defaultClass}/>,
-        mongoDb: <SiMongodb size={s?`${s}`:'100'} className={defaultClass}/>,
-        postgreDB: <BiLogoPostgresql size={s?`${s}`:'100'} className={defaultClass}/>,
+        mongoDB: <SiMongodb size={s?`${s}`:'100'} className={defaultClass}/>,
+        postgreSQL: <BiLogoPostgresql size={s?`${s}`:'100'} className={defaultClass}/>,
         jquery: <SiJquery size={s?`${s}`:'100'} className={defaultClass}/>,
         nodeJs: <RiNodejsLine size={s?`${s}`:'100'} className={defaultClass}/>,
         expressJs: <SiExpress size={s?`${s}`:'100'} className={defaultClass}/>,
@@ -83,8 +83,8 @@ export const SkillCard = ({
                 <div className="flex items-center justify-center z-20">
                     {loading && 
                         <div>
-                            <div className="w-full h-5 rounded-lg bg-slate-800 animate-pulse" />
-                            <div className="w-[100px] h-[100px] rounded-full bg-slate-800 animate-pulse mt-6" />
+                            <div className="w-full h-5 rounded-lg bg-slate-300 animate-pulse" />
+                            <div className="w-[100px] h-[100px] rounded-full bg-slate-300 animate-pulse mt-6" />
                         </div>
                     }
                     {!loading && type && <Icon type={type} s="100" c="#1f2937" /> }
@@ -99,16 +99,26 @@ export const SkillCard = ({
 
 export const ToolsCard = ({
     title,
-    type
+    type,
+    loading
 }:{
-    title:string; 
-    type:IconType
+    title?: string;
+    type?: IconType;
+    loading?: boolean;
 }) => {
     return (
         <div className="card-item col-span-6 md:col-span-3 xl:col-span-2">
             <div className="rounded-3xl shadow-md p-6 bg-slate-100 dark:bg-slate-900 hover:dark:bg-slate-800 transition-all duration-500 hover:bg-indigo-100 hover:transform hover:rotate-3">
-                <p className="text-center text-base xl:text-xl mb-4 text-black dark:text-slate-300">{title}</p>
-                <div className="p-4"><Icon type={type} s="100" c="#1e293b" /></div>
+                {!loading && title && <p className="text-center text-base xl:text-xl mb-4 text-black dark:text-slate-300">{title}</p> }
+                <div className="p-4">
+                    {loading && 
+                        <div>
+                            <div className="w-full h-5 rounded-lg bg-slate-300 animate-pulse" />
+                            <div className="w-[100px] h-[100px] rounded-full bg-slate-300 animate-pulse mt-6" />
+                        </div>
+                    }
+                    {!loading && type && <Icon type={type} s="100" c="#1e293b" /> }
+                </div>
             </div>
         </div>
     )

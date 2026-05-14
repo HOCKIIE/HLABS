@@ -5,6 +5,11 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { SkillModule } from './skill/skill.module';
+import { CacheModule } from '@nestjs/cache-manager';
+import { redisStore } from 'cache-manager-ioredis-yet';
+import { ToolModule } from './tool/tool.module';
+import { ExperienceModule } from './experience/experience.module';
+
 @Module({
     imports: [
         ConfigModule.forRoot({
@@ -25,8 +30,21 @@ import { SkillModule } from './skill/skill.module';
                 synchronize: true, // ❗ production ควรปิด
             }),
         }),
+        // Redis Cache
+        CacheModule.registerAsync({
+            isGlobal: true,
+            useFactory: async () => ({
+                store: await redisStore({
+                    host: process.env.REDIS_HOST || 'localhost',
+                    port: Number(process.env.REDIS_PORT) || 6379,
+                }),
+                ttl: 60 * 60 * 1000, // 1 hour (ms)
+            }),
+        }),
         AuthModule,
         SkillModule,
+        ToolModule,
+        ExperienceModule,
     ],
     controllers: [AppController],
     providers: [AppService],
