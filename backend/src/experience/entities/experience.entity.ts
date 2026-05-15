@@ -20,7 +20,7 @@ export class ExperienceEntity {
     @Column({ type: 'text', nullable: true })
     description!: JSON;
     @Column({ type: 'text', nullable: true })
-    description_json!: JSON;
+    description_json!: JSON
 
     @Column({ type: 'boolean', default: true })
     is_active!: boolean;

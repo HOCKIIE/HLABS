@@ -51,7 +51,7 @@ export default async function RootLayout({children}:{children: React.ReactNode})
     return (
         <html lang="en" >
             <body
-                className={`scroll-smooth bg-white dark:bg-gradient-to-tr dark:from-slate-950 dark:to-slate-800 dark:bg-no-repeat ${poppins.className}`}
+                className={`${poppins.className} scroll-smooth bg-white dark:bg-linear-to-tr dark:from-slate-950 dark:to-slate-800 dark:bg-no-repeat`}
             >
                 <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
                     <PageSettingContext>

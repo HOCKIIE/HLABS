@@ -3,7 +3,7 @@
 import { ToolsCard } from "../molecule/SkillCard";
 import { IconType } from "@/types/IconType";
 import { ToolsType } from "@/types/ToolsType";
-import feApi from "@/services/feApi";
+import feApi from "@/services/api/feApi";
 import useSWR from 'swr'
 
 export default function ToolsSection(){

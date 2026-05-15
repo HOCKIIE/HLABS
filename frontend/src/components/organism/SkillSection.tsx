@@ -1,6 +1,6 @@
 import { SkillCard } from "../molecule/SkillCard"
 import { IconType } from "@/types/IconType";
-import feApi from "@/services/feApi";
+import feApi from "@/services/api/feApi";
 import { SkillType } from "@/types/SkillType";
 import useSWR from 'swr'
 
@@ -19,7 +19,7 @@ export default function SkillSection(){
             <div className="container">
                 <div className="grid grid-cols-12 gap-4 lg:gap-8 mt-20">
                     <div className="col-span-12">
-                        <h3 className="text-5xl font-bold text-center text-slate-800 dark:text-slate-200 -tracking-tighter">SKILLS</h3>
+                        <h3 className="text-5xl font-bold text-center text-slate-800 dark:text-slate-200 tracking-wider">SKILLS</h3>
                     </div>
                     {error && <p className="text-center col-span-12 text-red-500">Failed to load skills.</p>}
                     {isLoading && Array(18).fill(null).map((_, i) => <SkillCard key={i} loading={true} />)}

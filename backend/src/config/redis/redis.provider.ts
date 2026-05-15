@@ -7,7 +7,7 @@ export const redisProvider = {
         const redis = new Redis({
             host: process.env.REDIS_HOST || 'localhost',
             port: Number(process.env.REDIS_PORT || 6379),
-            lazyConnect: true,
+            lazyConnect: process.env.NODE_ENV === "production" ? true : false,
             maxRetriesPerRequest: null,
             retryStrategy(times) {
                 Logger.log(`Redis retry attempt: ${times}`);

@@ -4,7 +4,7 @@ import { useRef, useEffect, useState } from "react";
 import SafeHTML from "../molecule/SafeHTML";
 import { ExperienceType } from "@/types/ExperienceType";
 import useSWR from 'swr'
-import feApi from "@/services/feApi";
+import feApi from "@/services/api/feApi";
 import ExpEmptyItem from "../atom/ExpEmptyItem";
 
 const fetcher = (url: string) => feApi.get(url).then(res => res.data);

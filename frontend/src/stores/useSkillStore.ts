@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import beApi from "@/services/beApi";
+import beApi from "@/services/api/beApi";
 
 const apiPrefix = '/skill';
 

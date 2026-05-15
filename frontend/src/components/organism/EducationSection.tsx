@@ -2,7 +2,7 @@
 
 import { EducationType } from "@/types/EducationType";
 import SafeHTML from "../molecule/SafeHTML";
-import feApi from "@/services/feApi";
+import feApi from "@/services/api/feApi";
 import useSWR from "swr";
 
 const fetcher = (url: string) => feApi.get(url).then(res => res.data);

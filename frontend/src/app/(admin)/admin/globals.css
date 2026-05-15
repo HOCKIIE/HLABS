@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@config "../../../../tailwind.config.js";
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+
+    --primary: #3562ae;
+    --primary-hover: #2c5395;
+    --primary-foreground: #ffffff;
+}
+
+[data-theme="BLUE_THEME"] {
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --primary-foreground: #ffffff;
+}
+
+[data-theme="AQUA_THEME"] {
+    --primary: #06b6d4;
+    --primary-hover: #0891b2;
+    --primary-foreground: #ffffff;
+}
+
+[data-theme="INDIGO_THEME"] {
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --primary-foreground: #ffffff;
+}
+
+[data-theme="GREEN_THEME"] {
+    --primary: #16a34a;
+    --primary-hover: #15803d;
+    --primary-foreground: #ffffff;
+}
+
+[data-theme="CYAN_THEME"] {
+    --primary: #0891b2;
+    --primary-hover: #0e7490;
+    --primary-foreground: #ffffff;
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+}
