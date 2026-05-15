@@ -17,7 +17,7 @@ export default function ThemeIcon() {
     if (!mounted) return null;
 
     // ✅ render หลัง mount เท่านั้น
-    if (resolvedTheme === "dark") return <MdOutlineDarkMode className="w-[20px] h-[20px]" />;
-    if (resolvedTheme === "light") return <MdOutlineLightMode className="w-[20px] h-[20px]" />;
-    return <RiComputerLine className="w-[20px] h-[20px]" />;
+    if (resolvedTheme === "dark") return <MdOutlineDarkMode className="w-5 h-5" />;
+    if (resolvedTheme === "light") return <MdOutlineLightMode className="w-5 h-5" />;
+    return <RiComputerLine className="w-5 h-5" />;
 }

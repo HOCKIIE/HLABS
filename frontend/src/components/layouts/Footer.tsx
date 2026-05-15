@@ -8,7 +8,7 @@ export default function Footer()
                     <div className="container">
                         <div className="grid grid-cols-12">
                             <div className="col-span-12 md:col-span-5">
-                                <div className="min-h-[100px] py-10">
+                                <div className="min-h-25 py-10">
                                     <div className="flex items-center">
                                         <div className="text-5xl font-bold text-gray-300">
                                             Available for select freelance opportunities
@@ -33,7 +33,7 @@ export default function Footer()
                         </div>
                     </div>
                 </div>
-                <div className="bg-gray-500 dark:bg-gray-700 min-h-[15px] text-gray-950 dark:text-emerald-500">
+                <div className="bg-gray-500 dark:bg-gray-700 min-h-3.75 text-gray-950 dark:text-emerald-500">
                     <div className="container">
                         {/* <strong>&copy; {new Date().getFullYear()} HLABS</strong> */}
                         <strong>&copy; 2025 HLABS</strong>

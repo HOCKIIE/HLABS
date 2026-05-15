@@ -15,15 +15,15 @@ export const ResumeHTML = () => {
         <div className="grid grid-cols-12 gap-0 bg-gray-100 dark:bg-slate-800 print:mt-0 overflow-hidden h-full">
             <div className="col-span-12 xl:col-span-4 print:col-span-4 bg-gray-500 dark:bg-gray-900 h-full">
                 <div className="print:bg-gray-400">
-                    <div className="profile-image min-h-[400px] print:min-h-[230px] flex items-center justify-center relative">
-                        <div className="absolute w-[320px] md:w-[320px] print:w-[auto] h-full top-0 flex items-end justify-center bg-slate-700 rounded-b-full">
-                            <div className="rounded-full mb-9 print:m-4 overflow-hidden h-[250px] w-[250px] print:h-[160px] print:w-[160px] flex items-center justify-center border-4 border-slate-200">
+                    <div className="profile-image min-h-100 print:min-h-57.5 flex items-center justify-center relative">
+                        <div className="absolute w-[320px] md:w-[320px] print:w-auto h-full top-0 flex items-end justify-center bg-slate-700 rounded-b-full">
+                            <div className="rounded-full mb-9 print:m-4 overflow-hidden h-62.5 w-62.5 print:h-40 print:w-40 flex items-center justify-center border-4 border-slate-200">
                                 <Image src="/image/IMG_0281.jpg" alt="Suphawat Kongson" width="200" height="200" className="w-full" quality={100}/>
                             </div>
                         </div>
                     </div>
                     <div className="p-4 block md:block xl:hidden">
-                        <h1 className="text-center font-bold text-2xl bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">
+                        <h1 className="text-center font-bold text-2xl bg-linear-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">
                             SUPHAWAT KONGSON
                         </h1>
                         <h2 className="text-center text-lg print:text-[17px] font-roboto-mono text-slate-300 dark:text-gray-300 print:text-gray-800 font-bold font-silk-screen">
@@ -105,12 +105,12 @@ export const ResumeHTML = () => {
             <div className="col-span-12 xl:col-span-8 print:col-span-8 h-full">
                 <div className="bg-gray-300 dark:bg-slate-700 py-8 px-4 hidden md:hidden xl:block">
                     {/* <Title fontSize="160"/> */}
-                    <h1 className="font-bold text-6xl bg-gradient-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">
+                    <h1 className="font-bold text-6xl bg-linear-to-r from-indigo-500 to-pink-500 bg-clip-text text-transparent">
                         SUPHAWAT KONGSON
                     </h1>
                     <h2 className="text-lg md:text-2xl xl:text-5xl text-gray-700 dark:text-gray-300 font-bold mt-2 font-roboto-mono">Software Engineer</h2>
                 </div>
-                <div className="w-full border-t-[3px] border-r-[800px] border-b-[50px] border-l-[50px] border-t-gray-300 border-r-gray-300 border-b-gray-100 border-l-gray-100 dark:border-t-slate-700 dark:border-r-slate-700 dark:border-b-slate-800 dark:border-l-slate-800 print:hidden"></div>
+                <div className="w-full border-t-[3px] border-r-800 border-b-50 border-l-50 border-t-gray-300 border-r-gray-300 border-b-gray-100 border-l-gray-100 dark:border-t-slate-700 dark:border-r-slate-700 dark:border-b-slate-800 dark:border-l-slate-800 print:hidden"></div>
                 <div className="p-4">
                     <div className="education">
                         <h3 className="uppercase  font-bold flex items-center">
@@ -133,7 +133,7 @@ export const ResumeHTML = () => {
                             <div className="w-full ms-2 border-solid border-t-[3px] border-gray-700 right-0 top-[50%]"></div>
                         </h3>
                         <div className="timeline ps-5 border-l-[3px] border-indigo-300 dark:border-indigo-800/40 ">
-                            {experince.map((v:ExperienceType, k:number) => 
+                            {experince && experince.map((v:ExperienceType, k:number) => 
                                 <div key={k} className="mt-4 relative">
                                     <div className="absolute ms-[-29px] top-1 w-4 h-4 bg-indigo-600 rounded-full"></div>
                                     <div className="text-base print:text-sm text-gray-700 dark:text-gray-400">

@@ -24,7 +24,7 @@ type DropdownType = {
 }
 
 const Dropdown = ({data}:DropdownType) => {
-    return (<div className={`dropdown-item absolute rounded-lg overflow-hidden shadow-md -left-[40%] top-1/6 min-w-[300px] z-[200] transition-all duration-700 divide-y divide-indigo-50 ${data.dropdownToggle?`open`:``}`}>
+    return (<div className={`dropdown-item absolute rounded-lg overflow-hidden shadow-md left-[-40%] top-1/6 min-w-75 z-200 transition-all duration-700 divide-y divide-indigo-50 ${data.dropdownToggle?`open`:``}`}>
         <div className="bg-white dark:bg-slate-800 min-h-100 p-3 ralative">
             <div className="absolute rounded-full w-2 h-2 border border-slate-300 dark:border-slate-600 bg-slate-100 dark:bg-slate-700 left-1 top-1"></div>
             <div className="absolute rounded-full w-2 h-2 border border-slate-300 dark:border-slate-600 bg-slate-100 dark:bg-slate-700 right-1 top-1"></div>

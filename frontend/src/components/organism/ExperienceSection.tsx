@@ -79,13 +79,13 @@ export default function ExperienceSection(){
         <section className="bg-gray-200 dark:bg-slate-800 mt-40 py-10 experience">
             <div className="container">
                 <div className="grid grid-cols-12 gap-6">
-                    <div className="col-span-12 mt-4"><h3 className="text-center text-2xl md:text-4xl font-bold text-slate-800 dark:text-slate-200 -tracking-tighter">EXPERIENCE</h3></div>
+                    <div className="col-span-12 mt-4"><h3 className="text-center text-2xl md:text-4xl font-bold text-slate-800 dark:text-slate-200 tracking-wider">EXPERIENCE</h3></div>
                     <div className="col-span-12">
                         <div className="relative border-s-[5px] border-slate-300 dark:border-slate-700">
                             <div 
                                 ref={timelineRef} 
                                 style={{ height: `${newElementHeights.reduce((a,b)=>a+b,0)}px`}}
-                                className="absolute top-0 left-0 ms-[-4px] transition-[height] ease-in-out duration-[900ms] delay-[900ms] w-[5px] bg-indigo-500 dark:bg-emerald-500 z-1"
+                                className="absolute top-0 left-0 -ms-1 transition-[height] ease-in-out duration-900 delay-900ms w-1.25 bg-indigo-500 dark:bg-emerald-500 z-1"
                             ></div>
                             <div className="relative">
                                 {isLoading && Array(4).fill(null).map((_, i) => <ExpEmptyItem key={i}/> )}
@@ -99,17 +99,17 @@ export default function ExperienceSection(){
                                             ref={(el) => { refs.current[index] = el; }}
                                             className={`font-roboto-mono grid pb-20 ms-1 ${activeIndexes.includes(index)}`}
                                         >
-                                            <div className={`absulute flex items-center justify-center w-6 h-6 rounded-full ms-[-18px] transition-all duration-500 delay-[900ms] ring-8 ring-gray-200 dark:ring-slate-800 ${activeIndexes.includes(index)?`bg-indigo-500 dark:bg-emerald-500`:`bg-gray-400 dark:bg-gray-400`} z-[100] overflow-hidden`}>
+                                            <div className={`absulute flex items-center justify-center w-6 h-6 rounded-full -ms-4.5 transition-all duration-500 delay-900 ring-8 ring-gray-200 dark:ring-slate-800 ${activeIndexes.includes(index)?`bg-indigo-500 dark:bg-emerald-500`:`bg-gray-400 dark:bg-gray-400`} z-100 overflow-hidden`}>
                                                 <svg className="w-2.5 h-2.5 text-white dark:text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                                     <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
                                                 </svg>
                                             </div>
                                             <div className="ms-5 mt-[-1.7rem] flex">
                                                 <div className="rounded-lg bg-gray-100 dark:bg-slate-900 overflow-hidden shadow pe-2 relative w-full md:w-auto">
-                                                    <div className={`absolute w-[160px] h-[55px] bg-gradient-to-br ${bgColorClass[colorClass]} via-gray-100 to-gray-100 dark:via-slate-900 dark:to-slate-900 z-0`}></div>
+                                                    <div className={`absolute w-40 h-13.75 bg-linear-to-br ${bgColorClass[colorClass]} via-gray-100 to-gray-100 dark:via-slate-900 dark:to-slate-900 z-0`}></div>
                                                     <div className="py-3">
                                                         <div className="relative z-3 flex">
-                                                            <div className={`w-[5px] ${bgColor[colorClass]} rounded-e-lg`}></div>
+                                                            <div className={`w-1.25 ${bgColor[colorClass]} rounded-e-lg`}></div>
                                                             <div className="border-r border-gray-300 dark:border-gray-600 min-w-14 text-gray-600 dark:text-slate-300 hidden md:flex items-center justify-center">0{index+1}</div>
                                                             <div className="mx-4">
                                                                 <h4 className="text-xl font-bold text-gray-600 dark:text-slate-300">{date}</h4>

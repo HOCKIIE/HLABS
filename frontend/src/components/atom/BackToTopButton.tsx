@@ -29,9 +29,10 @@ const BackToTopButton: React.FC = () => {
 
   return (
     <button
-      onClick={scrollToTop}
-      className={`fixed bottom-5 right-5 p-3 bg-indigo-300 dark:bg-slate-950 text-white hover:text-indigo-500 dark:hover:text-emerald-500 shadow-[0px_0px_5px_3px_rgba(167,139,250,0.4)] dark:shadow-[0px_0px_5px_3px_rgba(20,184,166,0.2)] rounded-full transition-opacity ${isVisible ? 'opacity-100' : 'opacity-0'}`}
-      style={{ transition: 'opacity 0.3s ease-in-out' }}
+        type="button"
+        onClick={scrollToTop}
+        className={`fixed bottom-5 right-5 p-3 bg-indigo-300 dark:bg-slate-950 text-white hover:text-indigo-500 dark:hover:text-emerald-500 shadow-[0px_0px_5px_3px_rgba(167,139,250,0.4)] dark:shadow-[0px_0px_5px_3px_rgba(20,184,166,0.2)] rounded-full transition-opacity ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+        style={{ transition: 'opacity 0.3s ease-in-out' }}
     >
       <GoMoveToTop/>
     </button>

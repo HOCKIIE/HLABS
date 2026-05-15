@@ -17,7 +17,7 @@ export default function EducationSection(){
     <section>
         <div className="container">
             <div className="grid grid-cols-12 mt-20">
-                <div className="col-span-12"><h3 className="text-center text-4xl font-bold text-slate-800 dark:text-slate-200 -tracking-tighter">EDUCATION</h3></div>
+                <div className="col-span-12"><h3 className="text-center text-4xl font-bold text-slate-800 dark:text-slate-200 tracking-wider">EDUCATION</h3></div>
             </div>
             {!error && <div className="grid grid-cols-12 gap-2 xl:gap-0 xl:border border-gray-400 mt-10">
                 {isLoading && Array(3).fill(null).map((_,k) => <div key={k} className="col-span-12 md:col-span-6 xl:col-span-4 border md:border border-gray-300 px-4 py-6 transition-all duration-500">

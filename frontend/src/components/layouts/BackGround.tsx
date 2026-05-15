@@ -2,10 +2,10 @@ export default async function BackGround()
 {
     return (
         <div className="absolute" style={{backgroundAttachment:"fixed",backgroundSize:'cover',height:'100vh'}}>
-            <div className="circle-1 opacity-20 xl:opacity-30 dark:opacity-10 top-4 left-4 w-10 h-10 bg-gradient-to-r from-indigo-300 to-blue-300 dark:bg-indigo-950 rounded-full z-[-10]"></div>
-            <div className="circle-2 opacity-20 xl:opacity-30 dark:opacity-10 top-4 right-4 w-40 h-40 bg-gradient-to-b from-indigo-300 to-blue-300 dark:bg-indigo-950 rounded-full z-[-10]"></div>
-            <div className="circle-3 opacity-20 xl:opacity-30 dark:opacity-10 bottom-4 left-4 w-64 h-64 bg-gradient-to-r from-indigo-300 to-blue-300 dark:bg-indigo-950 rounded-full z-[-10]"></div>
-            {/* <div className="circle-4 fixed opacity-30 dark:opacity-10 bottom-4 right-4 w-16 h-16 bg-gradient-to-l from-indigo-300 to-blue-300 dark:bg-indigo-950 rounded-full z-[-10]"></div> */}
+            <div className="circle-1 opacity-20 xl:opacity-30 dark:opacity-10 top-4 left-4 w-10 h-10 bg-linear-to-r from-indigo-300 to-blue-300 dark:bg-indigo-950 rounded-full -z-10"></div>
+            <div className="circle-2 opacity-20 xl:opacity-30 dark:opacity-10 top-4 right-4 w-40 h-40 bg-linear-to-b from-indigo-300 to-blue-300 dark:bg-indigo-950 rounded-full -z-10"></div>
+            <div className="circle-3 opacity-20 xl:opacity-30 dark:opacity-10 bottom-4 left-4 w-64 h-64 bg-linear-to-r from-indigo-300 to-blue-300 dark:bg-indigo-950 rounded-full -z-10"></div>
+            {/* <div className="circle-4 fixed opacity-30 dark:opacity-10 bottom-4 right-4 w-16 h-16 bg-gradient-to-l from-indigo-300 to-blue-300 dark:bg-indigo-950 rounded-full -z-10"></div> */}
         </div>
     )
 }

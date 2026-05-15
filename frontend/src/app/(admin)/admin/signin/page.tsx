@@ -103,7 +103,7 @@ const Signin = () =>
                                                 height: '18px'
                                             }} />
                                         <label className="text-sm font-semibold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-ld block mb-0" htmlFor="remember"> Remember this Device</label>
-                                    </div><a className="text-primary text-sm font-medium" href="/auth/auth1/forgot-password" data-discover="true">Forgot Password?</a>
+                                    </div><button type="button" className="text-primary text-sm font-medium" data-href="/auth/auth1/forgot-password" data-discover="true">Forgot Password?</button>
                                 </div>
                                 <button 
                                     type="submit"

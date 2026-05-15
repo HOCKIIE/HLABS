@@ -30,9 +30,9 @@ export default function ThemeModeSwitch()
             <button onClick={()=>setDropdown(!dropdown)}
                 className='dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700 transition-all duration-100 text-indigo-500 dark:text-emerald-500 p-[6px] text-2xl rounded-full'
             >
-                {currentTheme=='dark'&&<MdOutlineDarkMode className="w-[20px] h-[20px]"/>}
-                {currentTheme=='light'&&<MdOutlineLightMode className="w-[20px] h-[20px]"/>}
-                {currentTheme=='system'&&<RiComputerLine className="w-[20px] h-[20px]"/>}
+                {currentTheme=='dark'&&<MdOutlineDarkMode className="w-5 h-5"/>}
+                {currentTheme=='light'&&<MdOutlineLightMode className="w-5 h-5"/>}
+                {currentTheme=='system'&&<RiComputerLine className="w-5 h-5"/>}
             </button>
             <div id="dropdown" className={`${!dropdown?'hidden ':''}absolute mt-1 right-0 z-10 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700`}>
                 <div className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">

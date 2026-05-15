@@ -63,10 +63,10 @@ export default function Mouse()
                 ref={cursorRef}
                 className={`mouse`}
                 style={{visibility:'visible'}}
-                />
+            />
             <div
                 ref={dotRef}
-                className="mouse-dot pointer-events-none fixed z-[9999]"
+                className="mouse-dot pointer-events-none fixed z-9999"
                 style={{
                     top: 0,
                     left: 0,
